@@ -1,14 +1,14 @@
+// --------------------------
+// REGULAR FONTS (Noto Serif)
+// --------------------------
+
 @font-face {
 	font-family: 'TheFinch';
 
 	font-weight: normal;
 	font-style: normal;
 
-	src: 	url('../fonts/TheFinchFont-Regular.eot');
-	src: 	url('../fonts/TheFinchFont-Regular.eot?#iefix') format('embedded-opentype'),
-			url('../fonts/TheFinchFont-Regular.woff2') format('woff2'),
-			url('../fonts/TheFinchFont-Regular.woff') format('woff'),
-			url('../fonts/TheFinchFont-Regular.ttf') format('truetype');
+	src: 	url('../fonts/serif/NotoSerif-Regular.ttf') format('truetype');
 
 	   -moz-font-feature-settings:	$font-feature-settings;
 		 -o-font-feature-settings:	$font-feature-settings;
@@ -16,6 +16,8 @@
 			font-feature-settings:	$font-feature-settings;
 
 	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
 }
 
 @font-face {
@@ -24,18 +26,16 @@
 	font-weight: normal;
 	font-style: italic;
 
-	src: 	url('../fonts/TheFinchFont-Italic.eot');
-	src: 	url('../fonts/TheFinchFont-Italic.eot?#iefix') format('embedded-opentype'),
-			url('../fonts/TheFinchFont-Italic.woff2') format('woff2'),
-			url('../fonts/TheFinchFont-Italic.woff') format('woff'),
-			url('../fonts/TheFinchFont-Italic.ttf') format('truetype');
+	src: 	url('../fonts/serif/NotoSerif-Italic.ttf') format('truetype');
 
-	-moz-font-feature-settings:	$font-feature-settings;
-	-o-font-feature-settings:	$font-feature-settings;
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
 	-webkit-font-feature-settings:	$font-feature-settings;
-	font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
 
 	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
 }
 
 @font-face {
@@ -44,18 +44,16 @@
 	font-weight: bold;
 	font-style: normal;
 
-	src: 	url('../fonts/TheFinchFont-Bold.eot');
-	src: 	url('../fonts/TheFinchFont-Bold.eot?#iefix') format('embedded-opentype'),
-			url('../fonts/TheFinchFont-Bold.woff2') format('woff2'),
-			url('../fonts/TheFinchFont-Bold.woff') format('woff'),
-			url('../fonts/TheFinchFont-Bold.ttf') format('truetype');
+	src: 	url('../fonts/serif/NotoSerif-Bold.ttf') format('truetype');
 
-	-moz-font-feature-settings:	$font-feature-settings;
-	-o-font-feature-settings:	$font-feature-settings;
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
 	-webkit-font-feature-settings:	$font-feature-settings;
-	font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
 
 	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
 }
 
 @font-face {
@@ -64,16 +62,90 @@
 	font-weight: bold;
 	font-style: italic;
 
-	src: 	url('../fonts/TheFinchFont-BoldItalic.eot');
-	src: 	url('../fonts/TheFinchFont-BoldItalic.eot?#iefix') format('embedded-opentype'),
-			url('../fonts/TheFinchFont-BoldItalic.woff2') format('woff2'),
-			url('../fonts/TheFinchFont-BoldItalic.woff') format('woff'),
-			url('../fonts/TheFinchFont-BoldItalic.ttf') format('truetype');
+	src: 	url('../fonts/serif/NotoSerif-BoldItalic.ttf') format('truetype');
 
-	-moz-font-feature-settings:	$font-feature-settings;
-	-o-font-feature-settings:	$font-feature-settings;
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
 	-webkit-font-feature-settings:	$font-feature-settings;
-	font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
 
 	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
+}
+
+// --------------------------
+// DISPLAY FONTS (Noto Serif Display)
+// --------------------------
+
+@font-face {
+	font-family: 'TheFinchDisplay';
+
+	font-weight: normal;
+	font-style: normal;
+
+	src: 	url('../fonts/display/NotoSerifDisplay-Regular.ttf') format('truetype');
+
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
+	-webkit-font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
+
+	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
+}
+
+@font-face {
+	font-family: 'TheFinchDisplay';
+
+	font-weight: normal;
+	font-style: italic;
+
+	src: 	url('../fonts/display/NotoSerifDisplay-Italic.ttf') format('truetype');
+
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
+	-webkit-font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
+
+	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
+}
+
+@font-face {
+	font-family: 'TheFinchDisplay';
+
+	font-weight: bold;
+	font-style: normal;
+
+	src: 	url('../fonts/display/NotoSerifDisplay-Bold.ttf') format('truetype');
+
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
+	-webkit-font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
+
+	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
+}
+
+@font-face {
+	font-family: 'TheFinchDisplay';
+
+	font-weight: bold;
+	font-style: italic;
+
+	src: 	url('../fonts/display/NotoSerifDisplay-BoldItalic.ttf') format('truetype');
+
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
+	-webkit-font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
+
+	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
 }

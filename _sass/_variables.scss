@@ -158,9 +158,9 @@ $header-padding-bottom-md:				$header-font-size-base-md / 2;
 $header-padding-bottom-lg:				$header-font-size-base-lg / 2;
 $header-padding-bottom-xl:				$header-font-size-base-xl / 2;
 
-$header-wordmark-font-weight:				bold;
-$header-font-weight:						normal;
-$header-text-decoration:					none;
+$header-wordmark-font-weight:			bold;
+$header-font-weight:					normal;
+$header-text-decoration:				none;
 $header-text-decoration-hover:			none;
 
 
@@ -442,10 +442,10 @@ $h5-font-weight:					bold;
 // BREAKPOINT VALUES
 
 $xs: 	 							0;
-$sm: 	 							600px;
-$md: 	 							766px;
-$lg: 	 							1000px;
-$xl: 	 							1200px;
+$sm: 	 							700px;
+$md: 	 							980px;
+$lg: 	 							1200px;
+$xl: 	 							1400px;
 
 
 // Grid containers
@@ -453,10 +453,10 @@ $xl: 	 							1200px;
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-xs: 	 					300px;
-$container-sm: 	 					560px;
-$container-md: 	 					600px;
-$container-lg: 	 					800px;
-$container-xl: 	 					900px;
+$container-sm: 	 					660px;
+$container-md: 	 					766px;
+$container-lg: 	 					1000px;
+$container-xl: 	 					1200px;
 
 $container-padding: 	 			15px;
 
@@ -465,9 +465,9 @@ $container-padding: 	 			15px;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      		"TheFinch", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", Roboto, "Segoe UI", Arial, sans-serif !default;
-$font-family-monospace:       		"TheFinch", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            		"TheFinch", ui-monospace,'SFMono-Regular', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", Roboto, "Segoe UI", Arial, sans-serif !default;
+$font-family:                       "TheFinch", "Times New Roman", serif;
+$font-family-display:               "TheFinchDisplay", "Times New Roman", serif;
+$font-family-monospace:       		SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-feature-settings:				"ss02", "tnum", "liga", "zero", "kern";
 $sup-font-feature-settings:			"ss02", "tnum", "liga", "zero", "kern", "frac";

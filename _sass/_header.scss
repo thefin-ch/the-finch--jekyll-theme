@@ -2,106 +2,24 @@
 
 header#site-header {
 	
-	display: block;
-	position: 	relative;
-	z-index: 	10000000;
-
-	min-height: 63px;
-
-	background: 		$header-background;
-	
-	/* Text and background color for dark mode */
-	@media (prefers-color-scheme: dark) {
-	    background: 	$header-background-dark-mode;
-	}
-	
 	nav {
 		
 		p, li.header-link {
-			display: inline-block;
-			
-			margin: 			0;
-			
-			@include xs {
-				font-size: 		$header-font-size-base-xs;
-				line-height: 	$header-line-height-base-xs;
-				padding-top: 		$header-padding-top-xs;
-				padding-bottom: 	$header-padding-bottom-xs;
-			}
-			@include sm {
-				font-size: 		$header-font-size-base-sm;
-				line-height: 	$header-line-height-base-sm;
-				padding-top: 		$header-padding-top-sm;
-				padding-bottom: 	$header-padding-bottom-sm;
-			}
-			@include md {
-				font-size: 		$header-font-size-base-md;
-				line-height: 	$header-line-height-base-md;
-				padding-top: 		$header-padding-top-md;
-				padding-bottom: 	$header-padding-bottom-md;
-			}
-			@include lg {
-				font-size: 		$header-font-size-base-lg;
-				line-height: 	$header-line-height-base-lg;
-				padding-top: 		$header-padding-top-lg;
-				padding-bottom: 	$header-padding-bottom-lg;
-			}
-			@include xl {
-				font-size: 		$header-font-size-base-xl;
-				line-height: 	$header-line-height-base-xl;
-				padding-top: 		$header-padding-top-xl;
-				padding-bottom: 	$header-padding-bottom-xl;
-			}
-			
-			font-weight:		$header-font-weight;
 			
 			&.header-wordmark {
-				font-weight:		$header-wordmark-font-weight;
+				
 			}
 			
 			&:before {
-				position: 		absolute;
-			    content: 		none;
-			    
-			    left: 			0;
+				
 			}
 		}
 		
 		a {
-				
-			color:			$header-color;
-			
-			/* Text and background color for dark mode */
-			@media (prefers-color-scheme: dark) {
-			    color: 		$header-color-dark-mode;
-			}
-
-			text-decoration: 		$header-text-decoration;
-		
-			&:hover,
-			&:focus {
-				color:				$header-color-hover;
-				text-decoration: 	$header-text-decoration-hover;
-			}
 			
 		}
 		
 		div.header-align-left {
-			
-			display: 			block;	
-			position: 			relative;
-					
-			background: 			$header-background;
-			z-index: 			1000000;
-			
-			@include dark-mode {	
-				background:		$header-background-dark-mode;
-			}
-			
-			@include md-up {
-				display: 	inline-block;			
-				float: 		left;
-			}
 
 		}
 		
@@ -156,43 +74,6 @@ header#site-header {
 					margin-right: 0;
 				}
 				
-				font-size: 			$p-font-size-base;
-				line-height: 		$p-line-height-base;
-				padding-top: 			$header-padding-top;
-				padding-bottom: 		$header-padding-bottom;
-				
-				@include xs {
-					font-size: 		$p-font-size-base-xs;
-					line-height: 	$p-line-height-base-xs;
-					padding-top: 		$header-padding-top-xs;
-					padding-bottom: 	$header-padding-bottom-xs;
-				}
-				@include sm {
-					font-size: 		$p-font-size-base-sm;
-					line-height: 	$p-line-height-base-sm;
-					padding-top: 		$header-padding-top-sm;
-					padding-bottom: 	$header-padding-bottom-sm;
-				}
-				@include md {
-					font-size: 		$p-font-size-base-md;
-					line-height: 	$p-line-height-base-md;
-					padding-top: 		$header-padding-top-md;
-					padding-bottom: 	$header-padding-bottom-md;
-				}
-				@include lg {
-					font-size: 		$p-font-size-base-lg;
-					line-height: 	$p-line-height-base-lg;
-					padding-top: 		$header-padding-top-lg;
-					padding-bottom: 	$header-padding-bottom-lg;
-				}
-				@include xl {
-					font-size: 		$p-font-size-base-xl;
-					line-height: 	$p-line-height-base-xl;
-					padding-top: 		$header-padding-top-xl;
-					padding-bottom: 	$header-padding-bottom-xl;
-				}
-			
-				font-weight:		$header-font-weight;
 			}
 			
 		}
