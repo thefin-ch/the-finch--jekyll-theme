@@ -1,0 +1,64 @@
+div.breakpoint {
+
+	display: block;
+	position: fixed;
+
+	top: 0;
+	bottom: auto;
+
+	max-width: 75px;
+	max-height: 75px;
+
+	background: 	$magenta;
+	opacity: 		0.7;
+	border-radius: 	100px;
+	margin:			10px;
+	left: 			auto;
+	right: 			auto;
+	padding: 		10px 15px;
+
+	z-index: 100000;
+
+	p {
+		color: #FFFFFF;
+		padding: 0;
+		text-align: center;
+	}
+
+	@include xs {
+		span.xs { display: show; }
+		span.sm { display: none; }
+		span.md { display: none; }
+		span.lg { display: none; }
+		span.xl { display: none; }
+	}
+	@include sm {
+		span.xs { display: none; }
+		span.sm { display: show; }
+		span.md { display: none; }
+		span.lg { display: none; }
+		span.xl { display: none; }
+	}
+	@include md {
+		span.xs { display: none; }
+		span.sm { display: none; }
+		span.md { display: show; }
+		span.lg { display: none; }
+		span.xl { display: none; }
+	}
+	@include lg {
+		span.xs { display: none; }
+		span.sm { display: none; }
+		span.md { display: none; }
+		span.lg { display: show; }
+		span.xl { display: none; }
+	}
+	@include xl {
+		span.xs { display: none; }
+		span.sm { display: none; }
+		span.md { display: none; }
+		span.lg { display: none; }
+		span.xl { display: show; }
+	}
+
+}
