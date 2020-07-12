@@ -21,7 +21,12 @@
 
 p, li {
 
-	max-width: 		70ch;
+	@include md-up {
+		max-width: 		60ch;
+	}
+	@include xl {
+		max-width: 		70ch;
+	}
 
 	font-family: 	$font-family;
 	font-weight: 	$p-font-weight;
