@@ -96,8 +96,9 @@ header#site-header {
 
 	display: grid;
 
-	min-height: 100vh;
-
+	@include md-up {
+		min-height: 100vh;
+	}
 	grid-area: sidebar;
 
 	background: 		$brand;
