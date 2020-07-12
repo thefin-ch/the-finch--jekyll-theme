@@ -63,6 +63,8 @@ p, li {
 }
 
 a {
+	display: 			inline;
+
 	color: 				$link-color;
 
 	&:hover {
@@ -74,6 +76,10 @@ a {
 		background: $link-color;
 		color: $link-hover-color;
 		outline: $link-outline;
+	}
+
+	.more {
+		
 	}
 }
 

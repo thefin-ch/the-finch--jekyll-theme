@@ -2,13 +2,64 @@
 layout: default
 ---
 
-<h1>The Finch</h1>
+{% for post in site.posts limit: 1 %}
+<section id="splash">
 
-{% include figure.html 
-    url="/site/social-media.png"
-    alt="An image of a finch on a dark blue background" 
-    caption="The Finch logo" 
-    linktext="Charlie Smoothy" 
-    link="https://thefin.ch" %}
+    <article>
 
-Coming soon.
+        <img src="{{ post.image }}" alt="{{ post.image-alt }}">
+        
+        <div class="text">
+            
+            <h1><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+
+            <p>{{ post.excerpt }}</p>
+
+            <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
+
+        </div>
+
+    </article>
+
+</section>
+{% endfor %}
+
+{% for post in site.posts limit: 1 offset: 1 %}
+<section id="pull">
+
+    <article>
+
+        <div class="pullquote">
+            <h1><a href="{{ post.url }}" title="Read {{ post.title }}">“{{ post.pullquote }}”</a></h1>
+        </div>
+
+        <div class="text">
+            <p>{{ post.excerpt }}</p>
+
+            <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
+        </div>
+
+    </article>
+
+</section>
+{% endfor %}
+
+<section id="carousel">
+
+    <div class="articles">
+        {% for post in site.posts limit: 3 offset: 2 %}
+        <article>
+
+            <img src="{{ post.image }}" alt="{{ post.image-alt }}">
+
+            <div class="text">
+                <h1><a href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+                <p>{{ post.excerpt }}</p>    
+                <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
+            </div>
+
+        </article>
+        {% endfor %}
+    </div>
+
+</section>
