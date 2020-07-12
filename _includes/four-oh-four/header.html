@@ -1,0 +1,27 @@
+<header id="site-header">
+
+	<nav role="navigation">
+
+		<div id="header-links" class="closed">
+
+			<ul>
+
+				{% for item in site.data.menu %}
+				<li>
+					<a href="{{ item.url }}" alt= {{ item.alttext }}>{{ item.title }}</a>
+				</li>
+				{% endfor %}
+
+			</ul>
+
+		</div>
+
+		<div id="header-wordmark">
+			<a href="{{ site.url }}">
+				<img src="/assets/images/site/wordmark-four-oh-four-responsive.svg">
+			</a>
+		</div>
+
+	</nav>
+
+</header>

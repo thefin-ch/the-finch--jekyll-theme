@@ -1,7 +1,35 @@
 ---
-layout: default
+permalink: /404.html
 ---
 
-<h1>404</h1>
-<p>Page not found</p>
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+  <body id="{{ page.layout }}"{% if page.theme %} class="theme-{{ page.theme }}"{% endif %}>
+
+    {% include skiplink.html %}
+
+    <div class="wrapper">
+      
+      {% include four-oh-four/header.html %}
+
+      <main id="content" class="container">
+
+		<h1>404</h1>
+		<p>Page not found</p>
+
+      </main>
+
+      {% include footer.html %}
+
+    </div>
+
+    {% include breakpoints.html %}
+
+  </body>
+
+</html>
+
 
