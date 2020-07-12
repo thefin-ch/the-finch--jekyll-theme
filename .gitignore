@@ -1,5 +1,6 @@
 *.sass-cache
 _config.yml
+_posts
 index.md
 Gemfile.lock
 *_site
