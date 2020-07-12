@@ -31,24 +31,24 @@ header#site-header {
 
 				@include xs {
 					width: 100%;
-					max-width: 250px;
+					max-width: 300px;
 				}
 				@include sm {
 					width: 100%;
-					max-width: 250px;
+					max-width: 300px;
 				}
 
 				@include md {
-					width: 100%;
-					max-width: 300px;
+					width: 90%;
+					max-width: 350px;
 				}
 				@include lg {
 					width: 85%;
-					max-width: 300px;
+					max-width: 400px;
 				}
 				@include xl {
 					width: 85%;
-					max-width: 400px;
+					max-width: 500px;
 				}
 
 			}
