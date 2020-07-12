@@ -34,38 +34,66 @@
 }
 
 
-@include xl {
+.wrapper {
+	position: 	relative;
+	display: 	grid;
 
-	.wrapper {
-		position: 	relative;
-		display: 	grid;
-
-		@include xl {
-			grid-template-columns: 1fr 3fr;
-			grid-template-rows: auto auto;
-
-			grid-template-areas: 	"sidebar content"
-									"sidebar footer";
-		}
-
+	// Single column layout
+	@include xs {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+	@include sm {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
 	}
 
-	header#site-header {
-
-		display: grid;
-
-		grid-area: sidebar;
-
-		background: 		$brand;
-
+	// Two column layout
+	@include md {
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: auto auto;
+	}
+	@include lg {
+		grid-template-columns: 1fr 3fr;
+		grid-template-rows: auto auto;
+	}
+	@include xl {
+		grid-template-columns: 1fr 3fr;
+		grid-template-rows: auto auto;
 	}
 
-	main {
-		
-		grid-area: content;
-
+	@include xs {
+		grid-template-areas: 	"sidebar"
+								"content"
+								"footer";
+	}
+	@include sm {
+		grid-template-areas: 	"sidebar"
+								"content"
+								"footer";
 	}
 
-
+	@include md-up {
+		grid-template-areas: 	"sidebar content"
+								"sidebar footer";
+	}
 
 }
+
+header#site-header {
+
+	display: grid;
+
+	grid-area: sidebar;
+
+	background: 		$brand;
+
+}
+
+main {
+	
+	grid-area: content;
+
+}
+
+
