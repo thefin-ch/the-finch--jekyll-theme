@@ -3,11 +3,55 @@
 header#site-header {
 	
 	nav {
-		
-		display: block;
-		position: relative;
+
+		@include xs {
+			display: grid;
+			
+			grid-template-columns: 		auto;
+			grid-template-rows: 		auto auto;
+			grid-template-areas: 		"wordmark"
+										"links";
+		}
+		@include sm {
+			display: grid;
+			
+			grid-template-columns: 		auto;
+			grid-template-rows: 		auto auto;
+			grid-template-areas: 		"wordmark"
+										"links";
+		}
+
+		@include md-up {
+			
+			display: block;
+			position: relative;
+
+		}
 
 		div#header-wordmark {
+
+			background: $brand;
+
+			@include xs {
+
+				grid-area: wordmark;
+
+				display: block;
+				position: relative;
+				bottom: 0;
+				text-align: left;
+
+			}
+			@include sm {
+
+				grid-area: wordmark;
+				
+				display: block;
+				position: relative;
+				bottom: 0;
+				text-align: left;
+
+			}
 
 			@include md-up {
 
@@ -15,10 +59,10 @@ header#site-header {
 				position: sticky;
 				position: -webkit-sticky;
 				bottom: 0;
+				text-align: right;
 			
 			}
 
-			text-align: right;
 
 			a {
 				display: inline-block;
@@ -27,28 +71,36 @@ header#site-header {
 
 			img {
 
-				margin: 20px;
-
 				@include xs {
 					width: 100%;
-					max-width: 300px;
+					max-width: 200px;
+
+					margin: 10px 0 0 10px;
 				}
 				@include sm {
 					width: 100%;
-					max-width: 300px;
+					max-width: 250px;
+
+					margin: 10px 0 0 20px;
 				}
 
 				@include md {
-					width: 90%;
-					max-width: 350px;
+					width: 100%;
+					max-width: 251px;
+
+					margin: 20px;
 				}
 				@include lg {
 					width: 85%;
 					max-width: 400px;
+
+					margin: 20px;
 				}
 				@include xl {
 					width: 85%;
 					max-width: 500px;
+
+					margin: 20px;
 				}
 
 			}
@@ -56,14 +108,72 @@ header#site-header {
 		}
 		
 		div#header-links {
+
+			&.open {
+				@include xs {
+					
+					display: block;
+					position: relative;
+					margin-top: 0;
+					transition: 0.75s ease-out;
+
+					grid-area: links;
+
+					padding-top: 30px;
+					
+					text-align: left;
+
+				}
+				@include sm {
+					
+					display: block;
+					position: relative;
+					margin-top: 0;
+					transition: 0.75s ease-out;
+
+					grid-area: links;
+
+					padding-top: 30px;
+					
+					text-align: left;
+				}
+			}
+
+			&.closed {
+				@include xs {
+					
+					display: block;
+					position: relative;
+					margin-top: -100vh;
+					transition: 0.75s ease-in;
+
+					grid-area: links;
+					
+					text-align: left;
+				}
+				@include sm {
+					
+					display: block;
+					position: relative;
+					margin-top: -100vh;
+					transition: 0.75s ease-in;
+
+					grid-area: links;
+					
+					text-align: left;
+				}
+			}
+
+			@include md-up {
 				
-			display: block;
-			position: relative;
+				display: block;
+				position: relative;
 
-			text-align: right;
+				text-align: right;
 
-			min-height: 100%;
-			padding: 20px;
+				min-height: 100%;
+				padding: 20px;
+			}
 
 			font-family: $font-family-display;
 
@@ -88,6 +198,68 @@ header#site-header {
 				}
 			}
 
+			ul {
+				list-style-type: none;
+				padding: 0 0 0 20px;
+			}
+
+		}
+
+		button#header-menu-toggle {
+			
+			display: 	block;
+			position: 	absolute;
+
+			border: 		none;
+			background: 	none;
+			
+			z-index: 	9999999999;
+			
+			left: 		auto;
+			bottom: 		auto;
+			right: 		0;
+			top:			0;
+			
+			margin: 		0;
+			
+			@include xs {
+				padding:		15px 10px;
+			}
+			
+			@include sm {
+				padding:		20px 20px;
+			}
+			
+			svg#header-menu-toggle-image {
+
+				padding: 0;
+				margin: 0;
+
+				@include xs {
+					width: 			40px;
+					height: 		40px;
+				}
+				@include sm {	
+					width: 			40px;
+					height: 		40px;
+				}
+
+				&.open {
+					transform: rotate(-90deg);
+					transition: 0.5s ease-in-out;
+				}
+
+				&.closed {
+					transform: rotate(0deg);
+					transition: 0.5s ease-in-out;
+				}
+
+			}
+			
+			@include md-up {
+				display: none;
+			}
+		
 		}
 	
 	}
