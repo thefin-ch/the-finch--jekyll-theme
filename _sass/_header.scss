@@ -96,11 +96,11 @@ header#site-header {
 			margin: 		0;
 			
 			@include xs {
-				padding:		($header-padding-top-xs + ($header-font-size-base-xs * 0.2)) $container-padding;
+				padding:		($header-padding-top-xs + ($header-font-size-xs * 0.2)) $container-padding;
 			}
 			
 			@include sm {
-				padding:		($header-padding-top-sm + ($header-font-size-base-sm * 0.2)) $container-padding;
+				padding:		($header-padding-top-sm + ($header-font-size-sm * 0.2)) $container-padding;
 			}
 			
 			font-weight:				$header-wordmark-font-weight;
@@ -133,12 +133,12 @@ header#site-header {
 			svg#header-menu-toggle-image {
 
 				@include xs {
-					width: 			$header-font-size-base-xs * 0.8;
-					height: 		$header-font-size-base-xs * 0.8;
+					width: 			$header-font-size-xs * 0.8;
+					height: 		$header-font-size-xs * 0.8;
 				}
 				@include sm {	
-					width: 			$header-font-size-base-sm * 0.8;
-					height: 		$header-font-size-base-sm * 0.8;
+					width: 			$header-font-size-sm * 0.8;
+					height: 		$header-font-size-sm * 0.8;
 				}
 				
 				rect {
