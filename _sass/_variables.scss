@@ -24,6 +24,11 @@ $black:    	 						#1d1d1d !default;
 $true-black: 	 					#000000 !default;
 
 $brand:                             #010135 !default;
+$brand-75:                          lighten(#010135, 25%) !default;
+$brand-50:                          lighten(#010135, 50%) !default;
+$brand-25:                          lighten(#010135, 75%) !default;
+$brand-15:                          lighten(#010135, 85%) !default;
+
 
 $blue:    	 						#007aff !default;
 $purple:  	 						#c643fc !default;
@@ -84,19 +89,19 @@ $blockquote-background-dark-mode:		$gray-700;
 
 // DEFAULT TEXT SIZES & SPACING
 
-$p-font-size:					16px;
+$p-font-size:					18px;
 $p-font-size-xs:				$p-font-size;
-$p-font-size-sm:				16px;
+$p-font-size-sm:				18px;
 $p-font-size-md:				18px;
 $p-font-size-lg:				20px;
 $p-font-size-xl:				20px;
 
-$p-line-height:					$p-font-size + ($p-font-size * 0.75);
+$p-line-height:					$p-font-size  * 1.75;
 $p-line-height-xs:				$p-line-height;
-$p-line-height-sm:				$p-font-size-sm + ($p-font-size-sm * 0.75);
-$p-line-height-md:				$p-font-size-md + ($p-font-size-md * 0.75);
-$p-line-height-lg:				$p-font-size-lg + ($p-font-size-lg * 0.75);
-$p-line-height-xl:				$p-font-size-xl + ($p-font-size-xl * 0.65);
+$p-line-height-sm:				$p-font-size-sm * 1.75;
+$p-line-height-md:				$p-font-size-md * 1.75;
+$p-line-height-lg:				$p-font-size-lg * 1.75;
+$p-line-height-xl:				$p-font-size-xl * 1.75;
 
 $p-margin-top:						$p-font-size;
 $p-margin-top-xs:					$p-font-size-xs;
@@ -199,46 +204,21 @@ $footer-font-weight:						normal;
 $footer-text-decoration:					none;
 $footer-text-decoration-hover:			none;
 
-// FOOT NOTES TEXT SIZES & SPACING
-
-$footnotes-font-size:				16px;
-$footnotes-font-size-xs:				$footnotes-font-size;
-$footnotes-font-size-sm:				18px;
-$footnotes-font-size-md:				18px;
-$footnotes-font-size-lg:				20px;
-$footnotes-font-size-xl:				22px;
-
-$footnotes-line-height:				$footnotes-font-size + ($footnotes-font-size / 4);
-$footnotes-line-height-xs:			$footnotes-line-height;
-$footnotes-line-height-sm:			$footnotes-font-size-sm + ($footnotes-font-size-sm / 4);
-$footnotes-line-height-md:			$footnotes-font-size-md + ($footnotes-font-size-md / 4);
-$footnotes-line-height-lg:			$footnotes-font-size-lg + ($footnotes-font-size-lg / 4);
-$footnotes-line-height-xl:			$footnotes-font-size-xl + ($footnotes-font-size-xl / 5);
-
-$footnotes-padding-bottom:				$footnotes-font-size;
-$footnotes-padding-bottom-xs:				$footnotes-font-size-xs;
-$footnotes-padding-bottom-sm:				$footnotes-font-size-sm;
-$footnotes-padding-bottom-md:				$footnotes-font-size-md;
-$footnotes-padding-bottom-lg:				$footnotes-font-size-lg;
-$footnotes-padding-bottom-xl:				$footnotes-font-size-xl;
-
-$footnotes-font-weight:					normal;
-
 // H1 TEXT SIZES & SPACING
 
 $h1-font-size:					$p-font-size * 2;
 $h1-font-size-xs:				$h1-font-size;
 $h1-font-size-sm:				$p-font-size-sm * 2.75;
 $h1-font-size-md:				$p-font-size-md * 2.75;
-$h1-font-size-lg:				$p-font-size-lg * 2.75;
-$h1-font-size-xl:				$p-font-size-xl * 2.75;
+$h1-font-size-lg:				$p-font-size-lg * 3.5;
+$h1-font-size-xl:				$p-font-size-xl * 3.5;
 
-$h1-line-height:				$h1-font-size * 0.9;
+$h1-line-height:				$h1-font-size * 1.35;
 $h1-line-height-xs:				$h1-line-height;
-$h1-line-height-sm:				$h1-font-size-sm;
-$h1-line-height-md:				$h1-font-size-md;
-$h1-line-height-lg:				$h1-font-size-lg;
-$h1-line-height-xl:				$h1-font-size-xl;
+$h1-line-height-sm:				$h1-font-size-sm * 1.25;
+$h1-line-height-md:				$h1-font-size-md * 1.25;
+$h1-line-height-lg:				$h1-font-size-lg * 1.25;
+$h1-line-height-xl:				$h1-font-size-xl * 1.25;
 
 $h1-padding-top:						$h1-font-size * 2;
 $h1-padding-top-xs:					$h1-font-size-xs * 2;
@@ -262,19 +242,19 @@ $h1-text-transform:					none;
 
 // h2 TEXT SIZES & SPACING
 
-$h2-font-size:					$p-font-size + 5px;
+$h2-font-size:					$p-font-size * 1.65;
 $h2-font-size-xs:				$h2-font-size;
-$h2-font-size-sm:				$p-font-size-sm + 10px;
-$h2-font-size-md:				$p-font-size-md + 10px;
-$h2-font-size-lg:				$p-font-size-lg + 10px;
-$h2-font-size-xl:				$p-font-size-xl + 10px;
+$h2-font-size-sm:				$p-font-size-sm * 1.65;
+$h2-font-size-md:				$p-font-size-md * 1.65;
+$h2-font-size-lg:				$p-font-size-lg * 2.25;
+$h2-font-size-xl:				$p-font-size-xl * 2.25;
 
-$h2-line-height:				$h2-font-size + ($h2-font-size / 4);
+$h2-line-height:				$h2-font-size * 1.25;
 $h2-line-height-xs:				$h2-line-height;
-$h2-line-height-sm:				$h2-font-size-sm + ($h2-font-size-sm / 4);
-$h2-line-height-md:				$h2-font-size-md + ($h2-font-size-md / 4);
-$h2-line-height-lg:				$h2-font-size-lg + ($h2-font-size-lg / 4);
-$h2-line-height-xl:				$h2-font-size-xl + ($h2-font-size-xl / 4);
+$h2-line-height-sm:				$h2-font-size-sm * 1.25;
+$h2-line-height-md:				$h2-font-size-md * 1.25;
+$h2-line-height-lg:				$h2-font-size-lg * 1.25;
+$h2-line-height-xl:				$h2-font-size-xl * 1.25;
 
 $h2-padding-top:					$h2-font-size * 2;
 $h2-padding-top-xs:					$h2-font-size-xs * 2;
@@ -298,48 +278,48 @@ $h2-text-transform:					none;
 
 // h3 TEXT SIZES & SPACING
 
-$h3-font-size:					$p-font-size;
+$h3-font-size:					$p-font-size * 1.4;
 $h3-font-size-xs:				$h3-font-size;
-$h3-font-size-sm:				$p-font-size-sm;
-$h3-font-size-md:				$p-font-size-md;
-$h3-font-size-lg:				$p-font-size-lg;
-$h3-font-size-xl:				$p-font-size-xl;
+$h3-font-size-sm:				$p-font-size-sm * 1.4;
+$h3-font-size-md:				$p-font-size-md * 1.4;
+$h3-font-size-lg:				$p-font-size-lg * 2;
+$h3-font-size-xl:				$p-font-size-xl * 2;
 
-$h3-line-height:				$h3-font-size + ($h3-font-size / 4);
+$h3-line-height:				$h3-font-size * 1.25;
 $h3-line-height-xs:				$h3-line-height;
-$h3-line-height-sm:				$h3-font-size-sm + ($h3-font-size-sm / 4);
-$h3-line-height-md:				$h3-font-size-md + ($h3-font-size-md / 4);
-$h3-line-height-lg:				$h3-font-size-lg + ($h3-font-size-lg / 4);
-$h3-line-height-xl:				$h3-font-size-xl + ($h2-font-size-xl / 4);
+$h3-line-height-sm:				$h3-font-size-sm * 1.25;
+$h3-line-height-md:				$h3-font-size-md * 1.25;
+$h3-line-height-lg:				$h3-font-size-lg * 1.25;
+$h3-line-height-xl:				$h3-font-size-xl * 1.25;
 
-$h3-padding-top:						$h3-font-size;
+$h3-padding-top:					$h3-font-size;
 $h3-padding-top-xs:					$h3-font-size-xs;
 $h3-padding-top-sm:					$h3-font-size-sm;
 $h3-padding-top-md:					$h3-font-size-md;
 $h3-padding-top-lg:					$h3-font-size-lg;
 $h3-padding-top-xl:					$h3-font-size-xl;
 
-$h3-padding-bottom:					$h3-font-size / 3;
-$h3-padding-bottom-xs:				$h3-font-size-xs / 3;
-$h3-padding-bottom-sm:				$h3-font-size-sm / 3;
-$h3-padding-bottom-md:				$h3-font-size-md / 3;
-$h3-padding-bottom-lg:				$h3-font-size-lg / 3;
-$h3-padding-bottom-xl:				$h3-font-size-xl / 3;
+$h3-padding-bottom:					$h3-font-size * 0.5;
+$h3-padding-bottom-xs:				$h3-font-size-xs * 0.5;
+$h3-padding-bottom-sm:				$h3-font-size-sm * 0.5;
+$h3-padding-bottom-md:				$h3-font-size-md * 0.5;
+$h3-padding-bottom-lg:				$h3-font-size-lg * 0.5;
+$h3-padding-bottom-xl:				$h3-font-size-xl * 0.5;
 
-$h3-font-weight:						bold;
-$h3-font-style:						normal;
+$h3-font-weight:					bold;
+$h3-font-style:						oblique;
 $h3-text-align:						left;
-$h3-text-decoration:					none;
+$h3-text-decoration:				none;
 $h3-text-transform:					none;
 
 // h4 TEXT SIZES & SPACING
 
-$h4-font-size:					$p-font-size;
+$h4-font-size:					$p-font-size * 1.2;
 $h4-font-size-xs:				$h4-font-size;
-$h4-font-size-sm:				$p-font-size-sm;
-$h4-font-size-md:				$p-font-size-md;
-$h4-font-size-lg:				$p-font-size-lg;
-$h4-font-size-xl:				$p-font-size-xl;
+$h4-font-size-sm:				$p-font-size-sm * 1.2;
+$h4-font-size-md:				$p-font-size-md * 1.2;
+$h4-font-size-lg:				$p-font-size-lg * 1.6;
+$h4-font-size-xl:				$p-font-size-xl * 1.6;
 
 $h4-line-height:				$h4-font-size + ($h4-font-size / 4);
 $h4-line-height-xs:			$h4-line-height;
@@ -374,8 +354,8 @@ $h5-font-size:					$p-font-size;
 $h5-font-size-xs:				$h5-font-size;
 $h5-font-size-sm:				$p-font-size-sm;
 $h5-font-size-md:				$p-font-size-md;
-$h5-font-size-lg:				$p-font-size-lg;
-$h5-font-size-xl:				$p-font-size-xl;
+$h5-font-size-lg:				$p-font-size-lg * 1.25;
+$h5-font-size-xl:				$p-font-size-xl * 1.25;
 
 $h5-line-height:				$h5-font-size + ($h5-font-size / 4);
 $h5-line-height-xs:			$h5-line-height;
@@ -399,6 +379,10 @@ $h5-padding-bottom-lg:				$h5-font-size-lg;
 $h5-padding-bottom-xl:				$h5-font-size-xl;
 
 $h5-font-weight:					bold;
+$h5-font-style:						italic;
+$h5-text-align:						left;
+$h5-text-decoration:				none;
+$h5-text-transform:					none;
 
 
 

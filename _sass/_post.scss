@@ -28,6 +28,8 @@ body#post {
 		div.footnotes {
 		
 			&:before {
+				display: inline-block;
+				@extend h5;
 				content: "Footnotes";
 			}
 			
