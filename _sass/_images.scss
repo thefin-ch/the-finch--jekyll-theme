@@ -1,19 +1,35 @@
 // Images, figures, etc
 
 p > img {
-		
-	
+	width: 100% !important;
+	max-width: 100%;
 }
 
 figure.image {
 	
+	padding: 40px 0 20px;
+
 	img {
 		width: 100%;
 		max-width: 100%;
 	}
 	
 	figcaption {
+		margin-top: 5px;
+		padding: 10px 0;
+		border-top: 2px solid $brand;
 		
+		p {
+			font-style: oblique;
+
+			strong {
+				color: $brand;
+			}
+	 	}
 	}
 	
+}
+
+blockquote figure.image {
+	padding: 0 20px 0;
 }

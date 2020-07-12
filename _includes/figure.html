@@ -1,8 +1,8 @@
 <figure class="image">
 	<img src="{{ include.url | prepend: site.image-path | prepend: site.baseurl | prepend: site.url }}" alt="{{ include.alt }}">
 	<figcaption>
-		{% if include.figure %}<strong>Figure {{ include.figure }}:</strong>{% endif %}
+		<p><strong>Image:</strong>
 		{{ include.caption | append: '.' }}
-		{% if include.link %}<a href="{{ include.link }}" title="Open {{ include.linktext }} in new window" target="_blank">{{ include.linktext }}</a>.{% endif %}
+		{% if include.link %}<a href="{{ include.link }}" title="Open {{ include.linktext }} in new window" target="_blank">{{ include.linktext }}</a>.{% endif %}</p>
 	</figcaption>
 </figure>

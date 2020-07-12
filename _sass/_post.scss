@@ -26,18 +26,50 @@ body#post {
 		}
 		
 		div.footnotes {
+
+			padding: 40px 0 90px;
 		
 			&:before {
 				display: inline-block;
 				@extend h5;
 				content: "Footnotes";
 			}
-			
-			ul,ol {
-				
-			}
-			
+
 			p, li {
+
+				max-width: 		60ch;
+			
+				font-family: 	$font-family;
+				font-weight: 	$p-font-weight;
+				font-style: 	normal;
+			
+				color:			$black;
+			
+				@include xs {
+					font-size: 		$p-font-size-xs * 0.8;
+					line-height: 	$p-line-height-xs * 0.8;
+					padding: 		$p-padding-top-xs 0 ($p-padding-bottom-xs * 0.5) 0;
+				}
+				@include sm {
+					font-size: 		$p-font-size-sm * 0.8;
+					line-height: 	$p-line-height-sm * 0.8;
+					padding: 		$p-padding-top-sm 0 ($p-padding-bottom-sm * 0.5) 0;
+				}
+				@include md {
+					font-size: 		$p-font-size-md * 0.8;
+					line-height: 	$p-line-height-md * 0.8;
+					padding: 		$p-padding-top-md 0 ($p-padding-bottom-md * 0.5) 0;
+				}
+				@include lg {
+					font-size: 		$p-font-size-lg * 0.8;
+					line-height: 	$p-line-height-lg * 0.8;
+					padding: 		$p-padding-top-lg 0 ($p-padding-bottom-lg * 0.5) 0;
+				}
+				@include xl {
+					font-size: 		$p-font-size-xl * 0.8;
+					line-height: 	$p-line-height-xl * 0.8;
+					padding: 		$p-padding-top-xl 0 ($p-padding-bottom-xl * 0.5) 0;
+				}
 				
 			}
 			

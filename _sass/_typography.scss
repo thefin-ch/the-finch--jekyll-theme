@@ -1,75 +1,262 @@
 // Typography
 
+// Fallback for all text
+
+* {
+
+	font-family: $font-family;
+
+	font-size: 		$p-font-size;
+	font-weight: 	$p-font-weight;
+	line-height: 	$p-line-height;
+
+	font-kerning: 	normal;
+	letter-spacing: normal;
+
+	color: 			$black;
+
+}
+
+// Main paragraph text
+
+p, li {
+
+	max-width: 		70ch;
+
+	font-family: 	$font-family;
+	font-weight: 	$p-font-weight;
+	font-style: 	normal;
+
+	color:			$black;
+
+	@include xs {
+		font-size: 		$p-font-size-xs;
+		line-height: 	$p-line-height-xs;
+		padding: 		$p-padding-top-xs 0 $p-padding-bottom-xs 0;
+	}
+	@include sm {
+		font-size: 		$p-font-size-sm;
+		line-height: 	$p-line-height-sm;
+		padding: 		$p-padding-top-sm 0 $p-padding-bottom-sm 0;
+	}
+	@include md {
+		font-size: 		$p-font-size-md;
+		line-height: 	$p-line-height-md;
+		padding: 		$p-padding-top-md 0 $p-padding-bottom-md 0;
+	}
+	@include lg {
+		font-size: 		$p-font-size-lg;
+		line-height: 	$p-line-height-lg;
+		padding: 		$p-padding-top-lg 0 $p-padding-bottom-lg 0;
+	}
+	@include xl {
+		font-size: 		$p-font-size-xl;
+		line-height: 	$p-line-height-xl;
+		padding: 		$p-padding-top-xl 0 $p-padding-bottom-xl 0;
+	}
+	
+}
+
 a {
 	
 }
 
 h1 {
-	
+
+	max-width: 60ch;
+
+	font-family: 	$font-family-display;
+	font-weight: 	$h1-font-weight;
+	font-style: 	$h1-font-style;
+	text-decoration: $h1-text-decoration;
+	text-transform: $h1-text-transform;
+
+	color:			$brand;
+
+	@include xs {
+		font-size: 		$h1-font-size-xs;
+		line-height: 	$h1-line-height-xs;
+		padding: 		$h1-padding-top-xs 0 $h1-padding-bottom-xs 0;
+	}
+	@include sm {
+		font-size: 		$h1-font-size-sm;
+		line-height: 	$h1-line-height-sm;
+		padding: 		$h1-padding-top-sm 0 $h1-padding-bottom-sm 0;
+	}
+	@include md {
+		font-size: 		$h1-font-size-md;
+		line-height: 	$h1-line-height-md;
+		padding: 		$h1-padding-top-md 0 $h1-padding-bottom-md 0;
+	}
+	@include lg {
+		font-size: 		$h1-font-size-lg;
+		line-height: 	$h1-line-height-lg;
+		padding: 		$h1-padding-top-lg 0 $h1-padding-bottom-lg 0;
+	}
+	@include xl {
+		font-size: 		$h1-font-size-xl;
+		line-height: 	$h1-line-height-xl;
+		padding: 		$h1-padding-top-xl 0 $h1-padding-bottom-xl 0;
+	}
+
 }
 
 h2 {
-	
+
+	max-width: 60ch;
+
+	font-family: 	$font-family-display;
+	font-weight: 	$h2-font-weight;
+	font-style: 	$h2-font-style;
+	text-decoration: $h2-text-decoration;
+	text-transform: $h2-text-transform;
+
+	color:			$brand;
+
+	@include xs {
+		font-size: 		$h2-font-size-xs;
+		line-height: 	$h2-line-height-xs;
+		padding: 		$h2-padding-top-xs 0 $h2-padding-bottom-xs 0;
+	}
+	@include sm {
+		font-size: 		$h2-font-size-sm;
+		line-height: 	$h2-line-height-sm;
+		padding: 		$h2-padding-top-sm 0 $h2-padding-bottom-sm 0;
+	}
+	@include md {
+		font-size: 		$h2-font-size-md;
+		line-height: 	$h2-line-height-md;
+		padding: 		$h2-padding-top-md 0 $h2-padding-bottom-md 0;
+	}
+	@include lg {
+		font-size: 		$h2-font-size-lg;
+		line-height: 	$h2-line-height-lg;
+		padding: 		$h2-padding-top-lg 0 $h2-padding-bottom-lg 0;
+	}
+	@include xl {
+		font-size: 		$h2-font-size-xl;
+		line-height: 	$h2-line-height-xl;
+		padding: 		$h2-padding-top-xl 0 $h2-padding-bottom-xl 0;
+	}
+
 }
 
 h3 {
 		
-}
+	max-width: 60ch;
 
-h2 + h3 {
-	
+	font-family: 	$font-family-display;
+	font-weight: 	$h3-font-weight;
+	font-style: 	$h3-font-style;
+	text-decoration: $h3-text-decoration;
+	text-transform: $h3-text-transform;
+
+	color:			$brand;
+
 	@include xs {
-		padding-top: 0 !important;
+		font-size: 		$h3-font-size-xs;
+		line-height: 	$h3-line-height-xs;
+		padding: 		$h3-padding-top-xs 0 $h3-padding-bottom-xs 0;
 	}
 	@include sm {
-		padding-top: 0 !important;
+		font-size: 		$h3-font-size-sm;
+		line-height: 	$h3-line-height-sm;
+		padding: 		$h3-padding-top-sm 0 $h3-padding-bottom-sm 0;
 	}
 	@include md {
-		padding-top: 0 !important;
+		font-size: 		$h3-font-size-md;
+		line-height: 	$h3-line-height-md;
+		padding: 		$h3-padding-top-md 0 $h3-padding-bottom-md 0;
 	}
 	@include lg {
-		padding-top: 0 !important;
+		font-size: 		$h3-font-size-lg;
+		line-height: 	$h3-line-height-lg;
+		padding: 		$h3-padding-top-lg 0 $h3-padding-bottom-lg 0;
 	}
 	@include xl {
-		padding-top: 0 !important;
+		font-size: 		$h3-font-size-xl;
+		line-height: 	$h3-line-height-xl;
+		padding: 		$h3-padding-top-xl 0 $h3-padding-bottom-xl 0;
 	}
 
 }
 
 h4 {
-	
-}
 
-h3 + h4 {
-	
-	margin: 0;
-	
+	max-width: 60ch;
+
+	font-family: 	$font-family-display;
+	font-weight: 	$h4-font-weight;
+	font-style: 	$h4-font-style;
+	text-decoration: $h4-text-decoration;
+	text-transform: $h4-text-transform;
+
+	color:			$brand;
+
 	@include xs {
-		padding-top: 0 !important;
+		font-size: 		$h4-font-size-xs;
+		line-height: 	$h4-line-height-xs;
+		padding: 		$h4-padding-top-xs 0 $h4-padding-bottom-xs 0;
 	}
 	@include sm {
-		padding-top: 0 !important;
+		font-size: 		$h4-font-size-sm;
+		line-height: 	$h4-line-height-sm;
+		padding: 		$h4-padding-top-sm 0 $h4-padding-bottom-sm 0;
 	}
 	@include md {
-		padding-top: 0 !important;
+		font-size: 		$h4-font-size-md;
+		line-height: 	$h4-line-height-md;
+		padding: 		$h4-padding-top-md 0 $h4-padding-bottom-md 0;
 	}
 	@include lg {
-		padding-top: 0 !important;
+		font-size: 		$h4-font-size-lg;
+		line-height: 	$h4-line-height-lg;
+		padding: 		$h4-padding-top-lg 0 $h4-padding-bottom-lg 0;
 	}
 	@include xl {
-		padding-top: 0 !important;
+		font-size: 		$h4-font-size-xl;
+		line-height: 	$h4-line-height-xl;
+		padding: 		$h4-padding-top-xl 0 $h4-padding-bottom-xl 0;
 	}
 	
 }
 
 h5 {
-	
-}
 
-p {
-	
-	&.lead {
-			
+	max-width: 60ch;
+
+	font-family: 	$font-family-display;
+	font-weight: 	$h5-font-weight;
+	font-style: 	$h5-font-style;
+	text-decoration: $h5-text-decoration;
+	text-transform: $h5-text-transform;
+
+	color:			$brand;
+
+	@include xs {
+		font-size: 		$h5-font-size-xs;
+		line-height: 	$h5-line-height-xs;
+		padding: 		$h5-padding-top-xs 0 $h5-padding-bottom-xs 0;
+	}
+	@include sm {
+		font-size: 		$h5-font-size-sm;
+		line-height: 	$h5-line-height-sm;
+		padding: 		$h5-padding-top-sm 0 $h5-padding-bottom-sm 0;
+	}
+	@include md {
+		font-size: 		$h5-font-size-md;
+		line-height: 	$h5-line-height-md;
+		padding: 		$h5-padding-top-md 0 $h5-padding-bottom-md 0;
+	}
+	@include lg {
+		font-size: 		$h5-font-size-lg;
+		line-height: 	$h5-line-height-lg;
+		padding: 		$h5-padding-top-lg 0 $h5-padding-bottom-lg 0;
+	}
+	@include xl {
+		font-size: 		$h5-font-size-xl;
+		line-height: 	$h5-line-height-xl;
+		padding: 		$h5-padding-top-xl 0 $h5-padding-bottom-xl 0;
 	}
 	
 }
@@ -110,41 +297,124 @@ li {
 }
 
 ul {
-		
+	list-style: disc;
+	
+	padding-left: 	40px;
 }
 
 ol {
-
+	list-style: decimal;
+	
+	padding-left: 	40px;
 }
 
 blockquote {
-			
 	
-	p {		
-		&:first-child {
+	display: inline-block;
+
+	background: $brand-15;
+	border-top: 5px solid $brand;
+
+	@include xs {
+		padding: 		$p-padding-bottom-xs 0 0;
+		margin: 		0 0 $p-margin-bottom-xs 0;
+	}
+	@include sm {
+		padding: 		$p-padding-bottom-sm 0 0;
+		margin: 		0 0 $p-margin-bottom-sm 0;
+	}
+	@include md {
+		padding: 		$p-padding-bottom-md 0 0;
+		margin: 		0 0 $p-margin-bottom-md 0;
+	}
+	@include lg {
+		padding: 		$p-padding-bottom-lg 0 0;
+		margin: 		0 0 $p-margin-bottom-lg 0;
+	}
+	@include xl {
+		padding: 		$p-padding-bottom-xl 0 0;
+		margin: 		0 0 $p-margin-bottom-xl 0;
+	}
+
+	> * {
+
+		@include xs {
+			padding-left: 		$p-padding-bottom-xs;
+			padding-right: 		$p-padding-bottom-xs;
+		}
+		@include sm {
+			padding-left: 		$p-padding-bottom-sm;
+			padding-right: 		$p-padding-bottom-sm;
+		}
+		@include md {
+			padding-left: 		$p-padding-bottom-md;
+			padding-right: 		$p-padding-bottom-md;
+		}
+		@include lg {
+			padding-left: 		$p-padding-bottom-lg;
+			padding-right: 		$p-padding-bottom-lg;
+		}
+		@include xl {
+			padding-left: 		$p-padding-bottom-xl;
+			padding-right: 		$p-padding-bottom-xl;
+		}
+
+	}
+
+	&.quote {
+
+		&:before {
+			display: 	block;
+			position: 	absolute;
+			content: 	"\201c";
+			color: 		$brand-25;
+			font-family: $font-family-display;
+
+			@include xs {
+				font-size: 70px;
+				padding: 10px 10px;
+			}
+			@include sm {
+				font-size: 180px;
+				padding: 30px 10px;
+			}
+			@include md {
+				font-size: 150px;
+				padding: 30px 10px;
+			}
+			@include lg {
+				font-size: 150px;
+				padding: 30px 10px;
+			}
+			@include xl {
+				font-size: 180px;
+				padding: 45px 10px;
+			}
 
 		}
-		&:last-child {
 
+		p {
+			@include xs {
+				padding-left: 5ch;
+			}
+			@include sm {
+				padding-left: 10ch;
+			}
+			@include md {
+				padding-left: 10ch;
+			}
+			@include lg {
+				padding-left: 10ch;
+			}
+			@include xl {
+				padding-left: 10ch;
+			}
 		}
-	}
-	
-	ul {	
 
-	}
-	
-	ol {		
-
-		
-		&:last-child {
-
+		p:last-child {
+			text-align: 	right;
+			font-weight: 	bold;
 		}
-		
-	}
-	
-	p ~ ol, 
-	p ~ ul {
-		
 	}
 	
 }
