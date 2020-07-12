@@ -6,6 +6,28 @@ body#home {
         display: grid;
         position: relative;
 
+        @include xs {
+            padding:        20px 0 60px 20px;
+            grid-template-columns:      1fr;
+            grid-template-rows:         auto auto auto;
+            grid-template-areas:        "splash"
+                                        "pull"
+                                        "carousel";
+            grid-row-gap:               40px;
+            row-gap:                    40px;
+        }
+
+        @include sm {
+            padding:        20px 0 60px 20px;
+            grid-template-columns:      1fr;
+            grid-template-rows:         auto auto auto;
+            grid-template-areas:        "splash"
+                                        "pull"
+                                        "carousel";
+            grid-row-gap:               60px;
+            row-gap:                    60px;
+        }
+
         @include md {
             padding:        20px 0 60px 20px;
             grid-template-columns:      1fr;
@@ -13,8 +35,8 @@ body#home {
             grid-template-areas:        "splash"
                                         "pull"
                                         "carousel";
-            grid-row-gap:               20px;
-            row-gap:                    20px;
+            grid-row-gap:               60px;
+            row-gap:                    60px;
         }
 
         @include lg {
@@ -24,8 +46,8 @@ body#home {
             grid-template-areas:        "splash"
                                         "pull"
                                         "carousel";
-            grid-row-gap:               20px;
-            row-gap:                    20px;
+            grid-row-gap:               60px;
+            row-gap:                    60px;
         }
 
         @include xl {
@@ -50,6 +72,24 @@ body#home {
         article {
         
             display:    grid;
+
+            @include xs {
+                grid-template-columns: 1fr 40px;
+                grid-template-rows: auto auto;
+                grid-template-areas:    "image gutter"
+                                        "text gutter";
+                grid-column-gap: 0;
+                column-gap: 0;
+            }
+
+            @include sm {
+                grid-template-columns: 1fr 60px;
+                grid-template-rows: auto auto;
+                grid-template-areas:    "image gutter"
+                                        "text gutter";
+                grid-column-gap: 0;
+                column-gap: 0;
+            }
 
             @include md {
                 grid-template-columns: 13fr 1fr;
@@ -117,6 +157,26 @@ body#home {
         article {
         
             display:    grid;
+
+            @include xs {
+                padding: 20px 0 0 20px;
+                grid-template-columns: 1fr 20px;
+                grid-template-rows: auto auto;
+                grid-template-areas:    "pullquote gutter"
+                                        "excerpt gutter";
+                grid-column-gap: 0;
+                column-gap: 0;
+            }
+
+            @include sm {
+                padding: 20px 0 0 20px;
+                grid-template-columns: 1fr 20px;
+                grid-template-rows: auto auto;
+                grid-template-areas:    "pullquote gutter"
+                                        "excerpt gutter";
+                grid-column-gap: 0;
+                column-gap: 0;
+            }
 
             @include md {
                 padding: 20px 0 0 30px;
@@ -188,6 +248,22 @@ body#home {
 
         border-top: 5px solid $brand;
 
+        @include xs {
+            grid-template-columns: 1fr 60px;
+            grid-template-rows: auto;
+            grid-template-areas:    "articles gutter";
+            grid-column-gap: 0;
+            column-gap: 0;
+        }
+
+        @include sm {
+            grid-template-columns: 1fr 60px;
+            grid-template-rows: auto;
+            grid-template-areas:    "articles gutter";
+            grid-column-gap: 0;
+            column-gap: 0;
+        }
+
         @include md {
             grid-template-columns: 10fr 1fr;
             grid-template-rows: auto;
@@ -218,9 +294,30 @@ body#home {
 
             grid-area: articles; 
 
-            padding: 40px 0;
+
+            @include xs {
+                padding: 20px 0;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas:    "article-1" "article-2" "article-3";
+                grid-column-gap: 20px;
+                column-gap: 20px;
+            }
+
+
+            @include sm {
+                padding: 20px 0;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                grid-template-areas:    "article-1 article-2"
+                                        "article-1 article-2";
+                grid-column-gap: 20px;
+                column-gap: 20px;
+            }
+
 
             @include md {
+                padding: 20px 0;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: auto;
                 grid-template-areas:    "article-1 article-2 article-3";
@@ -229,6 +326,7 @@ body#home {
             }
 
             @include lg {
+                padding: 30px 0;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: auto;
                 grid-template-areas:    "article-1 article-2 article-3";
@@ -237,6 +335,7 @@ body#home {
             }
 
             @include xl {
+                padding: 40px 0;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: auto;
                 grid-template-areas:    "article-1 article-2 article-3";
@@ -245,6 +344,13 @@ body#home {
             }
 
             article {
+
+                &:nth-child(4) {
+                    @include md-up {
+                        display: none;
+                    }
+                }
+
                 img {
                     width: 100%;
                 }
