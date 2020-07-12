@@ -58,7 +58,18 @@ p, li {
 }
 
 a {
-	
+	color: 				$brand-50;
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: none;
+	}
+	&:focus {
+		text-decoration: none;
+		background: $brand;
+		color: $white;
+		outline: 3px solid $brand;
+	}
 }
 
 h1 {
@@ -262,18 +273,9 @@ h5 {
 }
 
 sup {
-	font-feature-settings:		$sup-font-feature-settings;
-    text-decoration: none;
-    margin-left: 2px;
-    
-    a {
-	    text-decoration: none;
-	    
-	    &:hover,
-	    &:focus {
-		    text-decoration: none;
-	    }
-    }
+	position: relative; 
+	top: -0.5em; 
+	font-size: 80%;
 }
 	
 strong, b {
@@ -423,28 +425,69 @@ blockquote {
 table {
 
 	width: 100%;
-	     	
+		
+	@include xs {
+		font-size: 		$p-font-size-xs;
+		line-height: 	$p-line-height-xs;
+		margin: 		$p-margin-top-xs 0 ($p-margin-bottom-xs * 2) 0;
+	}
+	@include sm {
+		font-size: 		$p-font-size-sm;
+		line-height: 	$p-line-height-sm;
+		margin: 		$p-margin-top-sm 0 ($p-margin-bottom-sm * 2) 0;
+	}
+	@include md {
+		font-size: 		$p-font-size-md;
+		line-height: 	$p-line-height-md;
+		margin: 		$p-margin-top-md 0 ($p-margin-bottom-md * 2) 0;
+	}
+	@include lg {
+		font-size: 		$p-font-size-lg;
+		line-height: 	$p-line-height-lg;
+		margin: 		$p-margin-top-lg 0 ($p-margin-bottom-lg * 2) 0;
+	}
+	@include xl {
+		font-size: 		$p-font-size-xl;
+		line-height: 	$p-line-height-xl;
+		margin: 		$p-margin-top-xl 0 ($p-margin-bottom-xl * 2) 0;
+	}
+	
+    border-collapse: collapse;
+
+	border-top: 5px solid $brand;
+	border-bottom: 5px solid $brand;
+
 	thead {
-					
+		@extend strong;
+		text-align: left;
+		border-bottom: 1px solid $brand;
 	}
 	
 	tfoot {
-		
+		@extend strong;
+		text-align: left;
+		border-top: 1px solid $black;
 	}
 	
 	tr {
+		border-bottom: 1px solid $gray-200;
 
 		&:last-child {
-
+			border-bottom: none !important;
 		}
 	}
 	
 	th, td {
+    	padding: 5px 10px;
+		vertical-align: top;
+		
+		border-left: 1px solid $gray-200;
 		
 		&:first-child {
-
+			border-left: none;
 		}
 	}
+
 }
 
 a.reversefootnote {
