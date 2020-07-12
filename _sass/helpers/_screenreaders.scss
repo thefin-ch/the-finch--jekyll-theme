@@ -47,43 +47,42 @@
   
   display: block;
   width: 100%;
+  max-width: 100vw !important;
 
   @include xs {
-	  padding-top: 		$p-padding-top-xs / 2 !important;
+	  padding-top: 		$p-padding-bottom-xs / 2 !important;
 	  padding-bottom: 	$p-padding-bottom-xs / 2 !important;
   }
 
   @include sm {
-	  padding-top: 		$p-padding-top-sm / 2 !important;
+	  padding-top: 		$p-padding-bottom-sm / 2 !important;
 	  padding-bottom: 	$p-padding-bottom-sm / 2 !important;
   }
 
   @include md {
-	  padding-top: 		$p-padding-top-md / 2 !important;
+	  padding-top: 		$p-padding-bottom-md / 2 !important;
 	  padding-bottom: 	$p-padding-bottom-md / 2 !important;
   }
 
   @include lg {
-	  padding-top: 		$p-padding-top-lg / 2 !important;
+	  padding-top: 		$p-padding-bottom-lg / 2 !important;
 	  padding-bottom: 	$p-padding-bottom-lg / 2 !important;
   }
 
   @include xl {
-	  padding-top: 		$p-padding-top-xl / 2 !important;
+	  padding-top: 		$p-padding-bottom-xl / 2 !important;
 	  padding-bottom: 	$p-padding-bottom-xl / 2 !important;
   }
   
-  text-align: 			left;
+  text-align: 			center;
   
   &:focus,
   &:hover {
 	  
 	  background: 		$skiplink-background !important;
-	  color:				$skiplink-color !important;
-	  
-	  @include dark-mode {  
-		  background: 		$skiplink-background-dark-mode !important;
-		  color:				$skiplink-color-dark-mode !important;
-	  }
+    color:				$skiplink-color !important;
+    outline: none;
+    text-decoration: underline;
+    
   }
 }

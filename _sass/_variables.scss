@@ -45,47 +45,23 @@ $cyan:    	 						#009fe3 !default;
 $body-background:					$true-white;
 $body-color:						$true-black;
 
-$body-background-dark-mode:			$true-black;
-$body-color-dark-mode:				$white;
-
-$skiplink-color:					$white;
-$skiplink-background:				$blue;
-$skiplink-color-dark-mode:			$black;
-$skiplink-background-dark-mode:		$blue;
-
-$link-color:						$black;
-$link-color-dark-mode:				$white;
-$link-hover-color:					$blue;
-$link-hover-color-dark-mode:		$blue;
+$link-color:						$brand-50;
+$link-hover-color:					$white;
 $link-font-weight:					normal;
-$link-outline:						none;
+$link-outline:						3px solid $link-color ;
 $link-text-decoration:				underline;
 $link-text-decoration-hover:		underline;
 
-$header-background:					$white;
-$header-background-dark-mode:		$black;
-
-$header-color:						$body-color;
-$header-color-dark-mode:			$body-color-dark-mode;
-$header-color-hover:				$link-hover-color;
-$header-color-hover-dark-mode: 		$link-hover-color-dark-mode;
-
-$footer-color:						$body-color;
-$footer-color-dark-mode:			$body-color-dark-mode;
-$footer-color-hover:				$link-hover-color;
-$footer-color-hover-dark-mode: 		$link-hover-color-dark-mode;
+$skiplink-color:					$link-hover-color;
+$skiplink-background:				$brand-50;
 
 $code-color:						$black;
 $code-background:					$gray-200;
-$code-color-dark-mode:				$white;
-$code-background-dark-mode:				$gray-700;
 $code-padding:							0 3px;
 $code-border-radius:					5px;
 $blockquote-code-color:					$black;
-$blockquote-code-color-dark-mode:		$white;
 
 $blockquote-background:					$gray-200;
-$blockquote-background-dark-mode:		$gray-700;
 
 // DEFAULT TEXT SIZES & SPACING
 

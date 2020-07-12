@@ -58,17 +58,17 @@ p, li {
 }
 
 a {
-	color: 				$brand-50;
+	color: 				$link-color;
 
 	&:hover {
 		cursor: pointer;
-		text-decoration: none;
+		text-decoration: $link-text-decoration;
 	}
 	&:focus {
-		text-decoration: none;
-		background: $brand;
-		color: $white;
-		outline: 3px solid $brand;
+		text-decoration: $link-text-decoration;
+		background: $link-color;
+		color: $link-hover-color;
+		outline: $link-outline;
 	}
 }
 

@@ -30,10 +30,4 @@ body {
     color: $body-color;
 	background: $body-background;
 	
-	/* Text and background color for dark mode */
-	@media (prefers-color-scheme: dark) {
-	    color: $body-color-dark-mode;
-	    background: $body-background-dark-mode;
-	}
-	
 }

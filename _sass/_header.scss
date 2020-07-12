@@ -4,166 +4,69 @@ header#site-header {
 	
 	nav {
 		
-		p, li.header-link {
-			
-			&.header-wordmark {
-				
-			}
-			
-			&:before {
-				
-			}
-		}
-		
-		a {
-			
-		}
-		
-		div.header-align-left {
+		display: block;
+		position: relative;
 
-		}
-		
-		div.header-align-right {
-					
-			@include xs {
-								
-				z-index: 50000;
-				
-				margin-top: 		-100vh;
-				transition: 		all 0.75s ease-in;
-							
-				&.open {
-					margin-top: 	0;
-					transition: 		all 0.75s ease-out;
-				}
-	
-			}
-			
-			@include sm {
-									
-				z-index: 50000;
-				
-				margin-top: 		-100vh;
-				transition: 		all 1s;
-							
-				&.open {
-					margin-top: 	0;
-					transition: 		all 1s;
-				}
-	
-			}
-			
-			@include md-up {
-				display: 	inline-block;
-				float: 		right;
-			}
-			
-			ul.header-menu {
-				margin: 	0;
-				padding: 	0;
-			}
-			
-			p, li.header-link {
-				
+		div#header-wordmark {
+
+			@include xl {
+
 				display: block;
-				
-				@include md-up {
-					display: inline-block;
-					
-					margin-left: 25px;
-					margin-right: 0;
-				}
-				
-			}
+				position: sticky;
+				position: -webkit-sticky;
+				bottom: 0;
 			
+			}
+
+			text-align: right;
+
+			a {
+				display: inline-block;
+				position: relative;
+			}
+
+			img {
+
+				margin: 20px;
+
+				@include xl {
+					width: 85%;
+					max-width: 400px;
+				}
+
+			}
+
 		}
 		
-		button#header-menu-toggle {
-			
-			display: 	block;
-			position: 	absolute;
+		div#header-links {
+				
+			display: block;
+			position: relative;
 
-			border: 		none;
-			background: 	none;
-			
-			z-index: 	9999999999;
-			
-			left: 		auto;
-			bottom: 		auto;
-			right: 		0;
-			top:			0;
-			
-			margin: 		0;
-			
-			@include xs {
-				padding:		($header-padding-top-xs + ($header-font-size-xs * 0.2)) $container-padding;
-			}
-			
-			@include sm {
-				padding:		($header-padding-top-sm + ($header-font-size-sm * 0.2)) $container-padding;
-			}
-			
-			font-weight:				$header-wordmark-font-weight;
-			
-			&:hover,
-			&:focus {
-				outline: 			none;
-			
-				svg#header-menu-toggle-image { 
-					rect,
-					&.open rect {
-						fill:			$link-hover-color;
-						
-						@include dark-mode {
-							fill:		$link-hover-color-dark-mode;
-						}
-					}
-				}
-				
-			}
-			
-			@include dark-mode {
-				color: 				$white;
-			}
-			
-			@include md-up {
-				display: none;
-			}
-			
-			svg#header-menu-toggle-image {
+			text-align: right;
 
-				@include xs {
-					width: 			$header-font-size-xs * 0.8;
-					height: 		$header-font-size-xs * 0.8;
-				}
-				@include sm {	
-					width: 			$header-font-size-sm * 0.8;
-					height: 		$header-font-size-sm * 0.8;
-				}
-				
-				rect {
-					fill:			$black;
-					
-					@include dark-mode {
-						fill:		$white;
-					}
-				}
-				
-				
-				
-				&.open rect {
-					fill:			$gray-500;
-					
-					@include dark-mode {
-						fill:		$gray-500;
-					}
+			min-height: 100%;
+			padding: 20px;
+
+			font-family: $font-family-display;
+
+			a {
+				color: $white;
+
+				font-weight: normal;
+				text-decoration: none;
+
+				@include xl {
+					font-size: $p-font-size-xl * 1.25;
 				}
 
+				&:hover {
+					text-decoration: $link-text-decoration;
+				}
 			}
-		
+
 		}
-		
-		@include clearfix;
-	}
 	
+	}
+
 }
