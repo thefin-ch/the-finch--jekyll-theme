@@ -96,6 +96,8 @@ header#site-header {
 
 	display: grid;
 
+	min-height: 100vh;
+
 	grid-area: sidebar;
 
 	background: 		$brand;
@@ -105,6 +107,16 @@ header#site-header {
 main {
 	
 	grid-area: content;
+
+	min-height: 100vh;
+
+}
+
+footer#site-footer {
+
+	grid-area: footer;
+
+	min-height: 30vh;
 
 }
 
