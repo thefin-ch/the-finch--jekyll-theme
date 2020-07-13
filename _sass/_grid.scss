@@ -67,10 +67,10 @@ header#site-header {
 
 
 	@include sm {
-		grid-template-columns:		auto minmax(250px, 100%);
+		grid-template-columns:		auto 250px;
 	}
 	@include md {
-		grid-template-columns:		auto 275px;
+		grid-template-columns:		auto 300px;
 	}
 	@include lg {
 		grid-template-columns:		auto 350px;
