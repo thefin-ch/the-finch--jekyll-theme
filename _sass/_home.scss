@@ -6,57 +6,44 @@ body#home {
         display: grid;
         position: relative;
 
-        padding:                    ($container-padding * 1) 0 0 ($container-padding * 1);
-        grid-template-columns:      1fr;
-        grid-template-rows:         auto auto auto;
-        grid-template-areas:        "splash"
-                                    "pull"
-                                    "carousel";
-        grid-row-gap:               40px;
-        row-gap:                    40px;
-        
-        @include sm {
-			padding: 					($container-padding * 1) 0 0 ($container-padding * 1);
-            grid-template-columns:      1fr;
-            grid-template-rows:         auto auto auto;
-            grid-template-areas:        "splash"
-                                        "pull"
-                                        "carousel";
-            grid-row-gap:               60px;
-            row-gap:                    60px;
-        }
+        padding: 					0 0 0 ($container-padding * 1);
 
-        @include md {
+		@include sm {
+            padding: 					($container-padding * 1) 0 0 ($container-padding * 1);
+            
+            grid-template-columns:		auto;
+
+            grid-row-gap:               ($container-padding * 1);
+            row-gap:                    ($container-padding * 1);
+		}
+		@include md {
 			padding: 					($container-padding * 2) 0 0 ($container-padding * 2);
-            grid-template-columns:      1fr;
-            grid-template-rows:         auto auto auto;
-            grid-template-areas:        "splash"
-                                        "pull"
-                                        "carousel";
-            grid-row-gap:               60px;
-            row-gap:                    60px;
-        }
+            
+			grid-template-columns:		auto;
 
-        @include lg {
+            grid-row-gap:               ($container-padding * 2);
+            row-gap:                    ($container-padding * 2);
+		}
+		@include lg {
 			padding: 					($container-padding * 3) 0 0 ($container-padding * 3);
-            grid-template-columns:      1fr;
-            grid-template-rows:         auto auto auto;
-            grid-template-areas:        "splash"
-                                        "pull"
-                                        "carousel";
-            grid-row-gap:               60px;
-            row-gap:                    60px;
-        }
+			grid-template-columns:		auto;
 
-        @include xl {
+            grid-row-gap:               ($container-padding * 3);
+            row-gap:                    ($container-padding * 3);
+		}
+		@include xl {
 			padding: 					($container-padding * 4) 0 0 ($container-padding * 6);
-            grid-template-columns:      1fr;
+			grid-template-columns:		auto;
+
+            grid-row-gap:               ($container-padding * 4);
+            row-gap:                    ($container-padding * 4);
+        }
+        
+        @include sm-up {
             grid-template-rows:         auto auto auto;
             grid-template-areas:        "splash"
                                         "pull"
                                         "carousel";
-            grid-row-gap:               60px;
-            row-gap:                    60px;
         }
 
     }
@@ -71,45 +58,47 @@ body#home {
         
             display:    grid;
 
-            grid-template-columns: 1fr 20px;
-            grid-template-rows: auto auto;
+            grid-template-columns:  auto 20px;
+            grid-template-rows:     auto auto;
             grid-template-areas:    "image gutter"
                                     "text gutter";
-            grid-column-gap: 0;
-            column-gap: 0;
 
             @include sm {
-                grid-template-columns: 1fr 20px;
-                grid-template-rows: auto auto;
+                grid-template-columns:  450px auto; 
+                grid-template-rows:     auto auto;
                 grid-template-areas:    "image gutter"
                                         "text gutter";
-                grid-column-gap: 0;
-                column-gap: 0;
+
+                grid-row-gap:        $container-padding;
+                row-gap:             $container-padding;
             }
 
             @include md {
-                grid-template-columns: 13fr 1fr;
-                grid-template-rows: auto auto;
+                grid-template-columns:  650px auto;
+                grid-template-rows:     auto auto;
                 grid-template-areas:    "image gutter"
                                         "text gutter";
-                grid-column-gap: 20px;
-                column-gap: 20px;
+                
+                grid-row-gap:        $container-padding;
+                row-gap:             $container-padding;
             }
 
             @include lg {
-                grid-template-columns: 5fr 5fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas: "image text gutter";
-                grid-column-gap: 20px;
-                column-gap: 20px;
+                grid-template-columns:  450px 350px auto;
+                grid-template-rows:     auto;
+                grid-template-areas:    "image text gutter";
+                
+                grid-column-gap:        $container-padding * 2;
+                column-gap:             $container-padding * 2;
             }
 
             @include xl {
-                grid-template-columns: 5fr 3fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas: "image text gutter";
-                grid-column-gap: 40px;
-                column-gap: 40px;
+                grid-template-columns:  630px 425px auto;
+                grid-template-rows:     auto;
+                grid-template-areas:    "image text gutter";
+
+                grid-column-gap:        $container-padding * 3;
+                column-gap:             $container-padding * 3;
             }
 
             img {
@@ -121,6 +110,13 @@ body#home {
 
                 display: block;
                 grid-area: text;
+
+                @include lg {
+                    margin:         $container-padding;
+                }
+                @include xl {
+                    padding-top:    ($container-padding * 2);
+                }
 
                 h1 {
                     @extend h2;
@@ -155,7 +151,7 @@ body#home {
             display:    grid;
 
             padding: ($container-padding * 1) 0 0 ($container-padding * 1);
-            grid-template-columns: 1fr 20px;
+            grid-template-columns: auto 20px;
             grid-template-rows: auto auto;
             grid-template-areas:    "pullquote gutter"
                                     "excerpt gutter";
@@ -163,8 +159,7 @@ body#home {
             column-gap: 0;
 
             @include sm {
-                padding: ($container-padding * 1) 0 0 ($container-padding * 1);
-                grid-template-columns: 1fr 20px;
+                grid-template-columns: 450px auto; 
                 grid-template-rows: auto auto;
                 grid-template-areas:    "pullquote gutter"
                                         "excerpt gutter";
@@ -173,31 +168,31 @@ body#home {
             }
 
             @include md {
-                padding: ($container-padding * 1) 0 0 ($container-padding * 1);
-                grid-template-columns: 13fr 1fr;
+                grid-template-columns: 650px auto;
                 grid-template-rows: auto auto;
                 grid-template-areas:    "pullquote gutter"
                                         "excerpt gutter";
-                grid-column-gap: ($container-padding * 2);
-                column-gap: ($container-padding * 2);
+                
+                grid-row-gap:        $container-padding;
+                row-gap:             $container-padding;
             }
 
             @include lg {
-                padding: ($container-padding * 2) 0 0 ($container-padding * 2);
-                grid-template-columns: 6fr 4fr 1fr;
+                grid-template-columns: 540px 265px auto;
                 grid-template-rows: auto;
                 grid-template-areas:    "pullquote excerpt gutter";
-                grid-column-gap: ($container-padding * 3);
-                column-gap: ($container-padding * 3);
+
+                grid-column-gap:        $container-padding;
+                column-gap:             $container-padding;
             }
 
             @include xl {
-                padding: ($container-padding * 2) 0 0 ($container-padding * 2);
-                grid-template-columns: 6fr 4fr 1fr;
+                grid-template-columns:  670px 335px auto;
                 grid-template-rows: auto;
                 grid-template-areas:    "pullquote excerpt gutter";
-                grid-column-gap: ($container-padding * 4);
-                column-gap: ($container-padding * 4);
+
+                grid-column-gap:        $container-padding * 3;
+                column-gap:             $container-padding * 3;
             }
 
             div.pullquote {
@@ -246,42 +241,31 @@ body#home {
 
         border-top: 5px solid $brand;
 
-        grid-template-columns: 1fr 20px;
+        grid-template-columns:  auto 20px;
         grid-template-rows: auto;
         grid-template-areas:    "articles gutter";
-        grid-column-gap: 0;
-        column-gap: 0;
 
         @include sm {
-            grid-template-columns: 1fr 20px;
+            grid-template-columns:  450px auto; 
             grid-template-rows: auto;
             grid-template-areas:    "articles gutter";
-            grid-column-gap: 0;
-            column-gap: 0;
         }
 
         @include md {
-            grid-template-columns: 10fr 1fr;
-            grid-template-rows: auto;
+            grid-template-columns:  650px auto;
             grid-template-areas:    "articles gutter";
-            grid-column-gap: 20px;
-            column-gap: 20px;
         }
 
         @include lg {
-            grid-template-columns: 13fr 1fr;
+            grid-template-columns: 830px auto;
             grid-template-rows: auto;
             grid-template-areas:    "articles gutter";
-            grid-column-gap: 20px;
-            column-gap: 20px;
         }
 
         @include xl {
-            grid-template-columns: 8fr 1fr;
+            grid-template-columns: 1100px auto;
             grid-template-rows: auto;
             grid-template-areas:    "articles gutter";
-            grid-column-gap: 40px;
-            column-gap: 40px;
         }
 
         div.articles {

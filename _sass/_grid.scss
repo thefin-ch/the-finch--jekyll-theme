@@ -21,25 +21,25 @@ body {
 
 	// Two column layout
 	@include sm {
-		grid-template-columns: 			1fr 2fr;
+		grid-template-columns: 			250px 2fr; // 768px breakpoint
 		grid-template-rows: 			auto;
 		grid-row-gap: 					20px;
 		row-gap: 						20px;
 	}
 	@include md {
-		grid-template-columns: 			2fr 5fr;
+		grid-template-columns: 			300px auto; // 1024px breakpoint
 		grid-template-rows: 			auto;
 		grid-row-gap: 					20px;
 		row-gap: 						20px;
 	}
 	@include lg {
-		grid-template-columns: 			1fr 2fr;
+		grid-template-columns: 			450px auto; // 1400px breakpoint
 		grid-template-rows: 			auto;
 		grid-row-gap: 					30px;
 		row-gap: 						30px;
 	}
 	@include xl {
-		grid-template-columns: 			1fr 2fr;
+		grid-template-columns: 			600px auto;  // 1900px breakpoint
 		grid-template-rows: 			auto;
 		grid-row-gap: 					40px;
 		row-gap: 						40px;
@@ -149,7 +149,9 @@ div#main {
 	}
 
 
-	main {
+	main#content {
+
+		// DEFAULT GRID LAYOUT
 
 		display: 	grid;
 
