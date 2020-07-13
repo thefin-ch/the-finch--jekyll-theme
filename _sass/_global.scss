@@ -10,6 +10,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
 }
 
 html {
@@ -30,4 +31,23 @@ body {
     color: $body-color;
 	background: $body-background;
 	
+}
+
+body {
+	@supports (padding: max(0)) {
+		// iOS 11.0 - 11.1
+		@supports (padding-top: constant(safe-area-inset-top)) {
+			padding-top: unquote('max(0px, constant(safe-area-inset-top))');
+			padding-bottom: unquote('max(0px, constant(safe-area-inset-bottom))');
+			padding-left: unquote('max(0px, constant(safe-area-inset-left))');
+			padding-right: unquote('max(0px, constant(safe-area-inset-right))');
+		}
+		// iOS 11.2+
+		@supports (padding-top: env(safe-area-inset-top)) {
+			padding-top: unquote('max(0px, env(safe-area-inset-top))');
+			padding-bottom: unquote('max(0px, env(safe-area-inset-bottom))');
+			padding-left: unquote('max(0px, env(safe-area-inset-left))');
+			padding-right: unquote('max(0px, env(safe-area-inset-right))');
+		}
+	}
 }

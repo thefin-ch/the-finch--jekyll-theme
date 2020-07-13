@@ -1,58 +1,54 @@
 <header id="site-header">
 
-	<nav role="navigation">
+	<nav role="navigation" id="header-links" class="closed">
 
-		<div id="header-links" class="closed">
+		<ul id="header-links">
 
-			<ul>
+			{% for item in site.data.menu %}
+			<li>
+				<a href="{{ item.url }}" alt= {{ item.alttext }}>{{ item.title }}</a>
+			</li>
+			{% endfor %}
 
-				{% for item in site.data.menu %}
-				<li>
-					<a href="{{ item.url }}" alt= {{ item.alttext }}>{{ item.title }}</a>
-				</li>
-				{% endfor %}
+		</ul>
 
-			</ul>
+	</nav>
 
-		</div>
-
-		<div id="header-wordmark">
-			<a href="{{ site.url }}">
-				<img src="/assets/images/site/wordmark-responsive.svg">
-			</a>
-		</div>
-
-		<button id="header-menu-toggle" onclick="toggleMenu()" aria-label="Toggle Navigation">
+	<button id="header-menu-toggle" onclick="toggleMenu()" aria-label="Toggle Navigation">
 				
-			<svg id="header-menu-toggle-image" class="closed" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 50 50" width="50" height="50">
-			<defs/>
-			<metadata> Produced by OmniGraffle 7.16 
-				<dc:date>2020-07-12 16:45:44 +0000</dc:date>
-			</metadata>
-			<g id="Canvas_1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none" fill-opacity="1">
-				<title>Canvas 1</title>
-				<g id="Canvas_1: menu-symbol">
-				<title>menu-symbol</title>
-				<g id="Circle1">
-					<title>circle-1</title>
-					<circle cx="7" cy="25" r="7.00001118531327" fill="white"/>
-				</g>
-				<g id="Circle2">
-					<title>circle-2</title>
-					<circle cx="25" cy="25" r="7.00001118531327" fill="white"/>
-				</g>
-				<g id="Circle3">
-					<title>circle-3</title>
-					<circle cx="43" cy="25" r="7.00001118531327" fill="white"/>
-				</g>
-				</g>
+		<svg id="header-menu-toggle-image" class="closed" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 50 50" width="50" height="50">
+		<defs/>
+		<metadata> Produced by OmniGraffle 7.16 
+			<dc:date>2020-07-12 16:45:44 +0000</dc:date>
+		</metadata>
+		<g id="Canvas_1" stroke-dasharray="none" stroke="none" stroke-opacity="1" fill="none" fill-opacity="1">
+			<title>Canvas 1</title>
+			<g id="Canvas_1: menu-symbol">
+			<title>menu-symbol</title>
+			<g id="Circle1">
+				<title>circle-1</title>
+				<circle cx="7" cy="25" r="7.00001118531327" fill="white"/>
 			</g>
-			</svg>
+			<g id="Circle2">
+				<title>circle-2</title>
+				<circle cx="25" cy="25" r="7.00001118531327" fill="white"/>
+			</g>
+			<g id="Circle3">
+				<title>circle-3</title>
+				<circle cx="43" cy="25" r="7.00001118531327" fill="white"/>
+			</g>
+			</g>
+		</g>
+		</svg>
 
 		<span class="sr-only">Menu</span>
 
 	</button>
 
-	</nav>
+	<div id="header-wordmark">
+		<a href="{{ site.url }}">
+			<img src="/assets/images/site/wordmark-responsive.svg">
+		</a>
+	</div>
 
 </header>
