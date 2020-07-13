@@ -119,16 +119,6 @@ body#home {
                 h1 {
                     @extend h2;
                     padding-top: 0;
-
-                    a {
-                        text-decoration: none;
-                        color: $brand;
-                        
-                        &:hover {
-                            text-decoration: underline;
-                            color: $brand-50;
-                        }
-                    }
                 }
 
             }
@@ -200,16 +190,6 @@ body#home {
                     @extend h2;
                     font-style: oblique;
                     padding-top: 0;
-                }
-
-                a {
-                    text-decoration: none;
-                    color: $brand;
-                    
-                    &:hover {
-                        text-decoration: underline;
-                        color: $brand-50;
-                    }
                 }
 
             }
@@ -336,16 +316,6 @@ body#home {
                     @extend h3;
                     font-style: normal;
                     padding: 20px 0 20px;
-
-                    a {
-                        text-decoration: none;
-                        color: $brand;
-                        
-                        &:hover {
-                            text-decoration: underline;
-                            color: $brand-50;
-                        }
-                    }
                 }
             }
 

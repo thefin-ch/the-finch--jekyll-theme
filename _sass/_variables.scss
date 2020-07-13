@@ -50,7 +50,14 @@ $link-hover-color:					$white;
 $link-font-weight:					normal;
 $link-outline:						3px solid $link-color ;
 $link-text-decoration:				underline;
-$link-text-decoration-hover:		underline;
+$link-text-decoration-hover:		none;
+
+$link-display-color:						$brand;
+$link-display-hover-color:					$white;
+$link-display-font-weight:					normal;
+$link-display-outline:						3px solid $link-display-color;
+$link-display-text-decoration:				none;
+$link-display-text-decoration-hover:		underline;
 
 $skiplink-color:					$link-hover-color;
 $skiplink-background:				$brand-50;

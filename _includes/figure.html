@@ -2,7 +2,7 @@
 	<img src="{{ include.url | prepend: site.image-path | prepend: site.baseurl | prepend: site.url }}" alt="{{ include.alt }}">
 	<figcaption>
 		<p><strong>Image:</strong>
-		{{ include.caption | append: '.' }}
+		{{ include.caption }}
 		{% if include.link %}<a href="{{ include.link }}" title="Open {{ include.linktext }} in new window" target="_blank">{{ include.linktext }}</a>.{% endif %}</p>
 	</figcaption>
 </figure>

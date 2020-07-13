@@ -1,13 +1,145 @@
 // Posts page styles
 
 body#post {
+
+	main#content {
+
+		display: grid;
+        position: relative;
+
+        padding: 					0 ($container-padding * 1);
+
+		@include sm {
+            padding: 					($container-padding * 1) 0 0 ($container-padding * 1);
+			grid-template-columns:		auto;
+
+            grid-row-gap:               ($container-padding * 1);
+            row-gap:                    ($container-padding * 1);
+		}
+		@include md {
+			padding: 					($container-padding * 2) 0 0 ($container-padding * 2);
+			grid-template-columns:		auto;
+
+            grid-row-gap:               ($container-padding * 2);
+            row-gap:                    ($container-padding * 2);
+		}
+		@include lg {
+			padding: 					($container-padding * 3) 0 0 ($container-padding * 3);
+			grid-template-columns:		auto;
+
+            grid-row-gap:               ($container-padding * 3);
+            row-gap:                    ($container-padding * 3);
+		}
+		@include xl {
+			padding: 					($container-padding * 4) 0 0 ($container-padding * 6);
+			grid-template-columns:		auto;
+
+            grid-row-gap:               ($container-padding * 4);
+            row-gap:                    ($container-padding * 4);
+		}
+		
+	}
+
+	article {
+
+		display: grid;
+
+		grid-template-rows: 	auto auto auto auto auto;
+
+		grid-template-areas: 	"image ."
+								"header ."
+								"meta ."
+								"body ."
+								"footer .";
+
+		@include sm {
+			grid-template-columns:		450px auto;
+			grid-row-gap:               ($container-padding * 1);
+			row-gap:                    ($container-padding * 1);
+		}
+		@include md {
+			grid-template-columns:		650px auto;
+			grid-row-gap:               ($container-padding * 2);
+			row-gap:                    ($container-padding * 2);
+		}
+		@include lg {
+			grid-template-columns:		830px auto;
+			grid-row-gap:               ($container-padding * 3);
+			row-gap:                    ($container-padding * 3);
+		}
+		@include xl {
+			grid-template-columns:		1100px auto;
+			grid-row-gap:               ($container-padding * 4);
+			row-gap:                    ($container-padding * 4);
+		}
+
+		border-top: 5px solid $brand;
+
+	}
+
+	aside.post-image {
+		
+		grid-area:		image;
+
+		img {
+			width: 100%;
+
+			@include sm {
+				max-width:		480px;
+			}
+			@include md {
+				max-width:		600px;
+			}
+			@include lg {
+				max-width:		700px;
+			}
+			@include xl {
+				max-width:		900px;
+			}
+
+		}
+
+	}
 			
 	header.post-title {
+
+		grid-area: header;
 		
+		h1.post-title {
+			display: inline-block;
+			padding: 0;
+		}
 			
+	}
+
+
+
+	aside.post-meta {
+
+		grid-area: meta;
+
+		dl.meta-data {
+			display:	grid;
+
+			grid-template-columns: 	auto minmax(0, 1fr);
+
+			grid-template-areas: 	"by author"
+									"published date"
+									"categories cats";
+
+			grid-column-gap: 		40px;
+			column-gap: 			40px;
+		}
+
+
 	}
 	
 	section.post-body {
+
+		position: relative;
+		display: block;
+
+		grid-area: body;
 		
 		> p:first-of-type {
 

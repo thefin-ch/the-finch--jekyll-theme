@@ -159,19 +159,19 @@ div#main {
 
 		@include sm {
 			padding: 					0 ($container-padding * 1);
-			grid-template-columns:		480px auto;
+			grid-template-columns:		450px auto;
 		}
 		@include md {
 			padding: 					0 ($container-padding * 2);
-			grid-template-columns:		600px auto;
+			grid-template-columns:		650px auto;
 		}
 		@include lg {
 			padding: 					0 ($container-padding * 3);
-			grid-template-columns:		700px auto;
+			grid-template-columns:		830px auto;
 		}
 		@include xl {
 			padding: 					0 ($container-padding * 6);
-			grid-template-columns:		800px auto;
+			grid-template-columns:		1100px auto;
 		}
 
 	}
@@ -180,7 +180,30 @@ div#main {
 
 footer#site-footer {
 
+	// DEFAULT GRID LAYOUT
+
 	grid-area: footer;
+
+	display: 	grid;
+
+	padding: 					0 ($container-padding * 1);
+
+	@include sm {
+		padding: 					0 ($container-padding * 1);
+		grid-template-columns:		480px auto;
+	}
+	@include md {
+		padding: 					0 ($container-padding * 2);
+		grid-template-columns:		600px auto;
+	}
+	@include lg {
+		padding: 					($container-padding * 3) ($container-padding * 3);
+		grid-template-columns:		700px auto;
+	}
+	@include xl {
+		padding: 					($container-padding * 4) ($container-padding * 6);
+		grid-template-columns:		900px auto;
+	}
 
 }
 

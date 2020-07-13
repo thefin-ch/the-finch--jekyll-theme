@@ -22,9 +22,6 @@
 p, li {
 
 	@include md-up {
-		max-width: 		60ch;
-	}
-	@include xl {
 		max-width: 		70ch;
 	}
 
@@ -62,14 +59,23 @@ p, li {
 	
 }
 
+dl {
+	@extend p;
+
+	dt {
+		font-weight: 	bold;
+	}
+}
+
 a {
 	display: 			inline;
 
 	color: 				$link-color;
+	text-decoration: 	$link-text-decoration;
 
 	&:hover {
 		cursor: pointer;
-		text-decoration: $link-text-decoration;
+		text-decoration: $link-text-decoration-hover;
 	}
 	&:focus {
 		text-decoration: $link-text-decoration;
@@ -78,9 +84,43 @@ a {
 		outline: $link-outline;
 	}
 
-	.more {
+	&.more {
+
+		color: 				$link-color;
+
+		text-decoration: 	$link-display-text-decoration;
+
+		&:hover {
+			cursor: pointer;
+			text-decoration: $link-display-text-decoration-hover;
+		}
+		&:focus {
+			text-decoration: $link-display-text-decoration-hover;
+			background: $link-display-color;
+			color: $link-display-hover-color;
+			outline: $link-display-outline;
+		}
 		
 	}
+
+	&.display {
+
+		color: 				$link-display-color;
+
+		text-decoration: 	$link-display-text-decoration;
+
+		&:hover {
+			cursor: pointer;
+			text-decoration: $link-display-text-decoration-hover;
+		}
+		&:focus {
+			text-decoration: $link-display-text-decoration-hover;
+			background: $link-display-color;
+			color: $link-display-hover-color;
+			outline: $link-display-outline;
+		}
+	}
+
 }
 
 h1 {

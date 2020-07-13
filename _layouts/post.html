@@ -3,12 +3,41 @@ layout: default
 ---
 						
 <article id="post-content" class="container">
-	
+
+	<aside class="post-image">
+
+		<figure>
+			<img src="{{ page.image }}" alt="{{ post.image-alt }}">
+			<figcaption>
+				<p><strong>Image:</strong>
+				{{ page.image-alt }}
+				{% if page.image-link %}<a href="{{ page.image-link }}" title="Open {{ page.image-linktext }} in new window" rel="external">{{ page.image-linktext }}</a>.{% endif %}</p>
+			</figcaption>
+		</figure>
+		
+	</aside>
+
 	<header class="post-title">
 
 		<h1 class="post-title">{{ page.title | smartify }}</h1>			
 
 	</header>
+						
+	<aside class="post-meta">
+		
+		<dl class="meta-data">
+			
+			<dt class="post-author">By:</dt> <dd>{{ page.author }}</dd>
+			<dt class="post-date">Published:</dt> <dd>{{ page.date | date: '%-d %B %Y' }}</dd>
+	
+			{% if page.categories %}
+			<dt class="post-categories">Categories:</dt>
+			<dd>{% for categories in page.categories %}{{ categories }}{% if forloop.last==false %}, {% endif %}{% endfor %}</dd>
+			{% endif %}
+		
+		</dl>
+		
+	</aside>
 
 	<section class="post-body">
 		
@@ -17,22 +46,7 @@ layout: default
 	</section>
 	
 	
-	<footer class="post-meta">
-						
-		<aside class="post-meta">
-			
-			<dl class="meta-data">
-				
-				<dt class="post-date">Published:</dt><dd>{{ page.date | date: '%-d %B %Y' }}</dd>
-		
-				{% if page.categories %}
-				<dt class="post-categories">Categories:</dt>
-				<dd>{% for categories in page.categories %}{{ categories }}{% if forloop.last==false %}, {% endif %}{% endfor %}</dd>
-				{% endif %}
-			
-			</dl>
-			
-		</aside>
+	<footer class="post-footer">
 	
 	</footer>
 	
