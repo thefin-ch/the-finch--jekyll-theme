@@ -74,7 +74,7 @@ body#home {
             display:    grid;
 
             @include xs {
-                grid-template-columns: 1fr 40px;
+                grid-template-columns: 1fr 20px;
                 grid-template-rows: auto auto;
                 grid-template-areas:    "image gutter"
                                         "text gutter";
@@ -83,7 +83,7 @@ body#home {
             }
 
             @include sm {
-                grid-template-columns: 1fr 60px;
+                grid-template-columns: 1fr 20px;
                 grid-template-rows: auto auto;
                 grid-template-areas:    "image gutter"
                                         "text gutter";
@@ -180,10 +180,10 @@ body#home {
 
             @include md {
                 padding: 20px 0 0 30px;
-                grid-template-columns: 7fr 2fr 4fr 1fr;
+                grid-template-columns: 13fr 1fr;
                 grid-template-rows: auto auto;
-                grid-template-areas:    "pullquote  pullquote .         gutter"
-                                        ".          excerpt   excerpt   gutter";
+                grid-template-areas:    "pullquote gutter"
+                                        "excerpt gutter";
                 grid-column-gap: 20px;
                 column-gap: 20px;
             }
@@ -249,7 +249,7 @@ body#home {
         border-top: 5px solid $brand;
 
         @include xs {
-            grid-template-columns: 1fr 60px;
+            grid-template-columns: 1fr 20px;
             grid-template-rows: auto;
             grid-template-areas:    "articles gutter";
             grid-column-gap: 0;
@@ -257,7 +257,7 @@ body#home {
         }
 
         @include sm {
-            grid-template-columns: 1fr 60px;
+            grid-template-columns: 1fr 20px;
             grid-template-rows: auto;
             grid-template-areas:    "articles gutter";
             grid-column-gap: 0;
@@ -300,8 +300,8 @@ body#home {
                 grid-template-columns: auto;
                 grid-template-rows: 1fr 1fr 1fr;
                 grid-template-areas:    "article-1" "article-2" "article-3";
-                grid-column-gap: 20px;
-                column-gap: 20px;
+                grid-row-gap: 20px;
+                row-gap: 20px;
             }
 
 
@@ -313,16 +313,21 @@ body#home {
                                         "article-1 article-2";
                 grid-column-gap: 20px;
                 column-gap: 20px;
+                grid-row-gap: 20px;
+                row-gap: 20px;
             }
 
 
             @include md {
                 padding: 20px 0;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: auto;
-                grid-template-areas:    "article-1 article-2 article-3";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                grid-template-areas:    "article-1 article-2"
+                                        "article-1 article-2";
                 grid-column-gap: 20px;
                 column-gap: 20px;
+                grid-row-gap: 20px;
+                row-gap: 20px;
             }
 
             @include lg {
@@ -332,6 +337,8 @@ body#home {
                 grid-template-areas:    "article-1 article-2 article-3";
                 grid-column-gap: 30px;
                 column-gap: 30px;
+                grid-row-gap: 30px;
+                row-gap: 30px;
             }
 
             @include xl {
@@ -341,15 +348,11 @@ body#home {
                 grid-template-areas:    "article-1 article-2 article-3";
                 grid-column-gap: 40px;
                 column-gap: 40px;
+                grid-row-gap: 40px;
+                row-gap: 40px;
             }
 
             article {
-
-                &:nth-child(4) {
-                    @include md-up {
-                        display: none;
-                    }
-                }
 
                 img {
                     width: 100%;

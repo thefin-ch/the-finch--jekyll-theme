@@ -62,7 +62,7 @@
 
 	// Two column layout
 	@include md {
-		grid-template-columns: 2fr 5fr;
+		grid-template-columns: 1fr 2fr;
 		grid-template-rows: auto auto;
 	}
 	@include lg {

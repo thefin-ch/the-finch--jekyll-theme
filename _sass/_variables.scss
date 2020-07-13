@@ -68,9 +68,9 @@ $blockquote-background:					$gray-200;
 $p-font-size:					14px;
 $p-font-size-xs:				$p-font-size;
 $p-font-size-sm:				14px;
-$p-font-size-md:				16px;
-$p-font-size-lg:				17px;
-$p-font-size-xl:				20px;
+$p-font-size-md:				15px;
+$p-font-size-lg:				16px;
+$p-font-size-xl:				17px;
 
 $p-line-height:					$p-font-size  * 1.75;
 $p-line-height-xs:				$p-line-height;
@@ -294,10 +294,10 @@ $h5-text-transform:					none;
 // BREAKPOINT VALUES
 
 $xs: 	 							0;
-$sm: 	 							700px;
-$md: 	 							1000px;
-$lg: 	 							1200px;
-$xl: 	 							1600px;
+$sm: 	 							768px;
+$md: 	 							1024px;
+$lg: 	 							1400px;
+$xl: 	 							1920px;
 
 
 // Grid containers
@@ -305,8 +305,8 @@ $xl: 	 							1600px;
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-xs: 	 					300px;
-$container-sm: 	 					600px;
-$container-md: 	 					750px;
+$container-sm: 	 					500px;
+$container-md: 	 					650px;
 $container-lg: 	 					900px;
 $container-xl: 	 					1200px;
 
