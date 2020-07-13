@@ -377,31 +377,29 @@ blockquote {
 	&.quote {
 
 		&:before {
-			display: 	block;
-			position: 	absolute;
+			display: 	inline;
+			position: 	relative;
 			content: 	"\201c";
 			color: 		$brand-25;
 			font-family: $font-family-display;
 
+			float: left;
+			line-height: 0.75;
+
 			@include xs {
 				font-size: 70px;
-				padding: 10px 10px;
 			}
 			@include sm {
 				font-size: 180px;
-				padding: 30px 10px;
 			}
 			@include md {
 				font-size: 150px;
-				padding: 30px 10px;
 			}
 			@include lg {
 				font-size: 150px;
-				padding: 30px 10px;
 			}
 			@include xl {
 				font-size: 180px;
-				padding: 45px 10px;
 			}
 
 		}
