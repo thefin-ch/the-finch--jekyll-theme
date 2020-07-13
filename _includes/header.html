@@ -4,9 +4,9 @@
 
 		<ul>
 
-			{% for item in site.data.menu %}
+			{% for topic in site.topics %}
 			<li>
-				<a href="{{ item.url }}" alt= {{ item.alttext }}>{{ item.title }}</a>
+				<a href="{{ topic.url }}" alt="See all posts under {{ topic.title }}">{{ topic.title }}</a>
 			</li>
 			{% endfor %}
 
