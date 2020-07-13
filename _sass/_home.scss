@@ -6,19 +6,18 @@ body#home {
         display: grid;
         position: relative;
 
-        @include xs {
-            padding:        20px 0 60px 20px;
-            grid-template-columns:      1fr;
-            grid-template-rows:         auto auto auto;
-            grid-template-areas:        "splash"
-                                        "pull"
-                                        "carousel";
-            grid-row-gap:               40px;
-            row-gap:                    40px;
-        }
+        padding:                    ($container-padding * 1) 0 0 ($container-padding * 1);
+        grid-template-columns:      1fr;
+        grid-template-rows:         auto auto auto;
+        grid-template-areas:        "splash"
+                                    "pull"
+                                    "carousel";
+        grid-row-gap:               40px;
+        row-gap:                    40px;
+        
 
         @include sm {
-            padding:        20px 0 60px 20px;
+			padding: 					($container-padding * 1) 0 0 ($container-padding * 1);
             grid-template-columns:      1fr;
             grid-template-rows:         auto auto auto;
             grid-template-areas:        "splash"
@@ -29,7 +28,7 @@ body#home {
         }
 
         @include md {
-            padding:        20px 0 60px 20px;
+			padding: 					($container-padding * 2) 0 0 ($container-padding * 2);
             grid-template-columns:      1fr;
             grid-template-rows:         auto auto auto;
             grid-template-areas:        "splash"
@@ -40,7 +39,7 @@ body#home {
         }
 
         @include lg {
-            padding:        20px 0 60px 20px;
+			padding: 					($container-padding * 3) 0 0 ($container-padding * 3);
             grid-template-columns:      1fr;
             grid-template-rows:         auto auto auto;
             grid-template-areas:        "splash"
@@ -51,7 +50,7 @@ body#home {
         }
 
         @include xl {
-            padding:        40px 0 80px 40px;
+			padding: 					($container-padding * 4) 0 0 ($container-padding * 6);
             grid-template-columns:      1fr;
             grid-template-rows:         auto auto auto;
             grid-template-areas:        "splash"
