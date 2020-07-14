@@ -2,6 +2,8 @@
 
 header#site-header {
 
+	background: 		$brand;
+
 	@include sm {
 		padding-top: 	$container-padding;
 	}

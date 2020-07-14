@@ -1,0 +1,18 @@
+---
+layout: page
+---
+
+<ul>
+
+
+    {% for post in site.categories[page.category] %}
+
+	<li>
+		<p class="loop-item-date"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %B" }}</time></p>
+		<p class="loop-item-title"><a href="{{ post.url }}" title="Read {{ post.title}}">{{ post.title | smartify }}</a></p>
+	</li>
+
+	{% endfor %}
+
+</ul>
+
