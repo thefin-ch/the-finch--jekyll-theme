@@ -1,9 +1,82 @@
+@font-face {
+	font-family: 'TheFinchSansSerif';
+
+	font-weight: normal;
+	font-style: normal;
+
+	src: 	url('../fonts/sans/DMSans-Regular.ttf') format('truetype');
+
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
+	-webkit-font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
+
+	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
+}
+
+@font-face {
+	font-family: 'TheFinchSansSerif';
+
+	font-weight: normal;
+	font-style: italic;
+
+	src: 	url('../fonts/sans/DMSans-Italic.ttf') format('truetype');
+
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
+	-webkit-font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
+
+	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
+}
+
+@font-face {
+	font-family: 'TheFinchSansSerif';
+
+	font-weight: bold;
+	font-style: normal;
+
+	src: 	url('../fonts/sans/DMSans-Bold.ttf') format('truetype');
+
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
+	-webkit-font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
+
+	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
+}
+
+@font-face {
+	font-family: 'TheFinchSansSerif';
+
+	font-weight: bold;
+	font-style: italic;
+
+	src: 	url('../fonts/sans/DMSans-BoldItalic.ttf') format('truetype');
+
+	   -moz-font-feature-settings:	$font-feature-settings;
+		 -o-font-feature-settings:	$font-feature-settings;
+	-webkit-font-feature-settings:	$font-feature-settings;
+			font-feature-settings:	$font-feature-settings;
+
+	font-display: fallback;
+	font-kerning: 			auto;
+	letter-spacing: 		normal;
+}
+
+
 // --------------------------
 // REGULAR FONTS (Noto Serif)
 // --------------------------
 
 @font-face {
-	font-family: 'TheFinch';
+	font-family: 'TheFinchSerif';
 
 	font-weight: normal;
 	font-style: normal;
@@ -21,7 +94,7 @@
 }
 
 @font-face {
-	font-family: 'TheFinch';
+	font-family: 'TheFinchSerif';
 
 	font-weight: normal;
 	font-style: italic;
@@ -39,7 +112,7 @@
 }
 
 @font-face {
-	font-family: 'TheFinch';
+	font-family: 'TheFinchSerif';
 
 	font-weight: bold;
 	font-style: normal;
@@ -57,7 +130,7 @@
 }
 
 @font-face {
-	font-family: 'TheFinch';
+	font-family: 'TheFinchSerif';
 
 	font-weight: bold;
 	font-style: italic;
