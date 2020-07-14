@@ -47,7 +47,11 @@
 
 	<div id="header-wordmark">
 		<a href="{{ site.url }}">
+			{% if page.layout == "four-oh-four" %}
+			<img src="/assets/images/site/wordmark-four-oh-four-responsive.svg">
+			{% else %}
 			<img src="/assets/images/site/wordmark-responsive.svg">
+			{% endif %}
 		</a>
 	</div>
 
