@@ -1,0 +1,12 @@
+// Mixins
+
+// Backgrounds
+
+@mixin border {
+
+	border-top: 10px solid $orange;
+	border-image-slice: 1;
+	border-top-width: 5px;
+	border-image-source: linear-gradient(to right, $orange, $magenta, $purple1)
+
+}

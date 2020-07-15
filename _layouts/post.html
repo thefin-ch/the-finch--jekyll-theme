@@ -19,6 +19,10 @@ layout: default
 
 	<header class="post-title">
 
+		{% if page.categories %}
+			<p class="categories">{% for categories in page.categories %}{{ categories | replace: "-", " " }}{% endfor %}</p>
+		{% endif %}
+
 		<h1 class="post-title">{{ page.title | smartify }}</h1>			
 
 	</header>
@@ -30,10 +34,7 @@ layout: default
 			<dt class="post-author">By:</dt> <dd>{{ page.author }}</dd>
 			<dt class="post-date">Published:</dt> <dd>{{ page.date | date: '%-d %B %Y' }}</dd>
 	
-			{% if page.categories %}
-			<dt class="post-categories">Categories:</dt>
-			<dd>{% for categories in page.categories %}{{ categories }}{% if forloop.last==false %}, {% endif %}{% endfor %}</dd>
-			{% endif %}
+			
 		
 		</dl>
 		

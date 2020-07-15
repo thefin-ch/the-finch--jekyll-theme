@@ -22,7 +22,7 @@
 p, li {
 
 	@include md-up {
-		max-width: 		70ch;
+		max-width: 		60ch;
 	}
 
 	font-family: 	$font-family;
@@ -72,6 +72,7 @@ a {
 
 	color: 				$link-color;
 	text-decoration: 	$link-text-decoration;
+	font-weight: 		$link-font-weight;
 
 	&:hover {
 		cursor: pointer;
@@ -365,8 +366,8 @@ blockquote {
 	
 	display: inline-block;
 
-	background: $brand-15;
-	border-top: 5px solid $brand;
+	background: $brand-25;
+	border-top: 5px solid $border-color;
 
 	@include xs {
 		padding: 		$p-padding-bottom-xs 0 0;
@@ -420,11 +421,12 @@ blockquote {
 			display: 	inline;
 			position: 	relative;
 			content: 	"\201c";
-			color: 		$brand-25;
+			color: 		$brand-50;
 			font-family: $font-family-display;
 
 			float: left;
 			line-height: 0.75;
+			padding-left: 10px;
 
 			@include xs {
 				font-size: 70px;
@@ -449,7 +451,7 @@ blockquote {
 				padding-left: 5ch;
 			}
 			@include sm {
-				padding-left: 10ch;
+				padding-left: 5ch;
 			}
 			@include md {
 				padding-left: 10ch;

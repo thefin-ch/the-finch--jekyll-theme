@@ -10,7 +10,7 @@
 
 // stylelint-disable
 $true-white:   	 					#ffffff !default;
-$white:   	 						#fafafa !default;
+$white:   	 						rgb(236, 235, 214) !default;
 $gray-100:	 						#f8f9fa !default;
 $gray-200:	 						#e9ecef !default;
 $gray-300:	 						#dee2e6 !default;
@@ -20,24 +20,41 @@ $gray-600: 	 						#868e96 !default;
 $gray-700: 	 						#495057 !default;
 $gray-800: 	 						#343a40 !default;
 $gray-900: 	 						#212529 !default;
-$black:    	 						#1d1d1d !default;
+$black:    	 						rgb(22,22,29) !default;
 $true-black: 	 					#000000 !default;
 
-$brand:                             #010135 !default;
-$brand-75:                          lighten(#010135, 25%) !default;
-$brand-50:                          lighten(#010135, 50%) !default;
-$brand-25:                          lighten(#010135, 75%) !default;
-$brand-15:                          lighten(#010135, 85%) !default;
 
+$blue:    	 						rgb(63,95,181) !default;
+$purple1:                           rgb(138,98,206) !default;
+$purple2:                           rgb(84,19,197) !default;
+$purple3:                           rgb(67,18,155) !default;
+$purple4:                           rgb(52,19,112) !default;
+$purple5:                           rgb(37,20,69) !default;
+$magenta:   	 					rgb(255,0,72) !default;
+$green1:                            rgb(65, 187, 156) !default;
+$green2:                            rgb(18, 112, 147) !default;
+$orange:                            rgb(255,159,0) !default;
 
-$blue:    	 						#007aff !default;
-$purple:  	 						#c643fc !default;
-$magenta:   	 					#e6007e !default;
-$red:     	 						#030303 !default;
-$orange:  	 						#ff5e3a !default;
-$yellow:  	 						#ffed00 !default;
-$green:   	 						#0bd318 !default;
-$cyan:    	 						#009fe3 !default;
+@supports (color: color(display-p3 1 1 1 / 1)) {
+	$white: color(display-p3 0.9254 0.9215 0.8392 / 1);
+    $black: color(display-p3 0.0862 0.0862 0.1137 / 1);
+    $pink: color(display-p3 1 0 0.2823 / 1);
+    $blue: color(display-p3 0.2470 0.3725 0.7098 / 1);
+    $purple1: color(display-p3 0.5411 0.3843 0.8078 / 1);
+    $purple2: color(display-p3 0.3294 0.0745 0.7725 / 1);
+    $purple3: color(display-p3 0.2627 0.0705 0.6078 / 1);
+    $purple4: color(display-p3 0.2039 0.0745 0.4392 / 1);
+    $purple5: color(display-p3 0.1450 0.0784 0.2705 / 1);
+    $orange: color(display-p3 1 0.6235 0 / 1);
+}
+
+$brand:                             hsl(240,60,12) !default;
+$brand-75:                          lighten($brand, 25%) !default;
+$brand-50:                          lighten($brand, 50%) !default;
+$brand-25:                          lighten($brand, 75%) !default;
+$brand-15:                          lighten($brand, 85%) !default;
+
+$border-color:                      $brand;
 
 
 // Default colors
@@ -47,9 +64,9 @@ $body-background:					$brand;
 $page-background:					$true-white;
 $body-color:						$true-black;
 
-$link-color:						$brand-50;
+$link-color:						$brand-75;
 $link-hover-color:					$white;
-$link-font-weight:					normal;
+$link-font-weight:					bold;
 $link-outline:						3px solid $link-color ;
 $link-text-decoration:				underline;
 $link-text-decoration-hover:		none;
@@ -221,7 +238,7 @@ $h3-padding-bottom-lg:				$h3-font-size-lg * 0.5;
 $h3-padding-bottom-xl:				$h3-font-size-xl * 0.5;
 
 $h3-font-weight:					bold;
-$h3-font-style:						oblique;
+$h3-font-style:						normal;
 $h3-text-align:						left;
 $h3-text-decoration:				none;
 $h3-text-transform:					none;

@@ -151,6 +151,8 @@ div#main {
 
 		display: 	grid;
 
+		min-height: 70vh;
+
 		padding: 					0 ($container-padding * 1);
 
 		@include sm {

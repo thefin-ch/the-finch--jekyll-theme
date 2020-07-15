@@ -1,0 +1,11 @@
+// Mixins
+
+// Backgrounds
+
+@mixin text-background {
+
+	background: -webkit-linear-gradient($orange, $magenta, $purple1);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}

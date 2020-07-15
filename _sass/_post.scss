@@ -73,7 +73,7 @@ body#post {
 			row-gap:                    ($container-padding * 4);
 		}
 
-		border-top: 5px solid $brand;
+		@include border;
 
 	}
 
@@ -105,9 +105,26 @@ body#post {
 
 		grid-area: header;
 		
+		display: grid;
+
+		grid-template-areas: 	"category"
+								"title";
+
 		h1.post-title {
-			display: inline-block;
-			padding: 0;
+
+			grid-area: 			title;
+			display: 			inline-block;
+
+			padding: 			0;
+
+		}
+
+		p.categories {
+
+			text-transform: 	uppercase;
+			font-weight: 		bold;
+			font-style: 		oblique;
+
 		}
 			
 	}
@@ -124,8 +141,7 @@ body#post {
 			grid-template-columns: 	auto minmax(0, 1fr);
 
 			grid-template-areas: 	"by author"
-									"published date"
-									"categories cats";
+									"published date";
 
 			grid-column-gap: 		40px;
 			column-gap: 			40px;
