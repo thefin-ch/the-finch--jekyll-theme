@@ -46,7 +46,7 @@ $display-p3-purple4: color(display-p3 0.2039 0.0745 0.4392 / 1);
 $display-p3-purple5: color(display-p3 0.1450 0.0784 0.2705 / 1);
 $display-p3-orange: color(display-p3 1 0.6235 0 / 1);
 
-$brand:                             hsl(240,60,12) !default;
+$brand:                             hsl(230,65,10) !default;
 $brand-75:                          lighten($brand, 25%) !default;
 $brand-50:                          lighten($brand, 50%) !default;
 $brand-25:                          lighten($brand, 75%) !default;
