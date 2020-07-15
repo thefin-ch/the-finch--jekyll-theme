@@ -52,6 +52,8 @@ body#home {
 
 		@include border;
 
+        padding: ($container-padding * 2) 0 0;
+
         article {
         
             display:    grid;
@@ -103,6 +105,7 @@ body#home {
                 grid-area: image;
 
                 width: 100%;
+
             }
             div.text {
 
