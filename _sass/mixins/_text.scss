@@ -4,8 +4,23 @@
 
 @mixin text-background {
 
-	background: -webkit-linear-gradient($orange, $magenta, $purple1);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	@supports not (-webkit-background-clip: text){
+
+		color: $purple1;
+
+		@supports (color: color(display-p3 1 1 1)) {
+			color: -webkit-linear-gradient($display-p3-orange, $display-p3-magenta, $display-p3-purple1);
+		}
+
+	}
+	@supports (-webkit-background-clip: text){
+
+		background: -webkit-linear-gradient($orange, $magenta, $purple1);
+		background: -webkit-linear-gradient($display-p3-orange, $display-p3-magenta, $display-p3-purple1);
+		
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	
+	}
 
 }
