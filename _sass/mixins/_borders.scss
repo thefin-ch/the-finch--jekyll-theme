@@ -9,9 +9,5 @@
 	border-top-width: 5px;
 	border-color: $orange;
 	border-image-source: linear-gradient(to right, $orange, $magenta, $purple1);
-	@supports (color: color(display-p3 1 1 1)) {
-		border-color: $display-p3-orange;
-		border-image-source: linear-gradient(to right, $display-p3-orange, $display-p3-magenta, $display-p3-purple1)
-	}
 
 }

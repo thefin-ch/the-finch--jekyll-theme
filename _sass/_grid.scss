@@ -1,207 +1,59 @@
 // Grid containers
-html,
-body {
-	@include sm-up {
-		overflow: hidden;
-	}
+.wrapper {
+    background: $page-background;
+  }
+  
+.container {
+    display: block;
+    position: relative;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    float: none;
+
+@include sm {
+    max-width: $container-sm !important;
 }
 
-.wrapper {
+@include md {
+    max-width: $container-md !important;
+}
 
-	position: 	relative;
-	display: 	grid;
+@include lg {
+    max-width: $container-lg !important;
+}
 
-	// Single column layout
-	grid-template-columns: 			auto;
-	grid-template-rows: 			auto auto;
-	grid-template-areas: 			"sidebar"
-									"content";
-	grid-row-gap: 					20px;
-	row-gap: 						20px;
+@include xl {
+    max-width: $container-xl !important;
+}
 
-	// Two column layout
-	@include sm {
-		grid-template-columns: 			250px 2fr; // 768px breakpoint
-		grid-template-rows: 			auto;
-		grid-row-gap: 					20px;
-		row-gap: 						20px;
-	}
-	@include md {
-		grid-template-columns: 			300px auto; // 1024px breakpoint
-		grid-template-rows: 			auto;
-		grid-row-gap: 					20px;
-		row-gap: 						20px;
-	}
-	@include lg {
-		grid-template-columns: 			450px auto; // 1400px breakpoint
-		grid-template-rows: 			auto;
-		grid-row-gap: 					30px;
-		row-gap: 						30px;
-	}
-	@include xl {
-		grid-template-columns: 			600px auto;  // 1900px breakpoint
-		grid-template-rows: 			auto;
-		grid-row-gap: 					40px;
-		row-gap: 						40px;
-	}
+&::after {
+    content: "";
+    clear: both;
+    display: table;
 
-	@include sm-up {
-		grid-template-areas: 		"sidebar content";
-	}
-
+    @supports (display: grid) {
+    content: none;
+    clear: inherit;
+    display: none;
+    }
+}
 }
 
 header#site-header {
 
-	display: grid;
-
-	grid-area: sidebar;
-
-	overflow: hidden;
-
-	@include sm-up {
-		height: 100vh;
-	}
-
-
-
-	@include sm {
-		grid-template-columns:		auto 250px;
-	}
-	@include md {
-		grid-template-columns:		auto 300px;
-	}
-	@include lg {
-		grid-template-columns:		auto 350px;
-	}
-	@include xl {
-		grid-template-columns:		auto 400px;
-	}
-
-	grid-template-rows: 		auto auto;
-	grid-template-columns: 		auto auto;
-	grid-template-areas: 		"logo button"
-								"links links";
-
-	@include sm-up {
-		grid-template-rows: 		auto auto;
-		grid-template-areas:		". links"
-									". logo";
-	}
-
-	nav {
-		grid-area: 		links;
-
-		justify-self: flex-start;
-
-		@include sm-up {
-			justify-self: 	flex-end;
-			align-self: 	flex-start;
-		}
-	}
-	div#header-wordmark {
-		grid-area: 		logo;
-
-		@include sm-up {
-			justify-self: 	flex-end;
-			align-self: 	flex-end;
-		}
-	}
-	button#header-menu-toggle {
-		grid-area: 			button;
-
-		justify-self: 	flex-end;
-
-	}
-
-	nav,
-	div#header-wordmark {
-		
-		padding: 0 10px;
-
-		@include sm {
-			padding:	30px 15px 0 15px;
-		}
-		@include md {
-			padding:	30px 20px 10px 20px;
-		}
-		@include lg {
-			padding:	30px 30px 20px 20px;
-		}
-		@include xl {
-			padding:	30px 30px 20px 20px;
-		}
-	}
-
 }
 
 div#main {
-	
-	grid-area: content;
-	
-	@include sm-up {
-		height: 100vh;
-		overflow-y: 	scroll;
-	}
-
-
-	main#content {
-
-		// DEFAULT GRID LAYOUT
-
-		display: 	grid;
-
-		min-height: 70vh;
-
-		padding: 					0 ($container-padding * 1);
-
-		@include sm {
-			padding: 					0 ($container-padding * 1);
-			grid-template-columns:		450px auto;
-		}
-		@include md {
-			padding: 					0 ($container-padding * 2);
-			grid-template-columns:		650px auto;
-		}
-		@include lg {
-			padding: 					0 ($container-padding * 3);
-			grid-template-columns:		830px auto;
-		}
-		@include xl {
-			padding: 					0 ($container-padding * 6);
-			grid-template-columns:		1100px auto;
-		}
-
-	}
 
 }
 
 footer#site-footer {
 
-	// DEFAULT GRID LAYOUT
 
-	grid-area: footer;
-
-	display: 	grid;
-
-	padding: 					0 ($container-padding * 1);
-
-	@include sm {
-		padding: 					0 ($container-padding * 1);
-		grid-template-columns:		480px auto;
-	}
-	@include md {
-		padding: 					0 ($container-padding * 2);
-		grid-template-columns:		600px auto;
-	}
-	@include lg {
-		padding: 					($container-padding * 3) ($container-padding * 3);
-		grid-template-columns:		700px auto;
-	}
-	@include xl {
-		padding: 					($container-padding * 4) ($container-padding * 6);
-		grid-template-columns:		900px auto;
-	}
 
 }
 

@@ -80,7 +80,7 @@ a {
 	}
 	&:focus {
 		text-decoration: $link-text-decoration;
-		background: $link-color;
+		background: $link-focus-background;
 		color: $link-hover-color;
 		outline: $link-outline;
 	}

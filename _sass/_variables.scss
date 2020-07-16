@@ -9,41 +9,32 @@
 //
 
 // stylelint-disable
-$true-white:   	 					#ffffff !default;
-$white:   	 						#f2f2f2 !default;
-$gray-100:	 						#f8f9fa !default;
-$gray-200:	 						#e9ecef !default;
-$gray-300:	 						#dee2e6 !default;
-$gray-400:	 						#ced4da !default;
-$gray-500: 	 						#adb5bd !default;
-$gray-600: 	 						#868e96 !default;
-$gray-700: 	 						#495057 !default;
-$gray-800: 	 						#343a40 !default;
-$gray-900: 	 						#212529 !default;
-$black:    	 						rgb(22,22,29) !default;
-$true-black: 	 					#000000 !default;
+$true-white:   	 					hsl(0, 0%, 100%) !default;
+$white:   	 						hsl(0, 0%, 95%) !default;
+$gray-100:	 						hsl(210, 17%, 98%) !default;
+$gray-200:	 						hsl(210, 16%, 93%) !default;
+$gray-300:	 						hsl(210, 14%, 89%) !default;
+$gray-400:	 						hsl(210, 14%, 83%) !default;
+$gray-500: 	 						hsl(210, 11%, 71%) !default;
+$gray-600: 	 						hsl(210, 7%, 56%) !default;
+$gray-700: 	 						hsl(210, 9%, 31%) !default;
+$gray-800: 	 						hsl(210, 10%, 23%) !default;
+$gray-900: 	 						hsl(210, 11%, 15%) !default;
+$black:    	 						hsl(240, 14%, 10%) !default;
+$true-black: 	 					hsl(0, 0%, 0%) !default;
 
 
-$blue:    	 						rgb(63,95,181) !default;
-$purple1:                           rgb(138,98,206) !default;
-$purple2:                           rgb(84,19,197) !default;
-$purple3:                           rgb(67,18,155) !default;
-$purple4:                           rgb(52,19,112) !default;
-$purple5:                           rgb(37,20,69) !default;
-$magenta:   	 					rgb(255,0,72) !default;
-$green1:                            rgb(65, 187, 156) !default;
-$green2:                            rgb(18, 112, 147) !default;
-$orange:                            rgb(255,159,0) !default;
-
-$display-p3-black: color(display-p3 0.0862 0.0862 0.1137 / 1);
-$display-p3-magenta: color(display-p3 1 0 0.2823 / 1);
-$display-p3-blue: color(display-p3 0.2470 0.3725 0.7098 / 1);
-$display-p3-purple1: color(display-p3 0.5411 0.3843 0.8078 / 1);
-$display-p3-purple2: color(display-p3 0.3294 0.0745 0.7725 / 1);
-$display-p3-purple3: color(display-p3 0.2627 0.0705 0.6078 / 1);
-$display-p3-purple4: color(display-p3 0.2039 0.0745 0.4392 / 1);
-$display-p3-purple5: color(display-p3 0.1450 0.0784 0.2705 / 1);
-$display-p3-orange: color(display-p3 1 0.6235 0 / 1);
+$blue:    	 						hsl(224, 48%, 48%) !default;
+$purple:                            hsl(262, 52%, 60%) !default;
+$purple1:                           hsl(262, 52%, 50%) !default;
+$purple2:                           hsl(262, 82%, 40%) !default;
+$purple3:                           hsl(261, 79%, 30%) !default;
+$purple4:                           hsl(261, 71%, 14%) !default;
+$purple5:                           hsl(261, 71%, 10%) !default;
+$magenta:   	 					hsl(343, 100%, 50%) !default;
+$green1:                            hsl(165, 48%, 49%) !default;
+$green2:                            hsl(196, 78%, 32%) !default;
+$orange:                            hsl(37, 100%, 50%) !default;
 
 $brand:                             hsl(230,65,10) !default;
 $brand-75:                          lighten($brand, 25%) !default;
@@ -60,15 +51,19 @@ $body-background:					$brand;
 $page-background:					$true-white;
 $body-color:						$true-black;
 
-$link-color:						$brand-75;
+$link-color:						$brand;
 $link-hover-color:					$white;
+$link-hover-background:				$white;
+$link-focus-background:				$magenta;
 $link-font-weight:					bold;
-$link-outline:						3px solid $link-color ;
+$link-outline:						3px solid $magenta;
 $link-text-decoration:				underline;
 $link-text-decoration-hover:		none;
 
 $link-display-color:						$brand;
 $link-display-hover-color:					$white;
+$link-display-focus-color:					$white;
+$link-display-focus-background:				$magenta;
 $link-display-font-weight:					normal;
 $link-display-outline:						3px solid $link-display-color;
 $link-display-text-decoration:				none;
@@ -87,11 +82,11 @@ $blockquote-background:					$gray-200;
 
 // DEFAULT TEXT SIZES & SPACING
 
-$p-font-size:					14px;
+$p-font-size:					16px;
 $p-font-size-xs:				$p-font-size;
-$p-font-size-sm:				14px;
-$p-font-size-md:				15px;
-$p-font-size-lg:				16px;
+$p-font-size-sm:				16px;
+$p-font-size-md:				16px;
+$p-font-size-lg:				17px;
 $p-font-size-xl:				17px;
 
 $p-line-height:					$p-font-size  * 1.75;

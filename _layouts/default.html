@@ -6,8 +6,6 @@
   <body id="{{ page.layout }}"{% if page.theme %} class="theme-{{ page.theme }}"{% endif %}>
 
     {% include skiplink.html %}
-
-    <div class="wrapper">
       
       {% include header.html %}
 
@@ -17,12 +15,9 @@
         {{ content }}
         </main>
 
-        {% include footer.html %}
-
       </main>
 
-
-    </div>
+      {% include footer.html %}
 
     {% include breakpoints.html %}
 
