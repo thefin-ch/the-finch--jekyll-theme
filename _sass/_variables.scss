@@ -10,7 +10,7 @@
 
 // stylelint-disable
 $true-white:   	 					#ffffff !default;
-$white:   	 						rgb(236, 235, 214) !default;
+$white:   	 						#f2f2f2 !default;
 $gray-100:	 						#f8f9fa !default;
 $gray-200:	 						#e9ecef !default;
 $gray-300:	 						#dee2e6 !default;
@@ -35,7 +35,6 @@ $green1:                            rgb(65, 187, 156) !default;
 $green2:                            rgb(18, 112, 147) !default;
 $orange:                            rgb(255,159,0) !default;
 
-$display-p3-white: color(display-p3 0.9254 0.9215 0.8392 / 1);
 $display-p3-black: color(display-p3 0.0862 0.0862 0.1137 / 1);
 $display-p3-magenta: color(display-p3 1 0 0.2823 / 1);
 $display-p3-blue: color(display-p3 0.2470 0.3725 0.7098 / 1);
