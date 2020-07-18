@@ -55,6 +55,7 @@ layout: default
         </div>
 
         <div class="text">
+			<p class="categories">{% for categories in post.categories %}<span class="category">{{ categories | replace: "-", " " }}</span>{% endfor %}</p>
             <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
             <p>{{ post.excerpt }}</p>    
             <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
@@ -62,5 +63,24 @@ layout: default
 
     </article>
     {% endfor %}
+
+</section>
+
+
+
+<section id="blogroll">
+
+    {% for post in site.posts limit: 5 offset: 5 %}
+    <article>
+        <p class="categories">{% for categories in post.categories %}<span class="category">{{ categories | replace: "-", " " }}</span>{% endfor %}</p>
+        <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+        <p>{{ post.excerpt }}</p>    
+        <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
+    </article>
+    {% endfor %}
+
+    <p class="all-posts">
+        <a href="">All posts</a>
+    </p>
 
 </section>

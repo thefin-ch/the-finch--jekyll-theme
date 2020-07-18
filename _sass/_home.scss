@@ -1,11 +1,24 @@
 // Home page styles
 
 body#home {
+
+	p.categories > span.category {
+		text-transform: 	uppercase;
+		font-weight: 		bold;
+		background: 	$brand;
+		color: 			$white;
+		padding: 5px 10px;
+	}
     
     section#splash {
 
-		padding: 0 0 ($container-padding * 2) 0;
-        
+		@include xs {
+			margin-bottom: $container-padding;
+		}
+		@include sm-up {
+			margin-bottom: $container-padding * 2;
+		}
+
         article {
 
 			position: relative;
@@ -18,7 +31,7 @@ body#home {
 			background-size: cover;
 
 			@include xs {
-				padding: ($container-padding * 15) 0 0;
+				padding: ($container-padding * 15) $container-padding $container-padding;
 			}
 
 			@include sm {
@@ -34,19 +47,18 @@ body#home {
 				display: 	flex;
 				position: 	relative;
 
+				@include xs {
+					max-width: 100%;
+				}
+				@include sm-up {
+					max-width: 60%;
+				}
+
 				align-self:     flex-start;
 				flex-direction: column;
 
 				background: 	$white;
 				padding: 		$container-padding;
-
-				p.categories > span.category {
-					text-transform: 	uppercase;
-					font-weight: 		bold;
-					background: 	$brand;
-					color: 			$white;
-					padding: 5px 10px;
-				}
 
                 h1 {
                     padding:    0;
@@ -76,7 +88,12 @@ body#home {
 
     section#pull {
 
-		padding: 0 0 ($container-padding * 2) 0;
+		@include xs {
+			margin-bottom: $container-padding;
+		}
+		@include sm-up {
+			margin-bottom: $container-padding * 2;
+		}
 
 		article {
 			
@@ -159,7 +176,13 @@ body#home {
 			flex-direction: column;
 
 			background: 	$white;	
-			margin-bottom: $container-padding * 2;
+
+			@include xs {
+				margin-bottom: $container-padding;
+			}
+			@include sm-up {
+				margin-bottom: $container-padding * 2;
+			}
 
 			@include xs {
 				width: 100%;
@@ -170,7 +193,6 @@ body#home {
 		div.hero-image {
 			display: block;
 			position: relative;
-			flex-basis: 40%;
 			padding: 		$container-padding;
 
 			img {
@@ -179,13 +201,104 @@ body#home {
 		}
 
 		div.text {
-			flex-basis: 60%;
 			padding: 		$container-padding;
 
 			h1 {
 				@extend h2;
 				padding-top: 0;
 			}
+		}
+
+	}
+	
+	section#blogroll {
+
+		display: 			flex;
+		width: 				100%;
+
+		@include md-down {
+			flex-flow: column nowrap;
+		}
+		@include md-up {
+			flex-flow: 	row wrap;
+			justify-content: space-between;
+		}
+
+		article {
+
+			display: 		flex;
+			width: 			calc(50% - #{$container-padding});
+			flex-direction: column;
+
+			background: 	$white;	
+
+			padding: 		$container-padding;
+
+			@include xs {
+				width: 100%;
+				margin-bottom: $container-padding;
+			}
+
+			@include sm-up {
+				&:nth-child(odd) {
+					margin: 		0 ($container-padding) ($container-padding * 2) 0;
+				}
+				&:nth-child(even) {
+					margin: 		0 0 ($container-padding * 2) ($container-padding);
+				}
+			}
+
+			h1 {
+				@extend h2;
+				padding-top: 0;
+			}
+		}
+
+		p.all-posts {
+			position: 		relative;
+			display: 		flex;
+			width: 			calc(50% - #{$container-padding});
+			flex-direction: row;
+
+			justify-content: center;
+			align-items: center;
+
+			text-align: center;
+			background: 	$white;	
+
+			padding: 		$container-padding;
+
+			@include xs {
+				width: 100%;
+				margin-bottom: $container-padding;
+			}
+
+			@include sm-up {
+				&:nth-child(odd) {
+					margin: 		0 ($container-padding) ($container-padding * 2) 0;
+				}
+				&:nth-child(even) {
+					margin: 		0 0 ($container-padding * 2) ($container-padding);
+				}
+			}
+
+            a {
+                display: inline-block;
+
+                &:hover {
+                    background: none;
+                    outline: none;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
 		}
 
     }
