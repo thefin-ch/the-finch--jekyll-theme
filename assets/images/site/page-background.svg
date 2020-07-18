@@ -4,28 +4,28 @@
   <defs>
     <linearGradient x1="0" x2="1" id="Gradient" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#010135" stop-opacity="0"/>
-      <stop offset=".503196" stop-color="#212b5a" stop-opacity=".25"/>
-      <stop offset="1" stop-color="#3f4f7a" stop-opacity=".5"/>
+      <stop offset=".503196" stop-color="#212b5a" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#3f4f7a" stop-opacity=".4"/>
     </linearGradient>
     <linearGradient id="Obj_Gradient" xl:href="#Gradient" gradientTransform="translate(22.499992 15.000007) rotate(-45) scale(21.213214)"/>
     <linearGradient x1="0" x2="1" id="Gradient_2" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#010135" stop-opacity="0"/>
-      <stop offset=".503196" stop-color="#214553" stop-opacity=".20247854"/>
-      <stop offset="1" stop-color="#417d6e" stop-opacity=".4049571"/>
+      <stop offset=".503196" stop-color="#214553" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#417d6e" stop-opacity=".3"/>
     </linearGradient>
     <linearGradient id="Obj_Gradient_2" xl:href="#Gradient_2" gradientTransform="translate(-7593132e-12 15.000007) rotate(-45) scale(21.213214)"/>
     <linearGradient id="Obj_Gradient_3" xl:href="#Gradient_2" gradientTransform="translate(29.999992 37.500007) rotate(-45) scale(21.213214)"/>
     <linearGradient x1="0" x2="1" id="Gradient_3" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#010135" stop-opacity="0"/>
-      <stop offset=".503196" stop-color="#92143f" stop-opacity=".12428477"/>
-      <stop offset="1" stop-color="#ff0048" stop-opacity=".24856954"/>
+      <stop offset=".503196" stop-color="#92143f" stop-opacity=".075"/>
+      <stop offset="1" stop-color="#ff0048" stop-opacity=".15"/>
     </linearGradient>
     <linearGradient id="Obj_Gradient_4" xl:href="#Gradient_3" gradientTransform="translate(7.499992 37.500007) rotate(-45) scale(21.213214)"/>
     <linearGradient id="Obj_Gradient_5" xl:href="#Gradient_3" gradientTransform="translate(45 15.000007) rotate(-45) scale(21.213214)"/>
     <linearGradient id="Obj_Gradient_6" xl:href="#Gradient" gradientTransform="translate(52.5 37.500007) rotate(-45) scale(21.213214)"/>
   </defs>
   <metadata> Produced by OmniGraffle 7.17 
-    <dc:date>2020-07-18 12:18:52 +0000</dc:date>
+    <dc:date>2020-07-18 12:24:02 +0000</dc:date>
   </metadata>
   <g id="Canvas_2" stroke-opacity="1" fill="none" fill-opacity="1" stroke="none" stroke-dasharray="none">
     <title>Canvas 2</title>
