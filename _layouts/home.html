@@ -40,6 +40,15 @@ layout: default
         </div>
 
         <div class="hero-text">
+            
+			<p class="categories">
+                {% for categories in post.categories %}
+                <a class="category" href="{{ categories | prepend: '/topic/' }}">
+                    {{ categories | replace: "-", " " }}
+                </a>
+                {% endfor %}
+            </p>
+            
             <p>{{ post.excerpt }}</p>
 
             <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
