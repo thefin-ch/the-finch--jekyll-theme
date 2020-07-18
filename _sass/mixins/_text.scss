@@ -10,12 +10,21 @@
 
 		color: 						transparent;
 
-		@include gradient(90deg, $orange, $magenta, $purple1);
+		@include gradient(45deg, $orange, $magenta, $purple1);
 
 		-webkit-background-clip: 	text;
 				background-clip: 	text;
-				background-size: 	100%;
+				background-size: 	cover;
 
+	}
+
+	a {
+		color: unset;
+
+		&:focus,
+		&:hover {
+			color: $white;
+		}
 	}
 
 }

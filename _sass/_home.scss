@@ -2,13 +2,43 @@
 
 body#home {
 
+	h1 > a {
+		color: 				$purple5;
+		text-decoration: 	none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+			color: 			$white;
+			background: 	$brand;
+			outline: 		5px solid $brand;
+		}
+	}
+
 	p.categories > a.category {
 		text-transform: 	uppercase;
 		font-weight: 		bold;
 		background: 	$brand;
+		border: 		3px solid $brand;
 		color: 			$white;
-		padding: 5px 10px;
+		padding: 3px 6px;
+
+		text-decoration: 	none;
+
+		&:hover {
+			background: 	$white;
+			color:			$brand;
+			border: 		3px solid $brand;
+		}
+		&:focus {
+			background: 	$white;
+			color:			$brand;
+			border: 		3px solid $brand;
+			outline: 		3px solid $orange;
+		}
 	}
+
     
     section#splash {
 
@@ -35,7 +65,7 @@ body#home {
 			}
 
 			@include sm {
-				padding: $pad-10 $pad-2 $pad-2;
+				padding: $pad-15 $pad-2 $pad-2;
 			}
 
 			@include md-up {
@@ -103,46 +133,71 @@ body#home {
 
 			background: $black;
 
-			padding: $pad-2;
-
-			@include xs {
+			@include sm-down {
 				flex-direction: column;
-				padding: $pad-1;
 			}
 
             div.hero-pullquote {
 
 				flex-basis: 60%;
 
-                h1 {
-					@extend h2;
-                    font-style: 	oblique;
-					padding-top: 	0;
-					padding-bottom: $pad-3;
+				@include sm-down {
+					flex-basis:  100%;
+				}
+
+				h1 {
+                    font-style: 	oblique;		
+					padding: 	$pad-2 $pad-2 $pad-4;
+
+					@include 		text-background;
 
 					@include xs {
-						flex-direction: column;
-						padding-top: $pad-2;
-						padding-bottom: 0;
+						padding: $pad-1 $pad-1 $pad-1;
 					}
-
-					a {
-						display: 		inline-block;
-						@include 		text-background;
+					@include sm {
+						padding: $pad-2 $pad-2;
 					}
                 }
 
             }
             div.hero-text {
 
-				padding-top: 	$pad-3;
-				padding-left:	$pad-2;
-
 				flex-basis: 40%;
+				align-self: flex-end;
+
+				padding:	$pad-8 $pad-2 $pad-2;
+
+				@include xs {
+					flex-basis:  100%;
+					padding: $pad-1;
+				}
+				@include sm {
+					flex-basis:  100%;
+					padding: $pad-2;
+				}
 
 				p {
 					color: 			$white;
+
+					&:last-of-type {
+						padding-bottom: 0;
+					}
 				}
+
+				p.categories > a.category {			
+					&:hover {
+						background: 	$black;
+						color:			$white;
+						border: 		3px solid $brand;
+					}
+					&:focus {
+						background: 	$black;
+						color:			$white;
+						border: 		3px solid $brand;
+						outline: 		3px solid $orange;
+					}
+				}
+
             }
 
         }
@@ -173,14 +228,12 @@ body#home {
 			@include xs {
 				margin-bottom: $pad-1;
 			}
+			@include sm-down {
+				width: 100%;
+			}
 			@include sm-up {
 				margin-bottom: $pad-2;
 			}
-
-			@include xs {
-				width: 100%;
-			}
-
 		}
 
 		div.hero-image {
@@ -231,8 +284,12 @@ body#home {
 				width: 100%;
 				margin-bottom: $pad-1;
 			}
+			@include sm {
+				width: 100%;
+				margin-bottom: $pad-2;
+			}
 
-			@include sm-up {
+			@include md-up {
 				&:nth-child(odd) {
 					margin: 		0 $pad-1 $pad-2 0;
 				}

@@ -159,29 +159,63 @@ header#site-header {
 			li {
 
 				position: relative;
+				padding: 0;
 
 				@include sm-down {
 					display: 	block;
-					padding: 	8px 12px;
-					border: 	1px solid $white;
 					font-size:			$p-font-size-sm;
 				}
 
 				@include md-up {
 					display: 	inline-block;
-					padding: 0;
 					margin-left: 20px;
 					font-size:			20px;
 				}
 			
-				a {
-					display: inline-block;
+				a.header-link {
 	
 					color: $white;
+					text-decoration: none;
 	
 					font-weight: 		normal;
 
+					@include md-up {
+
+						display: inline-block;
+						&:hover {
+							background: 		$white;
+							color: 				$brand;
+							outline:			5px solid $white;
+						}
+						&:focus {
+							background: 		$brand;
+							color: 				$white;
+							outline:			5px solid $brand;
+							text-decoration: 	underline;
+						}
+					}
+
 					@include sm-down {	
+						
+						display: block;
+						
+						padding: 	8px 12px;
+
+						border: 	1px solid $white;
+
+						&:hover {
+							background: 		$white;
+							color: 				$brand;
+							border: 			1px solid $white;
+						}
+						&:focus {
+							background: 		$brand;
+							color: 				$white;
+							border:			 	1px solid $brand;
+							outline:			5px solid $brand;
+							text-decoration: 	underline;
+						}
+						
 						&::after {
 							content: "";
 							position: absolute;
@@ -190,6 +224,8 @@ header#site-header {
 							width: 100%;
 							height: 100%;
 						}
+						
+						
 					}
 				}
 			}
