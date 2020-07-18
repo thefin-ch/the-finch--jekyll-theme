@@ -143,18 +143,26 @@ body#home {
 
 		display: 			flex;
 		width: 				100%;
-		flex-direction: 	column;
+
+		@include md-down {
+			flex-flow: column nowrap;
+		}
+		@include md-up {
+			flex-flow: 	row wrap;
+			justify-content: space-between;
+		}
 
 		article {
 
 			display: 		flex;
-			width: 100%;
+			width: 			32%;
+			flex-direction: column;
 
 			background: 	$white;	
 			margin-bottom: $container-padding * 2;
 
 			@include xs {
-				flex-direction: column;
+				width: 100%;
 			}
 
 		}

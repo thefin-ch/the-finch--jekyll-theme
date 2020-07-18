@@ -60,6 +60,13 @@
 			}
 }
 
+@mixin md-down {
+	@media 	only screen 
+			and (max-width: $lg - 1) {
+				@content;
+			}
+}
+
 // AND UP
 
 @mixin sm-up {

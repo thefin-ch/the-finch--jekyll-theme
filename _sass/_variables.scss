@@ -311,8 +311,8 @@ $h5-text-transform:					none;
 // BREAKPOINT VALUES
 
 $xs: 	 							0;
-$sm: 	 							768px;
-$md: 	 							1024px;
+$sm: 	 							800px;
+$md: 	 							1100px;
 $lg: 	 							1400px;
 $xl: 	 							1900px;
 
@@ -322,10 +322,10 @@ $xl: 	 							1900px;
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-xs: 	 					300px;
-$container-sm: 	 					730px;
-$container-md: 	 					900px;
-$container-lg: 	 					1050px;
-$container-xl: 	 					1200px;
+$container-sm: 	 					760px;
+$container-md: 	 					1000px;
+$container-lg: 	 					1300px;
+$container-xl: 	 					1600px;
 
 $container-padding: 	 			15px;
 
