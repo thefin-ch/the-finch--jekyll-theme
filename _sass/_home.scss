@@ -83,6 +83,9 @@ body#home {
 				@include sm-up {
 					max-width: 60%;
 				}
+				@include xl {
+					max-width: 50%;
+				}
 
 				align-self:     flex-start;
 				flex-direction: column;
@@ -251,7 +254,13 @@ body#home {
 
 			h1 {
 				@extend h2;
-				padding-top: 0;
+				padding: 0 0 $pad-1;
+			}
+
+			p {
+				&:last-of-type {
+					padding-bottom: 0;
+				}
 			}
 		}
 
@@ -300,11 +309,19 @@ body#home {
 
 			h1 {
 				@extend h2;
-				padding-top: 0;
+				padding: 0 0 $pad-1;
 
 				@include xl {
 					max-width: 80%;
 				}
+			}
+
+			p {
+
+				&:last-of-type {
+					padding-bottom: 0;
+				}
+
 			}
 		}
 
@@ -319,9 +336,12 @@ body#home {
 			align-items: center;
 
 			text-align: center;
-			background: 	$white;	
+
+			@include gradient(45deg, $orange, $magenta, $purple1);
 
 			padding: 		$pad-1;
+
+			@extend h1;
 
 			@include xs {
 				width: 100%;
@@ -337,12 +357,18 @@ body#home {
 				}
 			}
 
+			&:hover {
+				background: black;
+			}
+
             a {
-                display: inline-block;
+				display: 	inline-block;
+				color: 		$white;
 
                 &:hover {
-                    background: none;
-                    outline: none;
+                    background: 		none;
+					outline: 			none;					
+					@include 			text-background;
                 }
 
                 &::after {
