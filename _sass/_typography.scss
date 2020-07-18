@@ -515,3 +515,26 @@ a.reversefootnote {
 
 
 
+
+p.categories > a.category {
+	text-transform: 	uppercase;
+	font-weight: 		bold;
+	background: 	$brand;
+	border: 		3px solid $brand;
+	color: 			$white;
+	padding: 3px 6px;
+
+	text-decoration: 	none;
+
+	&:hover {
+		background: 	$white;
+		color:			$brand;
+		border: 		3px solid $brand;
+	}
+	&:focus {
+		background: 	$white;
+		color:			$brand;
+		border: 		3px solid $brand;
+		outline: 		3px solid $orange;
+	}
+}

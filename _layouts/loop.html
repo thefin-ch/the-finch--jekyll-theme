@@ -2,39 +2,51 @@
 layout: page
 ---
 
-{% for post in site.posts %}
+<ul id="loop">
+{% for post in paginator.posts %}
+	<li>
 
-	{% assign currentdate = post.date | date: "%Y" %}
-	
-	{% if currentdate != date %}
-	
-	{% unless forloop.first %}
-	</ul>
-	
-	</section>
-	{% endunless %}
-	
-	<section>
+		<article>
+			<p class="categories">
+				{% for categories in post.categories limit: 1 %}
+				<a class="category" href="{{ categories | prepend: '/topic/' }}">
+					{{ categories | replace: "-", " " }}
+				</a>
+				{% endfor %}
+			</p>
 		
-	<h2 id="y{{post.date | date: "%Y"}}" class="loop-header">{{ currentdate }}</h2>
+			<h2><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h2>
+			<p>{{ post.excerpt }}</p>
+		</article>
 	
-	<ul class="loop">
-	
-	{% assign date = currentdate %}
-	
-	{% endif %}
-	
-		<li>
-		
-			<p class="loop-item-date"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %B" }}</time></p>
-			<p class="loop-item-title"><a href="{{ post.url }}" title="Read {{ post.title}}">{{ post.title | smartify }}</a></p>
-		
-		</li>	
-	
-	{% if forloop.last %}
-	</ul>
-	
-	</section>
-	{% endif %}
-
+	</li>	
 {% endfor %}
+</ul>
+
+
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ '/' | relative_url }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
