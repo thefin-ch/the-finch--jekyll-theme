@@ -4,18 +4,18 @@
 
 @mixin text-background {
 
-	@supports not (-webkit-background-clip: text){
+	color: 					$orange;
 
-		color: $purple1;
+	@supports (background-clip: text) or (-webkit-background-clip: text) {
 
-	}
-	@supports (-webkit-background-clip: text){
+		color: 						transparent;
 
-		background: -webkit-linear-gradient($orange, $magenta, $purple1);
-		
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	
+		@include gradient(90deg, $orange, $magenta, $purple1);
+
+		-webkit-background-clip: 	text;
+				background-clip: 	text;
+				background-size: 	100%;
+
 	}
 
 }
