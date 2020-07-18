@@ -36,7 +36,7 @@ $green1:                            hsl(165, 48%, 49%) !default;
 $green2:                            hsl(196, 78%, 32%) !default;
 $orange:                            hsl(37, 100%, 50%) !default;
 
-$brand:                             $purple5 !default;
+$brand:                             $magenta !default;
 $brand-75:                          lighten($brand, 25%) !default;
 $brand-50:                          lighten($brand, 50%) !default;
 $brand-25:                          lighten($brand, 75%) !default;
@@ -46,7 +46,7 @@ $border-color:                      $brand;
 
 // Default colors
 
-$body-background:					$brand;
+$body-background:					$purple5;
 
 $page-background:					$true-white;
 $body-color:						$true-black;
@@ -69,8 +69,8 @@ $link-display-outline:						3px solid $link-display-color;
 $link-display-text-decoration:				none;
 $link-display-text-decoration-hover:		underline;
 
-$skiplink-color:					$link-hover-color;
-$skiplink-background:				$brand-50;
+$skiplink-color:					$white;
+$skiplink-background:				$brand;
 
 $code-color:						$black;
 $code-background:					$gray-200;
