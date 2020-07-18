@@ -259,8 +259,8 @@ body#home {
 		article {
 
 			display: 		flex;
-			width: 			calc(50% - #{$pad-1});
 			flex-direction: column;
+			
 
 			background: 	$white;	
 
@@ -274,13 +274,31 @@ body#home {
 				width: 100%;
 				margin-bottom: $pad-2;
 			}
+			@include md-up {
+				width: 			calc(50% - #{$pad-1});
+			}
+			@include xl {
+				width: 			calc(33% - #{$pad-1});
+			}
 
 			@include md-up {
-				&:nth-child(odd) {
+				&:nth-child(1n) {
 					margin: 		0 $pad-1 $pad-2 0;
 				}
-				&:nth-child(even) {
+				&:nth-child(2n) {
 					margin: 		0 0 $pad-2 $pad-1;
+				}
+			}
+
+			@include xl {
+				&:nth-child(3n+1) {
+					margin: 		0 ($pad-1 * 0.5) $pad-2 0;
+				}
+				&:nth-child(3n+2) {
+					margin: 		0 ($pad-1 * 0.5) $pad-2 ($pad-1 * 0.5);
+				}
+				&:nth-child(3n+3) {
+					margin: 		0 0 $pad-2 ($pad-1 * 0.5) !important;
 				}
 			}
 
@@ -295,6 +313,7 @@ body#home {
 
 			p {
 
+				max-width: 50ch;
 				&:last-of-type {
 					padding-bottom: 0;
 				}
@@ -306,7 +325,6 @@ body#home {
 			position: 		relative;
 			display: 		flex;
 			max-width: 		100%;
-			width: 			calc(50% - #{$pad-1});
 			flex-direction: row;
 
 			justify-content: center;
@@ -324,14 +342,23 @@ body#home {
 				width: 100%;
 				margin-bottom: $pad-1;
 			}
+			@include sm {
+				width: 100%;
+				margin-bottom: $pad-2;
+			}
+			@include md-up {
+				width: 			calc(50% - #{$pad-1});
+			}
+			@include xl {
+				width: 			calc(33% - #{$pad-1});
+			}
 
-			@include sm-up {
-				&:nth-child(odd) {
-					margin: 		0 $pad-1 $pad-2 0;
-				}
-				&:nth-child(even) {
-					margin: 		0 0 $pad-2 $pad-1;
-				}
+			@include md-up {
+				margin: 		0 0 $pad-2 $pad-1;
+			}
+
+			@include xl {
+				margin: 		0 0 $pad-2 ($pad-1 * 0.5) !important;
 			}
 
 			&:hover {
