@@ -2,41 +2,137 @@
 
 body#home {
     
-    main#content {
-        
-    }
-
     section#splash {
 
-		@include border;
-
-        padding: ($container-padding * 2) 0 0;
-
+		padding: 0 0 ($container-padding * 2) 0;
+        
         article {
 
+			position: relative;
+			display: flex;
+			
+			@include gradient(45deg, $orange, $magenta, $purple1);
+			
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+
+			@include xs {
+				padding: ($container-padding * 15) 0 0;
+			}
+
+			@include sm {
+				padding: ($container-padding * 10) ($container-padding * 2) ($container-padding * 2);
+			}
+
+			@include md-up {
+				padding: ($container-padding * 20) ($container-padding * 2) ($container-padding * 2);
+			}
+
+			div.hero-text {
+
+				display: 	flex;
+				position: 	relative;
+
+				align-self:     flex-start;
+				flex-direction: column;
+
+				background: 	$white;
+				padding: 		$container-padding;
+
+				p.categories > span.category {
+					text-transform: 	uppercase;
+					font-weight: 		bold;
+					background: 	$brand;
+					color: 			$white;
+					padding: 5px 10px;
+				}
+
+                h1 {
+                    padding:    0;
+					position: relative;
+				}
+				
+				p {
+					max-width: 40ch;
+				}
+
+				a.display {
+					&::before {
+						content: " ";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+            }
+
         }
-        
+
     }
 
     section#pull {
 
-		@include border;
+		padding: 0 0 ($container-padding * 2) 0;
 
-        article {
+		article {
+			
+			position: relative;
+            display: flex;
 
-            div.pullquote {
+			background: $black;
+
+			padding: ($container-padding * 2);
+
+			@include xs {
+				flex-direction: column;
+				padding: ($container-padding * 1);
+			}
+
+            div.hero-pullquote {
+
+				flex-basis: 60%;
 
                 h1 {
                     @extend h2;
                     font-style: oblique;
-                    padding-top: 0;
+					padding-top: 0;
+					padding-bottom: ($container-padding * 3);
                     @include text-background;
 
+					@include xs {
+						flex-direction: column;
+						padding-top: ($container-padding * 2);
+						padding-bottom: 0;
+					}
+
+					a {
+						&:hover {
+							text-decoration: underline;
+						}
+						&:focus {
+							color: $white;
+		
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: $white;
+						}
+					}
                 }
 
             }
-            div.text {
+            div.hero-text {
 
+				padding-top: 	$container-padding * 3;
+				padding-left:	$container-padding * 2;
+
+				flex-basis: 40%;
+
+				p {
+					color: 			$white;
+				}
             }
 
         }
@@ -45,7 +141,44 @@ body#home {
 
     section#carousel {
 
-		@include border;
+		display: 			flex;
+		width: 				100%;
+		flex-direction: 	column;
+
+		article {
+
+			display: 		flex;
+			width: 100%;
+
+			background: 	$white;	
+			margin-bottom: $container-padding * 2;
+
+			@include xs {
+				flex-direction: column;
+			}
+
+		}
+
+		div.hero-image {
+			display: block;
+			position: relative;
+			flex-basis: 40%;
+			padding: 		$container-padding;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		div.text {
+			flex-basis: 60%;
+			padding: 		$container-padding;
+
+			h1 {
+				@extend h2;
+				padding-top: 0;
+			}
+		}
 
     }
 		

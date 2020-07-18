@@ -37,12 +37,12 @@ header#site-header {
 
 		img.finch-logo {
 			@include sm-down { 
-				height: 	50px;
-				max-height: 50px;
+				height: 	50px !important;
+				max-height: 50px !important;
 			}
 			@include md-up {
-				height: 	100px;
-				max-height: 100px;
+				height: 	100px !important;
+				max-height: 100px !important;
 			}
 		}
 
@@ -180,7 +180,6 @@ header#site-header {
 					color: $white;
 	
 					font-weight: 		normal;
-					text-decoration: 	none;
 
 					@include sm-down {	
 						&::after {
@@ -192,19 +191,6 @@ header#site-header {
 							height: 100%;
 						}
 					}
-				}
-
-				&:hover,
-				&:focus {
-					background: 	$white !important;
-					outline:		2px solid $white;
-					a {
-						color: 				$purple5 !important;
-						text-decoration: 	none;
-					}
-				}
-				&:focus {
-					outline: 		3px solid $magenta;
 				}
 			}
 

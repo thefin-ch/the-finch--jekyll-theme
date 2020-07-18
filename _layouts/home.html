@@ -5,17 +5,17 @@ layout: default
 {% for post in site.posts limit: 1 %}
 <section id="splash">
 
-    <article>
-
-        <img src="{{ post.image }}" alt="{{ post.image-alt }}">
+    <article style="background-image: url('{{ post.image }}')">
         
-        <div class="text">
+        <p class="sr-only">{{ post.image-alt }}</p>
+        
+        <div class="hero-text">
             
+			<p class="categories">{% for categories in post.categories %}<span class="category">{{ categories | replace: "-", " " }}</span>{% endfor %}</p>
+
             <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
 
             <p>{{ post.excerpt }}</p>
-
-            <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
 
         </div>
 
@@ -29,11 +29,11 @@ layout: default
 
     <article>
 
-        <div class="pullquote">
+        <div class="hero-pullquote">
             <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">“{{ post.pullquote }}”</a></h1>
         </div>
 
-        <div class="text">
+        <div class="hero-text">
             <p>{{ post.excerpt }}</p>
 
             <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
@@ -46,20 +46,21 @@ layout: default
 
 <section id="carousel">
 
-    <div class="articles">
-        {% for post in site.posts limit: 6 offset: 2 %}
-        <article>
+    {% for post in site.posts limit: 3 offset: 2 %}
+    <article>
 
+
+        <div class="hero-image">
             <img src="{{ post.image }}"  loading="lazy" alt="{{ post.image-alt }}">
+        </div>
 
-            <div class="text">
-                <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
-                <p>{{ post.excerpt }}</p>    
-                <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
-            </div>
+        <div class="text">
+            <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
+            <p>{{ post.excerpt }}</p>    
+            <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
+        </div>
 
-        </article>
-        {% endfor %}
-    </div>
+    </article>
+    {% endfor %}
 
 </section>

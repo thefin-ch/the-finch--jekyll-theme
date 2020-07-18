@@ -2,6 +2,13 @@
 
 footer#site-footer {	
 
-	padding:		60px 0 200px;
+	padding:		($container-padding * 3) ($container-padding * 2);
+	margin-bottom: 		$container-padding * 2;
+
+	background: 	$black;
+
+	* {
+		color: 			$white !important;
+	}
 	
 }
