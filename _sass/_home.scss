@@ -332,9 +332,9 @@ body#home {
 
 			text-align: center;
 
-			@include gradient(45deg, $orange, $magenta, $purple1);
-
 			padding: 		$pad-1;
+
+			background: black;
 
 			@extend h1;
 
@@ -362,17 +362,18 @@ body#home {
 			}
 
 			&:hover {
-				background: black;
+				@include gradient(45deg, $orange, $magenta, $purple1);
 			}
 
             a {
 				display: 	inline-block;
-				color: 		$white;
+				@include 			text-background;
 
                 &:hover {
                     background: 		none;
 					outline: 			none;					
-					@include 			text-background;
+					color: 				$white;
+					text-decoration: none;
                 }
 
                 &::after {
