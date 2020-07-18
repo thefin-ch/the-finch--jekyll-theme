@@ -11,7 +11,13 @@ layout: default
         
         <div class="hero-text">
             
-			<p class="categories">{% for categories in post.categories %}<span class="category">{{ categories | replace: "-", " " }}</span>{% endfor %}</p>
+			<p class="categories">
+                {% for categories in post.categories %}
+                <a class="category" href="{{ categories | prepend: '/topic/' }}">
+                    {{ categories | replace: "-", " " }}
+                </a>
+                {% endfor %}
+            </p>
 
             <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
 
@@ -55,7 +61,13 @@ layout: default
         </div>
 
         <div class="text">
-			<p class="categories">{% for categories in post.categories %}<span class="category">{{ categories | replace: "-", " " }}</span>{% endfor %}</p>
+			<p class="categories">
+                {% for categories in post.categories %}
+                <a class="category" href="{{ categories | prepend: '/topic/' }}">
+                    {{ categories | replace: "-", " " }}
+                </a>
+                {% endfor %}
+            </p>
             <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
             <p>{{ post.excerpt }}</p>    
             <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
@@ -72,7 +84,13 @@ layout: default
 
     {% for post in site.posts limit: 5 offset: 5 %}
     <article>
-        <p class="categories">{% for categories in post.categories %}<span class="category">{{ categories | replace: "-", " " }}</span>{% endfor %}</p>
+        <p class="categories">
+                {% for categories in post.categories %}
+                <a class="category" href="{{ categories | prepend: '/topic/' }}">
+                    {{ categories | replace: "-", " " }}
+                </a>
+                {% endfor %}
+            </p>
         <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
         <p>{{ post.excerpt }}</p>    
         <p><a class="more" href="{{ post.url }}" title="Read more of {{ post.title }}">Read more</a></p>
