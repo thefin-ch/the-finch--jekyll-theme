@@ -2,16 +2,18 @@
 
 footer#site-footer {	
 
-	padding:		($container-padding * 3) ($container-padding * 2);
+	section {
+		padding:		($container-padding * 3) ($container-padding * 2);
 
-	@include sm-up{
-		margin-bottom: 		$container-padding * 2;
-	}
+		@include sm-up{
+			margin-bottom: 		$container-padding * 2;
+		}
 
-	background: 	$black;
+		background: 	$black;
 
-	* {
-		color: 			$white !important;
+		* {
+			color: 			$white !important;
+		}
 	}
 	
 }
