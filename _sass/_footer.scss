@@ -2,6 +2,11 @@
 
 footer#site-footer {	
 
+	@include xs {
+		margin-bottom: $pad-1;
+	}
+	margin-bottom: $pad-2;
+
 	section {
 		padding:		$pad-3 $pad-2;
 
