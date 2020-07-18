@@ -7,4 +7,5 @@ Gemfile.lock
 *_site
 *.DS_Store
 rebuild.sh
-posts
+*posts
+posts/index.html
