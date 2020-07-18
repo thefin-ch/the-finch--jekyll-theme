@@ -33,6 +33,14 @@ header#site-header {
 			@include sm-down {
 				width: 100%;
 			}
+
+			&:hover h1 {
+				@include 		text-background;
+				text-decoration: none;
+			}
+			&:focus h1 {
+				color: 			$white;
+			}
 		}
 
 		img.finch-logo {
