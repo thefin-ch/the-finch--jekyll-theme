@@ -26,8 +26,6 @@ body#home {
 			margin-bottom: $pad-2;
 		}
 
-		@include card-shadow;
-
         article {
 
 			position: relative;
@@ -339,6 +337,7 @@ body#home {
 			background: $black;
 
 			@extend h1;
+			@include card-shadow;
 
 			@include xs {
 				width: 100%;
@@ -389,6 +388,10 @@ body#home {
             }
 		}
 
-    }
+	}
+	
+	article {
+		@include card-shadow;
+	}
 		
 }

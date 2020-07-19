@@ -11,6 +11,8 @@ footer#site-footer {
 		padding:		$pad-3 $pad-2;
 
 		background: 	$black;
+		
+		@include card-shadow;
 
 		* {
 			color: 			$white !important;
