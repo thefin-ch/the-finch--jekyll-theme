@@ -33,6 +33,8 @@ body#loop {
             width: 100%;
             max-width: 100%;
 
+            @include card-shadow;
+
 			@include xs {
 				margin-bottom: $pad-1;
 			}
@@ -99,7 +101,7 @@ body#loop {
             position: relative;
             flex: 1;
             
-            background: $black;
+            background: $white;
 
             padding: $pad-1;
 
@@ -164,6 +166,10 @@ body#loop {
             }
 
             @include clearfix;
+
+            &.card-shadow {
+                @include card-shadow;
+            }
         }
 
         p.page--next-prev--prev {
