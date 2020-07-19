@@ -24,28 +24,3 @@ layout: page
 	{% endfor %}
 
 </ul>
-	
-	
-	
-	{% if paginator.total_pages > 1 %}
-	<div class="pagination" role="navigation">
-		{% if paginator.previous_page %}
-		<p class="page--next-prev--prev card-shadow">
-			<a class="page--next-prev--label" href="{{ paginator.previous_page_path | relative_url }}" title="Go to previous page">← Newer posts</a>
-		</p>
-		{% else %}
-		<p class="page--next-prev--prev-blank">
-		</p>  
-		{% endif %}
-	
-	
-		{% if paginator.next_page %}
-		<p class="page--next-prev--next card-shadow">
-			<a class="page--next-prev--label" href="{{ paginator.next_page_path | relative_url }}" title="Go to next page">Older posts →</a>
-		</p>  
-		{% else %}
-		<p class="page--next-prev--prev-blank">
-		</p>  
-		{% endif %}
-	</div>
-	{% endif %}
