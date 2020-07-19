@@ -2,17 +2,50 @@
 layout: page
 ---
 
-<ul>
+<ul id="loop">
 
-
-    {% for post in site.categories[page.category] %}
-
+	{% for post in site.categories[page.category] %}
 	<li>
-		<p class="loop-item-date"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %B" }}</time></p>
-		<p class="loop-item-title"><a href="{{ post.url }}" title="Read {{ post.title}}">{{ post.title | smartify }}</a></p>
-	</li>
 
+		<article>
+			<p class="categories">
+				{% for categories in post.categories limit: 1 %}
+				<a class="category" href="{{ categories | prepend: '/topic/' }}">
+					{{ categories | replace: "-", " " }}
+				</a>
+				{% endfor %}
+			</p>
+		
+			<h2><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h2>
+			<p>{{ post.excerpt }}</p>
+		</article>
+	
+	</li>	
 	{% endfor %}
 
 </ul>
-
+	
+	
+	
+	{% if paginator.total_pages > 1 %}
+	<div class="pagination" role="navigation">
+		{% if paginator.previous_page %}
+		<p class="page--next-prev--prev card-shadow">
+			<a class="page--next-prev--label" href="{{ paginator.previous_page_path | relative_url }}" title="Go to previous page">← Newer posts</a>
+		</p>
+		{% else %}
+		<p class="page--next-prev--prev-blank">
+		</p>  
+		{% endif %}
+	
+	
+		{% if paginator.next_page %}
+		<p class="page--next-prev--next card-shadow">
+			<a class="page--next-prev--label" href="{{ paginator.next_page_path | relative_url }}" title="Go to next page">Older posts →</a>
+		</p>  
+		{% else %}
+		<p class="page--next-prev--prev-blank">
+		</p>  
+		{% endif %}
+	</div>
+	{% endif %}
