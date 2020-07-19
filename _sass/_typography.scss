@@ -86,6 +86,7 @@ a {
 
 }
 
+
 h1 {
 
 	max-width: 60ch;
@@ -96,7 +97,50 @@ h1 {
 	text-decoration: $h1-text-decoration;
 	text-transform: $h1-text-transform;
 
+	color:			$brand;
+
+	@include xs {
+		font-size: 		$h1-font-size-xs * 0.75;
+		line-height: 	$h1-line-height-xs * 0.75;
+		padding: 		$h1-padding-top-xs 0 $h1-padding-bottom-xs 0;
+	}
+	@include sm {
+		font-size: 		$h1-font-size-sm * 0.75;
+		line-height: 	$h1-line-height-sm * 0.75;
+		padding: 		$h1-padding-top-sm 0 $h1-padding-bottom-sm 0;
+	}
+	@include md {
+		font-size: 		$h1-font-size-md * 0.75;
+		line-height: 	$h1-line-height-md * 0.75;
+		padding: 		$h1-padding-top-md 0 $h1-padding-bottom-md 0;
+	}
+	@include lg {
+		font-size: 		$h1-font-size-lg * 0.55;
+		line-height: 	$h1-line-height-lg * 0.55;
+		padding: 		$h1-padding-top-lg 0 $h1-padding-bottom-lg 0;
+	}
+	@include xl {
+		font-size: 		$h1-font-size-xl * 0.55;
+		line-height: 	$h1-line-height-xl * 0.55;
+		padding: 		$h1-padding-top-xl 0 $h1-padding-bottom-xl 0;
+	}
+
+}
+
+
+h1.display {
+
+	max-width: 60ch;
+
+	font-family: 	$font-family-display;
+	font-weight: 	$h1-font-weight;
+	font-style: 	$h1-font-style;
+	text-decoration: $h1-text-decoration;
+	text-transform: $h1-text-transform;
+
 	color:			$white;
+
+	
 
 	@include xs {
 		font-size: 		$h1-font-size-xs;
@@ -383,7 +427,7 @@ blockquote {
 			display: 	inline;
 			position: 	relative;
 			content: 	"\201c";
-			color: 		$brand-50;
+			color: 		$brand;
 			font-family: $font-family-display;
 
 			float: left;
@@ -503,38 +547,35 @@ table {
 
 }
 
-a.reversefootnote {
-	
-}
+p.categories {
 
+	display: 	block;
+	position: relative;
 
+	padding:		0 0 $pad-1 0;
 
-
-
-
-
-
-
-
-p.categories > a.category {
-	text-transform: 	uppercase;
-	font-weight: 		bold;
-	background: 	$brand;
-	border: 		3px solid $brand;
-	color: 			$white;
-	padding: 3px 6px;
-
-	text-decoration: 	none;
-
-	&:hover {
-		background: 	$white;
-		color:			$brand;
+	a.category {
+		display: inline;
+		text-transform: 	uppercase;
+		font-weight: 		bold;
+		background: 	$brand;
 		border: 		3px solid $brand;
-	}
-	&:focus {
-		background: 	$white;
-		color:			$brand;
-		border: 		3px solid $brand;
-		outline: 		3px solid $orange;
+		color: 			$white;
+		padding: 3px 6px;
+		margin: 0 5px 0 0;
+
+		text-decoration: 	none;
+
+		&:hover {
+			background: 	$white;
+			color:			$brand;
+			border: 		3px solid $brand;
+		}
+		&:focus {
+			background: 	$white;
+			color:			$brand;
+			border: 		3px solid $brand;
+			outline: 		3px solid $orange;
+		}
 	}
 }

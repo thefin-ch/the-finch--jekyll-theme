@@ -2,13 +2,28 @@
 layout: default
 ---
 						
-<article id="post-content" class="container">
+<article id="post-content">
 
+	<header class="post-title">
+
+		<p class="categories">
+			{% for categories in page.categories %}
+			<a class="category" href="{{ categories | prepend: '/topic/' }}">
+				{{ categories | replace: "-", " " }}
+			</a>
+			{% endfor %}
+		</p>
+
+		<h1 id="post-title" class="display">{{ page.title | smartify }}</h1>			
+
+	</header>
+
+	{% if page.image %}
 	<aside class="post-image">
 
 		<figure>
 			<img src="{{ page.image }}" alt="{{ post.image-alt }}">
-			<figcaption>
+			<figcaption class="container">
 				<p><strong>Image:</strong>
 				{{ page.image-alt }}
 				{% if page.image-link %}<a href="{{ page.image-link }}" title="Open {{ page.image-linktext }} in new window" rel="external">{{ page.image-linktext }}</a>.{% endif %}</p>
@@ -16,20 +31,11 @@ layout: default
 		</figure>
 		
 	</aside>
-
-	<header class="post-title">
-
-		{% if page.categories %}
-			<p class="categories">{% for categories in page.categories %}{{ categories | replace: "-", " " }}{% endfor %}</p>
-		{% endif %}
-
-		<h1 class="post-title">{{ page.title | smartify }}</h1>			
-
-	</header>
-						
+	{% endif %}
+			
 	<aside class="post-meta">
 		
-		<dl class="meta-data">
+		<dl class="meta-data container">
 			
 			<dt class="post-author">By:</dt> <dd>{{ page.author }}</dd>
 			<dt class="post-date">Published:</dt> <dd>{{ page.date | date: '%-d %B %Y' }}</dd>
@@ -40,7 +46,7 @@ layout: default
 		
 	</aside>
 
-	<section class="post-body">
+	<section class="post-body container">	
 		
 		{{ content }}
 			

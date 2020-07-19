@@ -3,127 +3,81 @@
 body#post {
 
 	main#content {
-
-		display: grid;
-        position: relative;
-
-        padding: 					0 ($container-padding * 1);
-
-		@include sm {
-            padding: 					($container-padding * 1) 0 0 ($container-padding * 1);
-			grid-template-columns:		auto;
-
-            grid-row-gap:               ($container-padding * 1);
-            row-gap:                    ($container-padding * 1);
-		}
-		@include md {
-			padding: 					($container-padding * 2) 0 0 ($container-padding * 2);
-			grid-template-columns:		auto;
-
-            grid-row-gap:               ($container-padding * 2);
-            row-gap:                    ($container-padding * 2);
-		}
-		@include lg {
-			padding: 					($container-padding * 3) 0 0 ($container-padding * 3);
-			grid-template-columns:		auto;
-
-            grid-row-gap:               ($container-padding * 3);
-            row-gap:                    ($container-padding * 3);
-		}
-		@include xl {
-			padding: 					($container-padding * 4) 0 0 ($container-padding * 6);
-			grid-template-columns:		auto;
-
-            grid-row-gap:               ($container-padding * 4);
-            row-gap:                    ($container-padding * 4);
-		}
 		
 	}
 
-	article {
+	article#post-content {
 
-		display: grid;
-
-		grid-template-rows: 	auto auto auto auto auto;
-
-		grid-template-areas: 	"image ."
-								"header ."
-								"meta ."
-								"body ."
-								"footer .";
-
-		@include sm {
-			grid-template-columns:		450px auto;
-			grid-row-gap:               ($container-padding * 1);
-			row-gap:                    ($container-padding * 1);
+		@include xs {
+			margin-bottom: $pad-1;
 		}
-		@include md {
-			grid-template-columns:		650px auto;
-			grid-row-gap:               ($container-padding * 2);
-			row-gap:                    ($container-padding * 2);
+		@include sm-up {
+			margin-bottom: $pad-2;
 		}
-		@include lg {
-			grid-template-columns:		830px auto;
-			grid-row-gap:               ($container-padding * 3);
-			row-gap:                    ($container-padding * 3);
-		}
-		@include xl {
-			grid-template-columns:		1100px auto;
-			grid-row-gap:               ($container-padding * 4);
-			row-gap:                    ($container-padding * 4);
-		}
-
-		@include border;
 
 	}
 
 	aside.post-image {
-		
-		grid-area:		image;
+
+		figure {
+			background: $white;
+			max-width: 900px;
+
+			@include card-shadow;
+		}
 
 		img {
 			width: 100%;
+		}
 
-			@include sm {
-				max-width:		480px;
-			}
-			@include md {
-				max-width:		600px;
-			}
-			@include lg {
-				max-width:		700px;
-			}
-			@include xl {
-				max-width:		900px;
-			}
-
+		@include xs {
+			margin-bottom: $pad-1;
+		}
+		@include sm-up {
+			margin-bottom: $pad-2;
 		}
 
 	}
 			
 	header.post-title {
 
-		grid-area: header;
-		
-		display: grid;
-
-		grid-template-areas: 	"category"
-								"title";
-
-		h1.post-title {
-
-			grid-area: 			title;
-			display: 			inline-block;
-
-			padding: 			0;
-
+		p.categories {
+			@include xs {
+				padding: 		$h1-padding-top-xs 0 $pad-1;
+			}
+			@include sm {
+				padding: 		$h1-padding-top-sm 0 $pad-2;
+			}
+			@include md {
+				padding: 		$h1-padding-top-md 0 $pad-2;
+			}
+			@include lg {
+				padding: 		$h1-padding-top-lg 0 $pad-2;
+			}
+			@include xl {
+				padding: 		$h1-padding-top-xl 0 $pad-2;
+			}
 		}
 
-		p.categories {
+		h1#post-title {
 
-			text-transform: 	uppercase;
-			font-weight: 		bold;
-			font-style: 		oblique;
+			display: 			block;
+
+			@include xs {
+				padding: 		0 0 $h1-padding-bottom-xs 0;
+			}
+			@include sm {
+				padding: 		0 0 $h1-padding-bottom-sm 0;
+			}
+			@include md {
+				padding: 		0 0 $h1-padding-bottom-md 0;
+			}
+			@include lg {
+				padding: 		0 0 $h1-padding-bottom-lg 0;
+			}
+			@include xl {
+				padding: 		0 0 $h1-padding-bottom-xl 0;
+			}
 
 		}
 			
@@ -132,10 +86,22 @@ body#post {
 
 
 	aside.post-meta {
+		
+		dl.meta-data{
 
-		grid-area: meta;
+			background: $white;
+			max-width: 900px !important;
+			margin-left: 0;
 
-		dl.meta-data {
+			@include xs {
+				margin-bottom: $pad-1;
+			}
+			@include sm-up {
+				margin-bottom: $pad-2;
+			}
+
+			@include card-shadow;
+
 			display:	grid;
 
 			grid-template-columns: 	auto minmax(0, 1fr);
@@ -155,7 +121,11 @@ body#post {
 		position: relative;
 		display: block;
 
-		grid-area: body;
+		max-width: 			900px !important;
+		margin-left: 		0;
+
+		background: $white;
+		@include card-shadow;
 		
 		> p:first-of-type {
 
@@ -175,7 +145,7 @@ body#post {
 		
 		div.footnotes {
 
-			padding: 40px 0 90px;
+			padding: $pad-3 0 $pad-1;
 		
 			&:before {
 				display: inline-block;
