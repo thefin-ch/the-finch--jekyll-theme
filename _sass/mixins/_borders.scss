@@ -4,9 +4,9 @@
 
 @mixin border {
 
-	border-top: 5px solid;
+	border-top: 10px solid $magenta;
 	border-image-slice: 1;
-	border-top-width: 5px;
+	border-top-width: 10px;
 	border-color: $orange;
 	border-image-source: linear-gradient(to right, $orange, $magenta, $purple1);
 

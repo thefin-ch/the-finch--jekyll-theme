@@ -23,7 +23,7 @@ layout: default
 
 		<figure>
 			<img src="{{ page.image }}" alt="{{ post.image-alt }}">
-			<figcaption class="container">
+			<figcaption>
 				<p><strong>Image:</strong>
 				{{ page.image-alt }}
 				{% if page.image-link %}<a href="{{ page.image-link }}" title="Open {{ page.image-linktext }} in new window" rel="external">{{ page.image-linktext }}</a>.{% endif %}</p>
@@ -35,10 +35,10 @@ layout: default
 			
 	<aside class="post-meta">
 		
-		<dl class="meta-data container">
+		<dl class="meta-data">
 			
 			<dt class="post-author">By:</dt> <dd>{{ page.author }}</dd>
-			<dt class="post-date">Published:</dt> <dd>{{ page.date | date: '%-d %B %Y' }}</dd>
+			<dt class="post-date">Published:</dt> <dd><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d %B %Y' }}</time></dd>
 	
 			
 		

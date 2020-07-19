@@ -16,28 +16,6 @@ body#post {
 		}
 
 	}
-
-	aside.post-image {
-
-		figure {
-			background: $white;
-			max-width: 900px;
-
-			@include card-shadow;
-		}
-
-		img {
-			width: 100%;
-		}
-
-		@include xs {
-			margin-bottom: $pad-1;
-		}
-		@include sm-up {
-			margin-bottom: $pad-2;
-		}
-
-	}
 			
 	header.post-title {
 
@@ -83,13 +61,39 @@ body#post {
 			
 	}
 
+	aside.post-image {
 
+		figure {
+			max-width: 900px;
+
+			figcaption * {
+				color: 		$white;
+			}
+		}
+
+		img {
+			width: 100%;
+			@include card-shadow;
+			@include border;
+		}
+
+		@include xs {
+			margin-bottom: $pad-1;
+		}
+		@include sm-up {
+			margin-bottom: $pad-2;
+		}
+
+	}
 
 	aside.post-meta {
+
+		* {
+			color: 		$white;
+		}
 		
 		dl.meta-data{
 
-			background: $white;
 			max-width: 900px !important;
 			margin-left: 0;
 
@@ -99,8 +103,6 @@ body#post {
 			@include sm-up {
 				margin-bottom: $pad-2;
 			}
-
-			@include card-shadow;
 
 			display:	grid;
 
@@ -117,12 +119,16 @@ body#post {
 	}
 	
 	section.post-body {
+		
+		@include border;
 
 		position: relative;
 		display: block;
 
 		max-width: 			900px !important;
 		margin-left: 		0;
+
+		padding-top: $pad-1;
 
 		background: $white;
 		@include card-shadow;
