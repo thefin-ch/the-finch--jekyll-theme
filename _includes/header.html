@@ -2,7 +2,11 @@
 
 	<div class="header-wordmark">
 		<a href="{{ site.url }}" class="header-wordmark">
+			{% if page.layout == "four-oh-four" %}
+			<img class="finch-logo" src="/assets/images/site/finch-missing.svg">
+			{% else %}
 			<img class="finch-logo" src="/assets/images/site/finch.svg">
+			{% endif %}
 			<h1 class="finch-wordmark">The Finch</h1>
 		</a>
 		<button id="header-menu-toggle" onclick="toggleMenu()" aria-label="Toggle Navigation" class="closed">Menu &#9660;</button>

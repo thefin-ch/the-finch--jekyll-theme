@@ -6,30 +6,26 @@
   <body id="{{ page.layout }}"{% if page.theme %} class="theme-{{ page.theme }}"{% endif %}>
 
     {% include skiplink.html %}
-
-    <div class="wrapper">
       
       {% include header.html %}
 
-      <div id="main">
+      <main id="content" class="container">
 
-        <main id="content">
-        
-          <article>
-            <h1>404</h1>
-            <p>Page not found</p>
-          </article>
+        <article>
+      
+          <h1 class="display">Page not found</h1>
+          <p>Oops. That page appears to have flown the nest.</p>
+          <p>Error 404.</p>
+          <img class="dead" src="/assets/images/site/finch-dead.svg"
 
-        </main>
-
+        </article>
+      
       </main>
 
-    </div>
+      {% include footer.html %}
 
     {% include breakpoints.html %}
 
   </body>
 
 </html>
-
-
