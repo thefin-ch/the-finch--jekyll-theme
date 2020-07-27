@@ -2,21 +2,92 @@
 
 footer#site-footer {	
 
-	@include xs {
-		margin-bottom: $pad-1;
-	}
-	margin-bottom: $pad-2;
+	> div {
 
-	section {
-		padding:		$pad-3 $pad-2;
+		display: flex;
+	
+		@include md-down {
+			flex-flow: column nowrap;
+		}
+		@include md-up {
+			flex-flow: 	row wrap;
+			justify-content: space-between;
+		}
+		@include xs {
+			margin-bottom: $pad-1;
+		}
+	
+		margin-bottom: $pad-2;
 
 		background: 	$black;
 		
 		@include card-shadow;
+	}
+
+	section, nav {
+
+		display: block;
+
+		@include xs {
+			width: 100%;
+			margin-bottom: $pad-1;
+		}
+		@include sm {
+			width: 100%;
+			margin-bottom: $pad-2;
+		}
+		@include md-up {
+			width: 			calc(50% - #{$pad-1});
+		}
+		@include xl {
+			width: 			calc(33% - #{$pad-1});
+		}
 
 		* {
 			color: 			$white !important;
 		}
 	}
+
+	section.wordmark {
+		padding:		$pad-3 $pad-2;
+
+		h1 {
+			@extend h2;
+			padding: 0 !important;
+		}
+	}
+
+	nav {
+		@include md-up {
+			padding:		$pad-3 $pad-2 $pad-3 0;
+		}
+
+		h1 {
+			@extend h4;
+			padding-top: 0 !important;
+			font-style: normal !important;
+		}
+
+		ul  {
+			
+			padding: 0;
+	
+			list-style: none;
+	
+			li {
+				padding: 0;
+
+				a {
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			
+		}
+	}
+
 	
 }
