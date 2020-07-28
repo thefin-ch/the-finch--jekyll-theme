@@ -10,13 +10,13 @@
 
 		<nav role="navigation" class="footer-links">
 
-			<h1>Topics</h1>
+			<h1>Meta</h1>
 
 			<ul>
 
-				{% for topic in site.topics %}
+				{% for page in site.pages %}
 				<li>
-					<a class="header-link" href="{{ topic.url }}" alt="See all posts under {{ topic.title }}">{{ topic.title }}</a>
+					<a class="header-link" href="{{ page.url }}" alt="Read {{ page.title }}">{{ page.title }}</a>
 				</li>
 				{% endfor %}
 
@@ -26,7 +26,7 @@
 
 		<nav role="navigation" class="footer-links">
 
-			<h1>About</h1>
+			<h1>Topics</h1>
 
 			<ul>
 
