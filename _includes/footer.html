@@ -24,6 +24,22 @@
 
 		</nav>
 
+		<nav role="navigation" class="footer-links">
+
+			<h1>About</h1>
+
+			<ul>
+
+				{% for topic in site.topics %}
+				<li>
+					<a class="header-link" href="{{ topic.url }}" alt="See all posts under {{ topic.title }}">{{ topic.title }}</a>
+				</li>
+				{% endfor %}
+
+			</ul>
+
+		</nav>
+
 	</div>
 
 </footer>

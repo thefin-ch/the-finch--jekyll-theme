@@ -34,6 +34,12 @@ footer#site-footer {
 		@include sm-up {
 			width: 			calc(33% - #{$pad-1});
 		}
+		@include lg-up {
+			width: 			calc(25% - #{$pad-1});
+			&:first-child {
+				width: 			calc(50%);
+			}
+		}
 
 		* {
 			color: 			$white !important;
