@@ -2,6 +2,7 @@
 _config.yml
 _posts
 _topics
+_pages
 index.md
 Gemfile.lock
 *_site
