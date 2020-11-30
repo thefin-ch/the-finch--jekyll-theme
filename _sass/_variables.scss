@@ -36,7 +36,7 @@ $green1:                            hsl(165, 48%, 49%) !default;
 $green2:                            hsl(196, 78%, 32%) !default;
 $orange:                            hsl(37, 100%, 50%) !default;
 
-$brand:                             $magenta !default;
+$brand:                             hsl(240, 96%, 11%) !default;
 $brand-75:                          lighten($brand, 25%) !default;
 $brand-50:                          lighten($brand, 50%) !default;
 $brand-25:                          lighten($brand, 75%) !default;
@@ -46,19 +46,19 @@ $border-color:                      $brand;
 
 // Default colors
 
-$body-background:					$purple5;
+$body-background:					$white;
 
-$page-background:					$true-white;
+$page-background:					$white;
 $body-color:						$true-black;
 
-$link-color:						$brand;
+$link-color:						$brand-75;
 $link-hover-color:					$white;
 $link-hover-background:				$white;
 $link-focus-background:				$magenta;
 $link-font-weight:					bold;
 $link-outline:						3px solid $magenta;
-$link-text-decoration:				underline;
-$link-text-decoration-hover:		none;
+$link-text-decoration:				none;
+$link-text-decoration-hover:		underline;
 
 $link-display-color:						$brand;
 $link-display-hover-color:					$white;
@@ -324,8 +324,8 @@ $xl: 	 							1900px;
 $container-xs: 	 					300px;
 $container-sm: 	 					750px;
 $container-md: 	 					940px;
-$container-lg: 	 					1300px;
-$container-xl: 	 					1600px;
+$container-lg: 	 					1000px;
+$container-xl: 	 					1200px;
 
 $container-padding: 	 			15px;
 
@@ -347,8 +347,8 @@ $pad-20:     $container-padding * 20;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family:                       "TheFinchSansSerif", "Times New Roman", serif;
-$font-family-display:               "TheFinchSansSerif", "Times New Roman", serif;
+$font-family:                       "The Finch", "Times New Roman", serif;
+$font-family-display:               "The Finch", "Times New Roman", serif;
 $font-family-monospace:       		SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-feature-settings:				"ss02", "tnum", "liga", "zero", "kern";

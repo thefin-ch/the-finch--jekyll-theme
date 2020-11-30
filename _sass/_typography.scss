@@ -127,49 +127,6 @@ h1 {
 
 }
 
-
-h1.display {
-
-	max-width: 60ch;
-
-	font-family: 	$font-family-display;
-	font-weight: 	$h1-font-weight;
-	font-style: 	$h1-font-style;
-	text-decoration: $h1-text-decoration;
-	text-transform: $h1-text-transform;
-
-	color:			$white;
-
-	
-
-	@include xs {
-		font-size: 		$h1-font-size-xs;
-		line-height: 	$h1-line-height-xs;
-		padding: 		$h1-padding-top-xs 0 $h1-padding-bottom-xs 0;
-	}
-	@include sm {
-		font-size: 		$h1-font-size-sm;
-		line-height: 	$h1-line-height-sm;
-		padding: 		$h1-padding-top-sm 0 $h1-padding-bottom-sm 0;
-	}
-	@include md {
-		font-size: 		$h1-font-size-md;
-		line-height: 	$h1-line-height-md;
-		padding: 		$h1-padding-top-md 0 $h1-padding-bottom-md 0;
-	}
-	@include lg {
-		font-size: 		$h1-font-size-lg;
-		line-height: 	$h1-line-height-lg;
-		padding: 		$h1-padding-top-lg 0 $h1-padding-bottom-lg 0;
-	}
-	@include xl {
-		font-size: 		$h1-font-size-xl;
-		line-height: 	$h1-line-height-xl;
-		padding: 		$h1-padding-top-xl 0 $h1-padding-bottom-xl 0;
-	}
-
-}
-
 h2 {
 
 	max-width: 60ch;
@@ -552,10 +509,10 @@ p.categories {
 	display: 	block;
 	position: relative;
 
-	padding:		0 0 $pad-1 0;
+	padding:		0 0 0 0;
 
 	a.category {
-		display: inline;
+		display: inline-block;
 		text-transform: 	uppercase;
 		font-weight: 		bold;
 		background: 	$brand;

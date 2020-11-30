@@ -1,15 +1,27 @@
 // Footer styles
 
 footer#site-footer {	
-
+	
 	> div {
 
 		display: flex;
+		position: relative;
+	
+		@include sm-down {
+			margin-top:	$pad-1;
+			margin-bottom: $pad-1;
+		}
+		@include md-up {
+			margin-top:	$pad-2;
+			margin-bottom: $pad-2;
+		}
+		
+		border: 1px solid;
 	
 		@include sm-down {
 			flex-flow: column nowrap;
 		}
-		@include sm-up {
+		@include md-up {
 			flex-flow: 	row wrap;
 			justify-content: space-between;
 		}
@@ -18,12 +30,9 @@ footer#site-footer {
 		}
 	
 		margin-bottom: $pad-2;
-
-		background: 	$black;
 		
-		@include card-shadow;
 	}
-
+	
 	section, nav {
 
 		display: block;
@@ -40,12 +49,9 @@ footer#site-footer {
 				width: 			calc(50%);
 			}
 		}
-
-		* {
-			color: 			$white !important;
-		}
+		
 	}
-
+	
 	section.wordmark {
 		padding:		$pad-3 $pad-2;
 
@@ -54,7 +60,7 @@ footer#site-footer {
 			padding: 0 !important;
 		}
 	}
-
+	
 	nav {
 		@include xs {
 			padding:		$pad-3 $pad-2;
@@ -98,5 +104,4 @@ footer#site-footer {
 		}
 	}
 
-	
 }

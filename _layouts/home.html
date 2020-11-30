@@ -2,109 +2,49 @@
 layout: default
 ---
 
-{% for post in site.posts limit: 1 %}
-<section id="splash">
-
-    <article style="background-image: url('{{ post.image }}')">
+<ul id="loop">
+{% for post in paginator.posts %}
+    <li>
         
-        <p class="sr-only">{{ post.image-alt }}</p>
-        
-        <div class="hero-text">
-            
-			<p class="categories">
-                {% for categories in post.categories %}
-                <a class="category" href="{{ categories | prepend: '/topic/' }}">
-                    {{ categories | replace: "-", " " }}
-                </a>
-                {% endfor %}
-            </p>
-
-            <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
-
-            <p>{{ post.excerpt }}</p>
-
-        </div>
-
-    </article>
-
-</section>
-{% endfor %}
-
-{% for post in site.posts limit: 1 offset: 1 %}
-<section id="pull">
-
-    <article>
-
-        <div class="hero-pullquote">
-            <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">“{{ post.pullquote }}”</a></h1>
-        </div>
-
-        <div class="hero-text">
-            
-			<p class="categories">
-                {% for categories in post.categories limit: 1 %}
-                <a class="category" href="{{ categories | prepend: '/topic/' }}">
-                    {{ categories | replace: "-", " " }}
-                </a>
-                {% endfor %}
-            </p>
-
-            <p>{{ post.excerpt }}</p>
-
-        </div>
-
-    </article>
-
-</section>
-{% endfor %}
-
-<section id="carousel">
-
-    {% for post in site.posts limit: 3 offset: 2 %}
-    <article>
-
-
-        <div class="hero-image">
-            <img src="{{ post.image }}"  loading="lazy" alt="{{ post.image-alt }}">
-        </div>
-
-        <div class="text">
-			<p class="categories">
-                {% for categories in post.categories %}
-                <a class="category" href="{{ categories | prepend: '/topic/' }}">
-                    {{ categories | replace: "-", " " }}
-                </a>
-                {% endfor %}
-            </p>
-            <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
-            <p>{{ post.excerpt }}</p>    
-        </div>
-
-    </article>
-    {% endfor %}
-
-</section>
-
-
-
-<section id="blogroll">
-
-    {% for post in site.posts limit: 5 offset: 5 %}
-    <article>
         <p class="categories">
-                {% for categories in post.categories %}
-                <a class="category" href="{{ categories | prepend: '/topic/' }}">
-                    {{ categories | replace: "-", " " }}
-                </a>
-                {% endfor %}
-            </p>
-        <h1><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h1>
-        <p>{{ post.excerpt }}</p>    
-    </article>
-    {% endfor %}
+            {% for categories in post.categories limit: 1 %}
+            <a class="category" href="{{ categories | prepend: '/topic/' }}">
+                {{ categories | replace: "-", " " }}
+            </a>
+            {% endfor %}
+        </p>
 
-    <p class="all-posts">
-        <a href="/posts/">All posts →</a>
+        <article>
+        
+            <h2><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h2>
+            <p>{{ post.excerpt }}</p>
+        </article>
+    
+    </li>	
+{% endfor %}
+</ul>
+
+
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination" role="navigation">
+    {% if paginator.previous_page %}
+    <p class="page--next-prev--prev card-shadow">
+        <a class="page--next-prev--label" href="{{ paginator.previous_page_path | relative_url }}" title="Go to previous page">← Newer posts</a>
     </p>
+    {% else %}
+    <p class="page--next-prev--prev-blank">
+    </p>  
+    {% endif %}
 
-</section>
+
+    {% if paginator.next_page %}
+    <p class="page--next-prev--next card-shadow">
+        <a class="page--next-prev--label" href="{{ paginator.next_page_path | relative_url }}" title="Go to next page">Older posts →</a>
+    </p>  
+    {% else %}
+    <p class="page--next-prev--prev-blank">
+    </p>  
+    {% endif %}
+</div>
+{% endif %}

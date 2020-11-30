@@ -21,19 +21,19 @@ body#post {
 
 		p.categories {
 			@include xs {
-				padding: 		$h1-padding-top-xs 0 $pad-1;
+				padding: 		$pad-1 0 $pad-1;
 			}
 			@include sm {
-				padding: 		$h1-padding-top-sm 0 $pad-2;
+				padding: 		$pad-1 0 $pad-2;
 			}
 			@include md {
-				padding: 		$h1-padding-top-md 0 $pad-2;
+				padding: 		$pad-2 0 $pad-2;
 			}
 			@include lg {
-				padding: 		$h1-padding-top-lg 0 $pad-2;
+				padding: 		$pad-3 0 $pad-2;
 			}
 			@include xl {
-				padding: 		$h1-padding-top-xl 0 $pad-2;
+				padding: 		$pad-3 0 $pad-2;
 			}
 		}
 
@@ -64,17 +64,15 @@ body#post {
 	aside.post-image {
 
 		figure {
-			max-width: 900px;
+			// max-width: 900px;
 
 			figcaption * {
-				color: 		$white;
+
 			}
 		}
 
 		img {
 			width: 100%;
-			@include card-shadow;
-			@include border;
 		}
 
 		@include xs {
@@ -89,7 +87,7 @@ body#post {
 	aside.post-meta {
 
 		* {
-			color: 		$white;
+
 		}
 		
 		dl.meta-data{
@@ -119,8 +117,6 @@ body#post {
 	}
 	
 	section.post-body {
-		
-		@include border;
 
 		position: relative;
 		display: block;
@@ -129,9 +125,6 @@ body#post {
 		margin-left: 		0;
 
 		padding-top: $pad-1;
-
-		background: $white;
-		@include card-shadow;
 		
 		> p:first-of-type {
 
@@ -144,7 +137,7 @@ body#post {
 
 			-webkit-font-feature-settings: 	normal !important;
 			   -moz-font-feature-settings: 	normal !important;
-			  	 -o-font-feature-settings: 	normal !important;
+				   -o-font-feature-settings: 	normal !important;
 					font-feature-settings:	normal !important;
 
 		}

@@ -11,11 +11,3 @@
 	}
 
 }
-
-@mixin gradient($angle, $first-color, $second-color, $third-color) {
-	background: 	$first-color; /* For browsers that do not support gradients */
-	background: 	-webkit-linear-gradient($angle, $first-color, $second-color, $third-color); /* For Safari 5.1 to 6.0 */
-	background: 	-o-linear-gradient($angle, $first-color, $second-color, $third-color); /* For Opera 11.1 to 12.0 */
-	background: 	-moz-linear-gradient($angle, $first-color, $second-color, $third-color); /* For Firefox 3.6 to 15 */
-	background: 	linear-gradient($angle, $first-color, $second-color, $third-color); /* Standard syntax */
-}

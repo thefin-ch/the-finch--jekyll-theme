@@ -1,41 +1,37 @@
 // Header styles
 
 header#site-header {
-
-	display:			flex;
+	display: flex;
+	flex-direction: column;
+			
+	@include sm-down {
+		padding-bottom: $pad-2;
+	}
+	@include md-up {
+		padding-bottom: $pad-3;
+	}
 	
-	@include sm-down {
-		flex-direction: 	column;
-	}
-	@include md-up {
-		flex-direction: 	row;
-	}
-
-	@include sm-down {
-		padding-top:		$pad-1;
-		padding-bottom:		$pad-1;
-	}
-	@include md-up {
-		padding-top:		$pad-2;
-		padding-bottom:		$pad-2;
-	}
-
-	div.header-wordmark {
-
+	div#header-wordmark {
+		
 		display: 		flex;
-		align-items: 	flex-start;
-		flex-direction: column;
+		position: 		relative;
+				
+		@include sm-down {
+			padding-top:	$pad-1;
+			padding-bottom: 0;
+		}
+		@include md-up {
+			padding-top:	$pad-3;
+			padding-bottom: 0;
+		}
 
-		a {
-			display: 			flex;
+		a.header-logo {
+			display: 			inline-block;
+			position: 			relative;
+						
 			text-decoration: 	none;
-
-			@include sm-down {
-				width: 100%;
-			}
-
+			
 			&:hover h1 {
-				@include 		text-background;
 				text-decoration: none;
 			}
 			&:focus h1 {
@@ -44,6 +40,7 @@ header#site-header {
 		}
 
 		img.finch-logo {
+						
 			@include sm-down { 
 				height: 	50px !important;
 				max-height: 50px !important;
@@ -54,77 +51,53 @@ header#site-header {
 			}
 		}
 
+		div.header-wordmark {
+			display: 			inline-block;
+			position: 			relative;
+			
+			width: 				100%;
+			
+			text-decoration: 	none;
+			
+			&:hover h1 {
+				text-decoration: none;
+			}
+			&:focus h1 {
+				color: 			$white;
+			}
+		}
+
 		h1.finch-wordmark {
+			
+			text-align: 		right;
+			vertical-align: 	bottom;
+			font-style: italic;
+			
+			border-color: 		$brand;
 
 			@include sm-down {
-
-				display: 			inline-block;
-	
 				height: 			33px;
-				flex-grow: 1;
-				padding: 0;
+				padding: 			0;
 	
-				color: 				$true-white;
 				font-size: 			24px;
 				line-height: 		32px;
-				text-align: 		right;
-				vertical-align: 	bottom;
-				border-bottom:		1px solid $white;
-
+				border-bottom:		1px solid;
 			}
 
 			@include md-up {
-
-				display: 			inline;
-	
 				height: 			66px;
 				padding: 			0 0 0 $pad-2;
 	
-				color: 				$true-white;
 				font-size: 			40px;
 				line-height: 		64px;
-				text-align: 		right;
-				vertical-align: 	bottom;
-				border-bottom:		2px solid $white;
-
+				border-bottom:		2px solid;
 			}
 			
 		}
-
-		button#header-menu-toggle {
-
-			@include sm-down {
-				display: 		inline-block;
-				align-self: 	flex-end;
-				padding:		3px 10px;
-				font-size: 		$p-font-size-sm;
-				text-align: 	right;
-				background: 	$purple5 !important;
-				color: 			$white;
-				border:			1px solid $white;
-
-				&:hover {
-					background: 	$white !important;
-					color: 			$purple5;
-				}
-				&:focus {
-					outline: 		3px solid $magenta;
-				}
-
-				&.open {
-					background: 	$white !important;
-					color: 			$purple5;
-				}
-			}
-			@include md-up {
-				display: 		none;
-			}
-		}
-
+		
 	}
 	
-	nav#header-links {
-		
+	nav#header-links {		
 		position: 	relative;
 		display: 	flex;
 
@@ -135,7 +108,6 @@ header#site-header {
 		@include md-up {
 			height: 			66px;
 			padding: 			0 0 $pad-1 $pad-1;
-			border-bottom:		2px solid $white;
 			line-height: 		64px;
 		}
 
@@ -181,25 +153,17 @@ header#site-header {
 				}
 			
 				a.header-link {
-	
-					color: $white;
-					text-decoration: none;
-	
+		
 					font-weight: 		normal;
 
 					@include md-up {
 
 						display: inline-block;
 						&:hover {
-							background: 		$white;
-							color: 				$brand;
-							outline:			5px solid $white;
+							
 						}
 						&:focus {
-							background: 		$brand;
-							color: 				$white;
-							outline:			5px solid $brand;
-							text-decoration: 	underline;
+
 						}
 					}
 
@@ -209,19 +173,11 @@ header#site-header {
 						
 						padding: 	8px 12px;
 
-						border: 	1px solid $white;
-
 						&:hover {
-							background: 		$white;
-							color: 				$brand;
-							border: 			1px solid $white;
+							
 						}
 						&:focus {
-							background: 		$brand;
-							color: 				$white;
-							border:			 	1px solid $brand;
-							outline:			5px solid $brand;
-							text-decoration: 	underline;
+
 						}
 						
 						&::after {
@@ -239,7 +195,6 @@ header#site-header {
 			}
 
 		}
-	
 	}
 
 	button#header-menu-toggle {
@@ -259,6 +214,38 @@ header#site-header {
 		
 		margin: 		0;
 		padding:		10px;
+		
+		@include sm-down {
+			align-self: 	flex-end;
+						
+			padding:		3px 10px;
+			font-size: 		$p-font-size-sm;
+			text-align: 	right;
+			border:			1px solid;
+
+			&:hover {
+				background: 	$white !important;
+			}
+			&:focus {
+				outline: 		3px solid $magenta;
+			}
+
+			&.open {
+				span.up-arrow {
+					display: none;
+				}
+			}
+
+			&.closed {
+				span.down-arrow {
+					display: none;
+				}
+			}
+		}
+		
+		@include md-up {
+			display: 		none;
+		}
 	
 	}
 

@@ -1,30 +1,3 @@
 // Mixins
 
 // Backgrounds
-
-@mixin text-background {
-
-	color: 					$orange;
-
-	@supports (background-clip: text) or (-webkit-background-clip: text) {
-
-		color: 						transparent;
-
-		@include gradient(45deg, $orange, $magenta, $purple1);
-
-		-webkit-background-clip: 	text;
-				background-clip: 	text;
-				background-size: 	cover;
-
-	}
-
-	a {
-		color: unset;
-
-		&:focus,
-		&:hover {
-			color: $white;
-		}
-	}
-
-}
