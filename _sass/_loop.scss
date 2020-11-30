@@ -8,6 +8,8 @@ body#home ul#loop {
     
     li {
         
+        max-width: unset;
+        
         margin-bottom: $pad-2;
         
         background: $white;
