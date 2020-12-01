@@ -149,8 +149,13 @@ header#site-header {
 	
 			// The links are displayed as a vertical list on smaller displays.
 			@include sm-down {
-	
+
 				width: 100%;
+				
+				background: $gray-200;
+				@include dark-mode {
+					background: $true-black;
+				}
 	
 				&.open {
 					display: block;
