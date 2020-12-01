@@ -2,4 +2,33 @@
 
 body#home {
 	
+	main#content {
+		
+		section.loop {
+			
+			@include md-up {
+				float: left;
+				max-width: 67%;
+			}
+			
+		}
+		
+		aside#sidebar {
+			
+			@include sm-down {
+				margin-top: $pad-2;
+			}
+			
+			@include md-up {				
+				float: left;
+				margin-left: $pad-2;
+				max-width: calc(33% - $pad-2);
+			}
+			
+		}
+		
+		@include clearfix;
+		
+	}
+	
 }

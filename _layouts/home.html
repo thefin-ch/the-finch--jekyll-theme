@@ -2,48 +2,57 @@
 layout: default
 ---
 
-<ul id="loop">
-{% for post in paginator.posts %}
-    <li>
+<section class="loop">
         
-        <p class="categories">
-            {% for categories in post.categories limit: 1 %}
-            <a class="category" href="{{ categories | prepend: '/topic/' }}">
-                {{ categories | replace: "-", " " }}
-            </a>
-            {% endfor %}
-        </p>
-
-        <article>
-            <h2><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h2>
-            <p>{{ post.excerpt }}</p>
-        </article>
+    <ul id="loop">
+    {% for post in paginator.posts %}
+        <li>
+            
+            <p class="categories">
+                {% for categories in post.categories limit: 1 %}
+                <a class="category" href="{{ categories | prepend: '/topic/' }}">
+                    {{ categories | replace: "-", " " }}
+                </a>
+                {% endfor %}
+            </p>
     
-    </li>	
-{% endfor %}
-</ul>
-
-
-
-{% if paginator.total_pages > 1 %}
-<div class="pagination" role="navigation">
-    {% if paginator.previous_page %}
-    <p class="page--next-prev--prev">
-        <a class="page--next-prev--label" href="{{ paginator.previous_page_path | relative_url }}" title="Go to previous page">← Newer posts</a>
-    </p>
-    {% else %}
-    <p class="page--next-prev--prev-blank">
-    </p>  
+            <article>
+                <h2><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h2>
+                <p>{{ post.excerpt }}</p>
+            </article>
+        
+        </li>	
+    {% endfor %}
+    </ul>
+    
+    
+    
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination" role="navigation">
+        {% if paginator.previous_page %}
+        <p class="page--next-prev--prev">
+            <a class="page--next-prev--label" href="{{ paginator.previous_page_path | relative_url }}" title="Go to previous page">← Newer posts</a>
+        </p>
+        {% else %}
+        <p class="page--next-prev--prev-blank">
+        </p>  
+        {% endif %}
+    
+    
+        {% if paginator.next_page %}
+        <p class="page--next-prev--next">
+            <a class="page--next-prev--label" href="{{ paginator.next_page_path | relative_url }}" title="Go to next page">Older posts →</a>
+        </p>  
+        {% else %}
+        <p class="page--next-prev--prev-blank">
+        </p>  
+        {% endif %}
+    </div>
     {% endif %}
+    
+</section>
 
-
-    {% if paginator.next_page %}
-    <p class="page--next-prev--next">
-        <a class="page--next-prev--label" href="{{ paginator.next_page_path | relative_url }}" title="Go to next page">Older posts →</a>
-    </p>  
-    {% else %}
-    <p class="page--next-prev--prev-blank">
-    </p>  
-    {% endif %}
-</div>
-{% endif %}
+<aside id="sidebar">
+    
+    {% include social.html %}
+</aside>
