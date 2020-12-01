@@ -13,8 +13,6 @@
 	font-kerning: 	normal;
 	letter-spacing: normal;
 
-	color: 			$black;
-
 }
 
 // Main paragraph text
@@ -70,6 +68,9 @@ dl {
 a {
 
 	color: 				$link-color;
+	@include dark-mode {
+		color:			$link-color-dark-mode;
+	}
 	text-decoration: 	$link-text-decoration;
 	font-weight: 		$link-font-weight;
 
@@ -81,6 +82,10 @@ a {
 		text-decoration: $link-text-decoration;
 		background: $link-focus-background;
 		color: $link-hover-color;
+		@include dark-mode {
+			background: $link-focus-background;
+			color:			$link-hover-color-dark-mode;
+		}
 		outline: $link-outline;
 	}
 

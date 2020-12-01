@@ -1,23 +1,34 @@
 // Footer styles
 
-footer#site-footer {	
+footer#site-footer {
+	
+	display: block;
+	position: relative;
+	
+	box-sizing: border-box;
+	
+	background: $footer-background;
+	color: $footer-color;
+	@include dark-mode {
+		background: $footer-background-dark-mode;
+		color: $footer-color-dark-mode;
+	}
 	
 	> div {
 
 		display: flex;
 		position: relative;
+		
+		margin-bottom: 0;
+		padding-bottom: $pad-4;
 	
 		@include sm-down {
 			margin-top:	$pad-1;
-			margin-bottom: $pad-1;
 		}
 		@include md-up {
 			margin-top:	$pad-2;
-			margin-bottom: $pad-2;
 		}
 		
-		border: 1px solid;
-	
 		@include sm-down {
 			flex-flow: column nowrap;
 		}
@@ -25,11 +36,6 @@ footer#site-footer {
 			flex-flow: 	row wrap;
 			justify-content: space-between;
 		}
-		@include xs {
-			margin-bottom: $pad-1;
-		}
-	
-		margin-bottom: $pad-2;
 		
 	}
 	
@@ -53,17 +59,22 @@ footer#site-footer {
 	}
 	
 	section.wordmark {
-		padding:		$pad-3 $pad-2;
+		padding:		$pad-3 $pad-2 $pad-3 0;
 
 		h1 {
 			@extend h2;
 			padding: 0 !important;
+			
+			color: $footer-color;
+			@include dark-mode {
+				color: $footer-color-dark-mode;
+			}
 		}
 	}
 	
 	nav {
 		@include xs {
-			padding:		$pad-3 $pad-2;
+			padding:		$pad-3 $pad-2 $pad-3 0;
 		}
 		@include sm-up {
 			padding:		$pad-3 $pad-2 $pad-3 0;

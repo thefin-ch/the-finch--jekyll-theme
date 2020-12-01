@@ -46,15 +46,25 @@ $border-color:                      $brand;
 
 // Default colors
 
-$body-background:					$white;
-
-$page-background:					$white;
+$body-background:					$true-white;
 $body-color:						$true-black;
+$body-background-dark-mode:			$black;
+$body-color-dark-mode:				$white;
+
+$footer-background:					   $white;
+$footer-color:						$true-black;
+$footer-background-dark-mode:		   $true-black;
+$footer-color-dark-mode:			$white;
 
 $link-color:						$brand-75;
-$link-hover-color:					$white;
+$link-hover-color:					$brand;
 $link-hover-background:				$white;
 $link-focus-background:				$magenta;
+$link-color-dark-mode:				$brand-25;
+$link-hover-color-dark-mode:		$white;
+$link-hover-background-dark-mode:	$brand;
+$link-focus-background-dark-mode:	$magenta;
+
 $link-font-weight:					bold;
 $link-outline:						3px solid $magenta;
 $link-text-decoration:				none;
