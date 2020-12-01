@@ -64,10 +64,13 @@ footer#site-footer {
 		h1 {
 			@extend h2;
 			padding: 0 !important;
+			font-style: italic !important;
 			
-			color: $footer-color;
-			@include dark-mode {
-				color: $footer-color-dark-mode;
+			a.finch-wordmark--link {
+				color: 		$brand !important;
+				@include dark-mode {
+					color: $white !important;
+				}
 			}
 		}
 	}
@@ -84,6 +87,11 @@ footer#site-footer {
 			@extend h4;
 			padding-top: 0 !important;
 			font-style: normal !important;
+			
+			color: 		$brand !important;
+			@include dark-mode {
+				color: $white !important;
+			}
 
 			a {
 				text-decoration: none;
