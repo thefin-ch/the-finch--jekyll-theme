@@ -23,26 +23,35 @@ ul#social-links {
 		line-height: 36px + $pad-2;
 		
 		background: $gray-200;
+		
+		border-top: 1px solid;
+		border-color: $border-color;
 		@include dark-mode {
-			background: $brand;
+			background: $true-black;
+			border-color:     $border-color-dark-mode;		
 		}
 		
 		&:hover,
 		&:focus {
 			background: $brand-25;
 			@include dark-mode {
-				background: $true-black;
+				background: $brand;
 			}
 			outline:    none;
 		}
 		
 		svg {
 			float: left;
-			max-height: 36px;
-			max-width: 36px;
-			height: 36px;
-			width: 36px;
-			margin: $pad-1;
+			height: 35px + $pad-2;
+			width: 36px + $pad-2;
+			padding: $pad-1;
+			
+			color: $white;
+			background: $brand;
+			@include dark-mode {
+				color: $brand;
+				background: $brand-25;
+			}
 		}
 		
 		a {
