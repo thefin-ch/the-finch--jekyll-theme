@@ -27,7 +27,10 @@ p, li {
 	font-weight: 	$p-font-weight;
 	font-style: 	normal;
 
-	color:			$black;
+	color:			$body-color;
+	@include dark-mode {
+		color:		$body-color-dark-mode;
+	}
 
 	@include xs {
 		font-size: 		$p-font-size-xs;
@@ -79,7 +82,7 @@ a {
 		text-decoration: $link-text-decoration-hover;
 	}
 	&:focus {
-		text-decoration: $link-text-decoration;
+		text-decoration: $link-text-decoration-focus;
 		background: $link-focus-background;
 		color: $link-hover-color;
 		@include dark-mode {
@@ -87,8 +90,19 @@ a {
 			color:			$link-hover-color-dark-mode;
 		}
 		outline: $link-outline;
+		
+		&:hover {
+			text-decoration: $link-text-decoration-hover !important;
+		}
 	}
 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:			$heading-color;
+	@include dark-mode {
+		color: 		$heading-color-dark-mode;
+	}
 }
 
 
@@ -101,8 +115,6 @@ h1 {
 	font-style: 	$h1-font-style;
 	text-decoration: $h1-text-decoration;
 	text-transform: $h1-text-transform;
-
-	color:			$brand;
 
 	@include xs {
 		font-size: 		$h1-font-size-xs * 0.75;
@@ -142,8 +154,6 @@ h2 {
 	text-decoration: $h2-text-decoration;
 	text-transform: $h2-text-transform;
 
-	color:			$brand;
-
 	@include xs {
 		font-size: 		$h2-font-size-xs;
 		line-height: 	$h2-line-height-xs;
@@ -181,8 +191,6 @@ h3 {
 	font-style: 	$h3-font-style;
 	text-decoration: $h3-text-decoration;
 	text-transform: $h3-text-transform;
-
-	color:			$brand;
 
 	@include xs {
 		font-size: 		$h3-font-size-xs;
@@ -222,8 +230,6 @@ h4 {
 	text-decoration: $h4-text-decoration;
 	text-transform: $h4-text-transform;
 
-	color:			$brand;
-
 	@include xs {
 		font-size: 		$h4-font-size-xs;
 		line-height: 	$h4-line-height-xs;
@@ -261,8 +267,6 @@ h5 {
 	font-style: 	$h5-font-style;
 	text-decoration: $h5-text-decoration;
 	text-transform: $h5-text-transform;
-
-	color:			$brand;
 
 	@include xs {
 		font-size: 		$h5-font-size-xs;
@@ -334,8 +338,14 @@ blockquote {
 	
 	display: inline-block;
 
-	background: $brand-25;
-	border-top: 5px solid $border-color;
+	background: $blockquote-background;
+	border-color: $border-color;
+	@include dark-mode {
+		background: $blockquote-background-dark-mode;
+		border-color: $border-color-dark-mode;
+	}	
+	
+	border-top: 5px solid;
 
 	@include xs {
 		padding: 		$p-padding-bottom-xs 0 0;
@@ -389,7 +399,12 @@ blockquote {
 			display: 	inline;
 			position: 	relative;
 			content: 	"\201c";
-			color: 		$brand;
+			
+			color: $border-color;
+			@include dark-mode {
+				color: $border-color-dark-mode;
+			}
+			
 			font-family: $font-family-display;
 
 			float: left;
@@ -473,23 +488,38 @@ table {
 	
     border-collapse: collapse;
 
-	border-top: 5px solid $brand;
-	border-bottom: 5px solid $brand;
+	border-color: $border-color;
+	@include dark-mode {
+		border-color: $border-color-dark-mode;
+	}
+
+	border-top: 5px solid;
+	border-bottom: 5px solid;
 
 	thead {
 		@extend strong;
 		text-align: left;
-		border-bottom: 1px solid $brand;
+		border-bottom: 1px solid $border-color;
+		@include dark-mode {
+			border-color: $border-color-dark-mode;
+		}
 	}
 	
 	tfoot {
 		@extend strong;
 		text-align: left;
-		border-top: 1px solid $black;
+		border-top: 1px solid $border-color;
+		@include dark-mode {
+			border-color: $border-color-dark-mode;
+		}
 	}
 	
 	tr {
+		
 		border-bottom: 1px solid $gray-200;
+		@include dark-mode {
+			border-color: $brand;
+		}		
 
 		&:last-child {
 			border-bottom: none !important;
@@ -501,6 +531,9 @@ table {
 		vertical-align: top;
 		
 		border-left: 1px solid $gray-200;
+		@include dark-mode {
+			border-color: $brand;
+		}
 		
 		&:first-child {
 			border-left: none;
@@ -522,22 +555,26 @@ p.categories {
 		font-weight: 		bold;
 		background: 	$brand;
 		border: 		3px solid $brand;
-		color: 			$white;
+		color:			$white;
+		border-color: 	$border-color;
+		@include dark-mode {
+			background: 	$brand-25;
+			color:			$black;
+			border-color: 	$border-color-dark-mode;
+		}
 		padding: 3px 6px;
 		margin: 0 5px 0 0;
 
 		text-decoration: 	none;
 
 		&:hover {
-			background: 	$white;
-			color:			$brand;
-			border: 		3px solid $brand;
+			text-decoration: underline;
 		}
 		&:focus {
 			background: 	$white;
 			color:			$brand;
 			border: 		3px solid $brand;
-			outline: 		3px solid $orange;
+			outline: 		3px solid $link-outline;
 		}
 	}
 }

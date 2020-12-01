@@ -16,15 +16,16 @@ figure.image {
 	
 	figcaption {
 		margin-top: 5px;
-		padding: 10px 0;
+		padding: 10px 0 0;
+		
 		border-top: 2px solid $brand;
+		border-color: $border-color;
+		@include dark-mode {
+			border-color: $border-color-dark-mode;
+		}
 		
 		p {
 			font-style: oblique;
-
-			strong {
-				color: $brand;
-			}
 	 	}
 	}
 	

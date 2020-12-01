@@ -35,6 +35,7 @@ $magenta:   	 					hsl(343, 100%, 50%) !default;
 $green1:                            hsl(165, 48%, 49%) !default;
 $green2:                            hsl(196, 78%, 32%) !default;
 $orange:                            hsl(37, 100%, 50%) !default;
+$yellow:                            hsl(55, 100%, 50%) !default;
 
 $brand:                             hsl(240, 96%, 11%) !default;
 $brand-75:                          lighten($brand, 25%) !default;
@@ -45,6 +46,8 @@ $border-color:                      $brand;
 
 
 // Default colors
+$html-background:				    $white;
+$html-background-dark-mode:		$true-black;
 
 $body-background:					$true-white;
 $body-color:						$true-black;
@@ -59,28 +62,32 @@ $footer-color-dark-mode:			$white;
 $link-color:						$brand-75;
 $link-hover-color:					$brand;
 $link-hover-background:				$white;
-$link-focus-background:				$magenta;
+$link-focus-background:				$yellow;
 $link-color-dark-mode:				$brand-25;
 $link-hover-color-dark-mode:		$white;
 $link-hover-background-dark-mode:	$brand;
-$link-focus-background-dark-mode:	$magenta;
+$link-focus-background-dark-mode:	$yellow;
 
 $link-font-weight:					bold;
-$link-outline:						3px solid $magenta;
+$link-outline:						3px solid $yellow;
 $link-text-decoration:				none;
 $link-text-decoration-hover:		underline;
+$link-text-decoration-focus:		none;
 
-$link-display-color:						$brand;
-$link-display-hover-color:					$white;
-$link-display-focus-color:					$white;
-$link-display-focus-background:				$magenta;
-$link-display-font-weight:					normal;
-$link-display-outline:						5px solid $orange;
-$link-display-text-decoration:				none;
-$link-display-text-decoration-hover:		underline;
 
 $skiplink-color:					$white;
 $skiplink-background:				$brand;
+
+$border-color:                      $brand;
+$border-color-dark-mode:            $brand-25;
+
+$loop-item-background:              $white;
+$loop-item-color:                   $black;
+$loop-item-background-dark-mode:    $true-black;
+$loop-item-color-dark-mode:         $white;
+
+$heading-color:                    $brand;
+$heading-color-dark-mode:            $brand-25;
 
 $code-color:						$black;
 $code-background:					$gray-200;
@@ -88,7 +95,8 @@ $code-padding:							0 3px;
 $code-border-radius:					5px;
 $blockquote-code-color:					$black;
 
-$blockquote-background:					$gray-200;
+$blockquote-background:					$brand-25;
+$blockquote-background-dark-mode:		$true-black;
 
 // DEFAULT TEXT SIZES & SPACING
 
@@ -155,9 +163,9 @@ $h1-line-height-xl:				$h1-font-size-xl * 1.25;
 $h1-padding-top:					$h1-font-size;
 $h1-padding-top-xs:					$h1-font-size-xs;
 $h1-padding-top-sm:					$h1-font-size-sm;
-$h1-padding-top-md:					$h1-font-size-md * 1.5;
-$h1-padding-top-lg:					$h1-font-size-lg * 1.5;
-$h1-padding-top-xl:					$h1-font-size-xl * 1.5;
+$h1-padding-top-md:					$h1-font-size-md * 0.5;
+$h1-padding-top-lg:					$h1-font-size-lg * 0.5;
+$h1-padding-top-xl:					$h1-font-size-xl * 0.5;
 
 $h1-padding-bottom:					$h1-font-size * 0.5;
 $h1-padding-bottom-xs:				$h1-font-size-xs * 0.5;

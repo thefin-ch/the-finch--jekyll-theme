@@ -2,8 +2,17 @@
 
 body#four-oh-four {
     
-    main {
-
+    svg.finch-dead {
+        max-width: 200px;
+        
+        padding-top: 10vh;
+        
+        // 'color' is set here because 'currentColor' is used in the SVG file
+        // and 'currentColor' responds to 'color' in CSS.
+        color: $brand !important;
+        @include dark-mode {
+            color: $white !important;
+        }
     }
 	
 }

@@ -6,16 +6,15 @@ layout: page
 
 	{% for post in site.categories[page.category] %}
 	<li>
+		<p class="categories">
+			{% for categories in post.categories limit: 1 %}
+			<a class="category" href="{{ categories | prepend: '/topic/' }}">
+				{{ categories | replace: "-", " " }}
+			</a>
+			{% endfor %}
+		</p>
 
 		<article>
-			<p class="categories">
-				{% for categories in post.categories limit: 1 %}
-				<a class="category" href="{{ categories | prepend: '/topic/' }}">
-					{{ categories | replace: "-", " " }}
-				</a>
-				{% endfor %}
-			</p>
-		
 			<h2><a class="display" href="{{ post.url }}" title="Read {{ post.title }}">{{ post.title }}</a></h2>
 			<p>{{ post.excerpt }}</p>
 		</article>

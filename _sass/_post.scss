@@ -67,7 +67,7 @@ body#post {
 			// max-width: 900px;
 
 			figcaption * {
-
+				
 			}
 		}
 
@@ -159,8 +159,6 @@ body#post {
 				font-family: 	$font-family;
 				font-weight: 	$p-font-weight;
 				font-style: 	normal;
-			
-				color:			$black;
 			
 				@include xs {
 					font-size: 		$p-font-size-xs * 0.8;

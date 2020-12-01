@@ -16,21 +16,22 @@
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
+  
+  min-height: 100vh;
+  
+  background: $html-background;
+  @include dark-mode {
+	  background: $html-background-dark-mode;
+  }
 }
 
-html,
 body {
-	
 	background: $body-background;
 	color: $body-color;
-	
 	@include dark-mode {
 		background: $body-background-dark-mode;
 		color: $body-color-dark-mode;
 	}
-	
-	
-	
 }
 
 div#main {

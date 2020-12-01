@@ -1,6 +1,6 @@
 // Loop page styles
 
-body#home ul#loop {	
+ul#loop {	
 
     list-style: none;
     
@@ -12,8 +12,17 @@ body#home ul#loop {
         
         margin-bottom: $pad-2;
         
-        background: $white;
+        background:   $loop-item-background;
+        color:        $loop-item-color;
+        border-color: $border-color;
+        @include dark-mode {
+            background:       $loop-item-background-dark-mode;
+            color:            $loop-item-color-dark-mode;
+            border-color:     $border-color-dark-mode; 
+        }
+        
         border-top: 1px solid;
+        
         
         article {
             padding: 0 $pad-1;
@@ -21,11 +30,19 @@ body#home ul#loop {
         
         h2 {
             padding-top: $pad-1;
-            padding-bottom: 0;
+            padding-bottom: $pad-1;
         }
         
-        p:last-child {
-            padding-bottom: 0;
+        p {
+            
+            color:        $loop-item-color;
+            @include dark-mode {
+                color:            $loop-item-color-dark-mode;
+            }
+            
+            &:last-child {
+                padding-bottom: 0;
+            }
         }
     }
 
@@ -44,7 +61,10 @@ div.pagination {
 
     margin-top: $pad-2;
     
-    border-top: 3px solid $white;
+    border-top: 3px solid $border-color;
+    @include dark-mode {
+        border-color:     $border-color-dark-mode;
+    }
 
     @include clearfix;
 
