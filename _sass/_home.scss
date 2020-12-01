@@ -22,7 +22,7 @@ body#home {
 			@include md-up {				
 				float: left;
 				margin-left: $pad-2;
-				max-width: calc(33% - $pad-2);
+				width: calc(33% - #{$pad-2});
 			}
 			
 		}

@@ -1,0 +1,67 @@
+// Sidebar
+
+ul#social-links {
+
+	display: block;
+	position: relative;
+	
+	width: 100%;
+	
+	padding: 0;
+	
+	list-style: none;
+	
+	li {
+		position: relative;
+		flex: 1;
+
+		margin: 0 0 $pad-1 0;
+		padding: 0;
+		
+		height: 36px + $pad-2;
+		font-size: 20px;
+		line-height: 36px + $pad-2;
+		
+		background: $gray-200;
+		@include dark-mode {
+			background: $brand;
+		}
+		
+		&:hover,
+		&:focus {
+			background: $brand-25;
+			@include dark-mode {
+				background: $true-black;
+			}
+			outline:    none;
+		}
+		
+		svg {
+			float: left;
+			max-height: 36px;
+			max-width: 36px;
+			height: 36px;
+			width: 36px;
+			margin: $pad-1;
+		}
+		
+		a {
+			display: inline-block;
+			padding: 0 20px;
+			
+			float: left;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		@include clearfix;
+	}
+	
+}
